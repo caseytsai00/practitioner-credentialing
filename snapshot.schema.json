@@ -1,0 +1,383 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Credentialing batch snapshot",
+  "description": "One sealed snapshot per consumed export batch. It states, for every application file in the office's caseload, what that file's state is as of the batch's export date. Seal one snapshot after consuming each batch, including when the batch leaves work unfinished; a later snapshot never rewrites an earlier one.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "snapshot_id",
+    "predecessor",
+    "batch",
+    "as_of",
+    "consumed",
+    "produced",
+    "rules_file",
+    "applications"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "credentialing-snapshot/1"
+    },
+    "snapshot_id": {
+      "description": "Your own stable identifier for this snapshot occurrence. Distinct across every snapshot you retain, including a re-run of the same batch.",
+      "type": "string",
+      "minLength": 1
+    },
+    "predecessor": {
+      "description": "The snapshot this one continues from: null for the first, otherwise the retained prior snapshot's repository-relative path and its SHA-256. A file never hashes itself.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "sha256"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        }
+      ]
+    },
+    "batch": {
+      "description": "Which export this snapshot consumed, counting from 1 in the order the office released them.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "as_of": {
+      "description": "The export date of that batch, YYYY-MM-DD. It is the clock for every date computed in this snapshot. Never the date you ran your Skill.",
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "consumed": {
+      "description": "What this snapshot read.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_files",
+        "documents"
+      ],
+      "properties": {
+        "record_files": {
+          "description": "The record files of that batch this run read, named as the office names them.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "documents": {
+          "description": "The documents of that batch this run opened, named as the office names them. Empty when the batch carries none.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "produced": {
+      "description": "Every file this run wrote or refreshed, as repository-relative paths, including this snapshot.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "rules_file": {
+      "description": "Repository-relative path of the register that lists every rule this run applied with the office document and section it came from.",
+      "type": "string",
+      "minLength": 1
+    },
+    "applications": {
+      "description": "One entry per application file in the caseload at this export date.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/application"
+      }
+    }
+  },
+  "$defs": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "element_state": {
+      "description": "resolved — the element is verified and needs nothing further. outstanding — something is still owed on it. finding — a fact the Clinical Director, and then the committees, must weigh. discrepancy — the applicant and a source disagree and the applicant has not resolved it. return-incomplete — the element's state returns the application to the applicant as incomplete. routed-to-clinical-director — the element waits on a recorded disposition from the Clinical Director. eligibility-question — nothing supports the privileges requested, so eligibility itself is the question.",
+      "enum": [
+        "resolved",
+        "outstanding",
+        "finding",
+        "discrepancy",
+        "return-incomplete",
+        "routed-to-clinical-director",
+        "eligibility-question"
+      ]
+    },
+    "application": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "application_id",
+        "revision",
+        "status",
+        "elements",
+        "packet_presentable",
+        "decisions",
+        "approval_decision_id",
+        "activation",
+        "monitored_conditions",
+        "action_queue"
+      ],
+      "properties": {
+        "application_id": {
+          "description": "The office's identifier for the application file.",
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "description": "The application revision every statement in this entry is about: the latest revision on file at this export date.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "description": "The file's state at this export date. intake-incomplete — an item on the completeness list is missing, has been requested in writing, and the applicant's clock is running. returned-incomplete — the file was returned to the applicant as incomplete. ineligible-clock-expired — the applicant's clock ran out with the requested item still missing. in-verification — the file is complete and at least one element is not resolved. packet-presentable — every element is resolved, the packet is bound to this revision, and no admitted outcome governs it yet. decision-inadmissible — a decision record for this file was refused and no admitted Governing Body outcome governs this revision. deferred — an admitted Governing Body deferral is outstanding. denied — an admitted Governing Body denial is on file. approved-not-yet-effective — an approval is admitted and its privileges start after this export date. active — the approved privileges are active on this export date. active-with-conditions — active, with at least one monitored condition still running. withdrawn — the applicant withdrew the application. discontinued — the Clinical Director discontinued it. Precedence when more than one description fits a file at an export date: a terminal status (withdrawn, discontinued) governs everything; otherwise an intake status (intake-incomplete, returned-incomplete, ineligible-clock-expired) governs whenever a completeness item is missing; otherwise the status furthest along this order governs: in-verification, packet-presentable, decision-inadmissible, deferred, denied, approved-not-yet-effective, active or active-with-conditions.",
+          "enum": [
+            "intake-incomplete",
+            "returned-incomplete",
+            "ineligible-clock-expired",
+            "in-verification",
+            "packet-presentable",
+            "decision-inadmissible",
+            "deferred",
+            "denied",
+            "approved-not-yet-effective",
+            "active",
+            "active-with-conditions",
+            "withdrawn",
+            "discontinued"
+          ]
+        },
+        "elements": {
+          "description": "The state of each of the six verified elements for this revision.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "licensure",
+            "experience",
+            "gaps",
+            "education",
+            "certification",
+            "references"
+          ],
+          "properties": {
+            "licensure": {
+              "$ref": "#/$defs/element_state"
+            },
+            "experience": {
+              "$ref": "#/$defs/element_state"
+            },
+            "gaps": {
+              "$ref": "#/$defs/element_state"
+            },
+            "education": {
+              "$ref": "#/$defs/element_state"
+            },
+            "certification": {
+              "$ref": "#/$defs/element_state"
+            },
+            "references": {
+              "$ref": "#/$defs/element_state"
+            }
+          }
+        },
+        "packet_presentable": {
+          "description": "Whether a packet for the revision named above is presentable at this export date, by the office's own readiness rule.",
+          "type": "boolean"
+        },
+        "decisions": {
+          "description": "Every decision record received for this file through this export, in the order received. A record that was refused stays here with the reason; it is never dropped from a later snapshot.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "decision_id",
+              "admitted",
+              "reason"
+            ],
+            "properties": {
+              "decision_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "admitted": {
+                "type": "boolean"
+              },
+              "reason": {
+                "description": "Why the record was refused, naming the first condition it failed. Null when the record was admitted.",
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                ]
+              }
+            },
+            "if": {
+              "properties": {
+                "admitted": {
+                  "const": false
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        },
+        "approval_decision_id": {
+          "description": "The identifier of the admitted Governing Body approval that authorizes this revision, or null when no approval has been admitted. A deferral, a denial and any recommendation leave this null.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "minLength": 1
+            }
+          ]
+        },
+        "activation": {
+          "description": "What the admitted approval put into effect. Null when no approval has been admitted.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "active_at_export",
+                "effective_date",
+                "cycle_end",
+                "privileges"
+              ],
+              "properties": {
+                "active_at_export": {
+                  "description": "Whether the privileges are active on this snapshot's export date.",
+                  "type": "boolean"
+                },
+                "effective_date": {
+                  "description": "The day the privileges start.",
+                  "$ref": "#/$defs/date"
+                },
+                "cycle_end": {
+                  "description": "The last day of the appointment cycle.",
+                  "$ref": "#/$defs/date"
+                },
+                "privileges": {
+                  "description": "The privilege groups the approval named, by their published codes.",
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "monitored_conditions": {
+          "description": "Conditions being tracked to a due date while the file or the appointment runs. Empty when there are none.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "condition",
+              "due"
+            ],
+            "properties": {
+              "condition": {
+                "description": "What is being tracked, in one sentence a reader can act on.",
+                "type": "string",
+                "minLength": 1
+              },
+              "due": {
+                "description": "The day it is owed by.",
+                "$ref": "#/$defs/date"
+              }
+            }
+          }
+        },
+        "action_queue": {
+          "description": "What the office must do on this file, and what it has done that someone needs to know. Empty only when the file needs nothing and carries nothing to report.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "item",
+              "owner",
+              "due"
+            ],
+            "properties": {
+              "item": {
+                "description": "The action or the fact, in one sentence, naming what it is about.",
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "description": "Who owes it, by role or by name as the records give it.",
+                "type": "string",
+                "minLength": 1
+              },
+              "due": {
+                "description": "The day it is owed by, or null when no record fixes one.",
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "#/$defs/date"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

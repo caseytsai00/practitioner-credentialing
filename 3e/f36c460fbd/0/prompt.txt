@@ -1,0 +1,7 @@
+cd ~/GitRollTraining/practitioner-credentialing
+
+---
+
+cd ~/GitRollTraining/practitioner-credentialing
+  git add .entire
+  git commit -m "Enable entire.io capture"

@@ -1,10 +1,20 @@
 from __future__ import annotations
 
 import datetime
+import re
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
-from scripts.model import Activation, ActionItem
+from scripts.model import (
+    ELEMENT_NAMES,
+    ActionItem,
+    Activation,
+    ApplicationRecord,
+    Decision,
+    MonitoredCondition,
+)
+from scripts.parsers import filter_rows
+from scripts.state import get_application_entry
 
 
 def _parse_date(value: str) -> Optional[datetime.date]:
@@ -525,3 +535,343 @@ def compute_activation(decision: dict, rules, as_of: str) -> Activation:
         cycle_end=cycle_end.isoformat(),
         privileges=list(decision.get("privileges") or []),
     )
+
+
+_PER_APP_ROW_TYPES = {
+    "disclosures": "question_code",
+    "declared_history": "entry_id",
+    "declared_credentials": "declaration_id",
+    "privilege_requests": "request_id",
+    "peer_referees": "referee_id",
+    "verification_replies": "reply_id",
+    "verification_attempts": "attempt_id",
+    "certification_replies": "reply_id",
+    "peer_reference_replies": "reply_id",
+    "correspondence": "letter_id",
+}
+
+_THROUGH_DATE_RE = re.compile(r"through (\d{4}-\d{2}-\d{2})")
+
+
+def merge_rows(existing_rows, new_rows, key_field):
+    merged = {row[key_field]: row for row in existing_rows if key_field in row and row[key_field]}
+    for row in new_rows:
+        if key_field in row and row[key_field]:
+            merged[row[key_field]] = row
+    return list(merged.values())
+
+
+def parse_disposition_outcome(text: str) -> set:
+    lowered = text.lower()
+    labels = set()
+    if "discontinue the application" in lowered and "do not discontinue" not in lowered:
+        labels.add("discontinue")
+    if "opportunity to amend" in lowered:
+        labels.add("amend-offer")
+    if any(
+        phrase in lowered
+        for phrase in (
+            "sufficient and the file may proceed",
+            "no bar to appointment",
+            "present the file to the executive committee",
+        )
+    ):
+        labels.add("clear")
+    return labels
+
+
+def apply_dispositions(elements, dispositions):
+    elements = dict(elements)
+    status_override = None
+    action_items = []
+    unmatched = False
+    for disposition in sorted(dispositions, key=lambda d: d["date"]):
+        labels = parse_disposition_outcome(disposition["raw_text"])
+        if "discontinue" in labels:
+            status_override = "discontinued"
+            action_items.append(
+                ActionItem(
+                    item="Notify applicant of discontinuance per disposition {}".format(disposition["filename"]),
+                    owner="Medical Services Professional",
+                )
+            )
+            continue
+        flagged = [
+            name
+            for name, state in elements.items()
+            if state in ("finding", "routed-to-clinical-director", "eligibility-question")
+        ]
+        if not flagged:
+            continue
+        if "clear" in labels:
+            for name in flagged:
+                elements[name] = "resolved"
+        elif "amend-offer" in labels:
+            action_items.append(
+                ActionItem(
+                    item="Applicant: amend the privilege request or provide further support per disposition {}".format(
+                        disposition["filename"]
+                    ),
+                    owner="Applicant",
+                )
+            )
+        else:
+            unmatched = True
+            action_items.append(
+                ActionItem(
+                    item="Disposition {} could not be automatically interpreted; a human must read it".format(
+                        disposition["filename"]
+                    ),
+                    owner="Medical Services Professional",
+                )
+            )
+    return elements, status_override, action_items, unmatched
+
+
+def evaluate_decisions(revision, decisions_for_app):
+    relevant = [d for d in decisions_for_app if d.get("revision") == revision]
+    admitted_bodies = set()
+    decision_records = []
+    admitted_gb_outcome = None
+    approval_decision_id = None
+    activation_source = None
+    for decision in sorted(relevant, key=lambda d: d.get("decision_date") or ""):
+        admitted, reason = admit_decision(decision, admitted_bodies)
+        decision_records.append(Decision(decision_id=decision["decision_id"], admitted=admitted, reason=reason))
+        if admitted:
+            admitted_bodies.add(decision["body"])
+            if decision["body"] == "Governing Body":
+                admitted_gb_outcome = decision["outcome"]
+                if decision["outcome"] in ("approved", "approved-with-conditions"):
+                    approval_decision_id = decision["decision_id"]
+                    activation_source = decision
+    has_inadmissible = any(not d.admitted for d in decision_records)
+    return decision_records, admitted_gb_outcome, approval_decision_id, activation_source, has_inadmissible
+
+
+def extract_monitored_conditions(store) -> List[MonitoredCondition]:
+    conditions = []
+    for letter in store.get("letters", []):
+        if letter.get("letter_type") != "board-action":
+            continue
+        match = _THROUGH_DATE_RE.search(letter.get("raw_text", ""))
+        if match:
+            conditions.append(
+                MonitoredCondition(condition="Board-ordered monitoring programme in force", due=match.group(1))
+            )
+    return conditions
+
+
+def compute_status(*, intake_status, elements, admitted_gb_outcome, has_inadmissible_decision, activation):
+    if intake_status != "complete":
+        return intake_status
+    # The status enum's precedence order treats decision-inadmissible, deferred, denied, and
+    # approval outcomes as all further along than packet-presentable -- so none of them can
+    # apply to a file whose elements are not all resolved yet; such a file is simply
+    # in-verification regardless of any decision record that happens to exist for it.
+    if not all(state == "resolved" for state in elements.values()):
+        return "in-verification"
+    if admitted_gb_outcome == "denied":
+        return "denied"
+    if admitted_gb_outcome == "deferred-pending-information":
+        return "deferred"
+    if admitted_gb_outcome in ("approved", "approved-with-conditions"):
+        if activation is not None and activation.active_at_export:
+            return "active-with-conditions" if admitted_gb_outcome == "approved-with-conditions" else "active"
+        return "approved-not-yet-effective"
+    if has_inadmissible_decision:
+        return "decision-inadmissible"
+    return "packet-presentable"
+
+
+def process_application(application_id, batch, ledger, rules, as_of):
+    entry = get_application_entry(ledger, application_id)
+    warnings: List[str] = []
+
+    if entry.get("status") in ("withdrawn", "discontinued"):
+        elements = entry.get("elements") or {name: "outstanding" for name in ELEMENT_NAMES}
+        record = ApplicationRecord(
+            application_id=application_id,
+            revision=entry.get("revision") or 1,
+            status=entry["status"],
+            elements=elements,
+            packet_presentable=False,
+            approval_decision_id=entry.get("approval_decision_id"),
+        )
+        return record, warnings
+
+    app_rows_this_batch = filter_rows(batch.applications, application_id=application_id)
+    if app_rows_this_batch:
+        app_row = max(app_rows_this_batch, key=lambda r: int(r["revision"]))
+        entry["last_application_row"] = app_row
+        entry["revision"] = int(app_row["revision"])
+    app_row = entry.get("last_application_row") or {}
+    revision = entry.get("revision") or 1
+
+    store = entry.setdefault("revision_data", {})
+    for row_type, key_field in _PER_APP_ROW_TYPES.items():
+        batch_rows = [r for r in getattr(batch, row_type) if r.get("application_id") == application_id]
+        store[row_type] = merge_rows(store.get(row_type, []), batch_rows, key_field)
+    new_decisions = [d for d in batch.decisions.values() if d.get("application_id") == application_id]
+    store["decisions"] = merge_rows(store.get("decisions", []), new_decisions, "decision_id")
+    new_dispositions = [d for d in batch.dispositions.values() if d.get("application_id") == application_id]
+    store["dispositions"] = merge_rows(store.get("dispositions", []), new_dispositions, "filename")
+    new_letters = [l for l in batch.letters.values() if l.get("application_id") == application_id]
+    store["letters"] = merge_rows(store.get("letters", []), new_letters, "filename")
+
+    withdrawal = next((l for l in store["letters"] if l.get("letter_type") == "withdrawal"), None)
+    if withdrawal is not None:
+        elements = {name: "outstanding" for name in ELEMENT_NAMES}
+        entry["status"] = "withdrawn"
+        entry["elements"] = elements
+        record = ApplicationRecord(
+            application_id=application_id, revision=revision, status="withdrawn",
+            elements=elements, packet_presentable=False,
+        )
+        return record, warnings
+
+    intake = evaluate_intake(
+        application_id=application_id,
+        app_row=app_row,
+        disclosures=store.get("disclosures", []),
+        history=store.get("declared_history", []),
+        credentials=store.get("declared_credentials", []),
+        priv_requests=store.get("privilege_requests", []),
+        referees=store.get("peer_referees", []),
+        correspondence=store.get("correspondence", []),
+        as_of=as_of,
+        rules=rules,
+    )
+
+    if intake.status != "complete":
+        elements = {name: "outstanding" for name in ELEMENT_NAMES}
+        if intake.status == "returned-incomplete":
+            elements["gaps"] = "return-incomplete"
+        entry["status"] = intake.status
+        entry["elements"] = elements
+        record = ApplicationRecord(
+            application_id=application_id, revision=revision, status=intake.status,
+            elements=elements, packet_presentable=False, action_queue=intake.action_items,
+        )
+        return record, warnings
+
+    elements_result = resolve_elements(
+        application_id=application_id,
+        history=store.get("declared_history", []),
+        credentials=store.get("declared_credentials", []),
+        referees=store.get("peer_referees", []),
+        verification_replies=store.get("verification_replies", []),
+        verification_attempts=store.get("verification_attempts", []),
+        licence_lookup_wa=ledger.get("licence_lookup_wa", []),
+        licence_lookup_other=ledger.get("licence_lookup_other", []),
+        certification_replies=store.get("certification_replies", []),
+        peer_reference_replies=store.get("peer_reference_replies", []),
+        correspondence=store.get("correspondence", []),
+        as_of=as_of,
+        rules=rules,
+    )
+    elements = {name: result.state for name, result in elements_result.items()}
+    action_queue: List[ActionItem] = []
+    for result in elements_result.values():
+        action_queue.extend(result.action_items)
+
+    discrepancies = detect_discrepancies(store.get("declared_history", []), store.get("verification_replies", []))
+    if discrepancies:
+        touched_ids = {d["entry_id"] for d in discrepancies}
+        touched_types = {
+            row.get("entry_type") for row in store.get("declared_history", []) if row.get("entry_id") in touched_ids
+        }
+        if touched_types & {"medical-school", "residency"}:
+            elements["education"] = "discrepancy"
+        if touched_types & {"employment", "teaching"}:
+            elements["experience"] = "discrepancy"
+        for d in discrepancies:
+            action_queue.append(
+                ActionItem(
+                    item="Discrepancy on {}: declared {} is {}, source says {}; applicant must resolve in writing or amend".format(
+                        d["entry_id"], d["field"], d["declared"], d["verified"]
+                    ),
+                    owner="Applicant",
+                )
+            )
+
+    if detect_eligibility_mismatch(
+        store.get("privilege_requests", []), store.get("declared_history", []), store.get("declared_credentials", [])
+    ):
+        elements["certification"] = "eligibility-question"
+        action_queue.append(
+            ActionItem(
+                item="Nothing on file supports the privilege requested; Clinical Director review needed",
+                owner="Clinical Director",
+            )
+        )
+
+    elements, status_override, disposition_action_items, unmatched = apply_dispositions(
+        elements, store.get("dispositions", [])
+    )
+    action_queue.extend(disposition_action_items)
+    if unmatched:
+        warnings.append(
+            "Application {} has a Clinical Director disposition that could not be automatically interpreted".format(
+                application_id
+            )
+        )
+
+    if status_override == "discontinued":
+        entry["status"] = "discontinued"
+        entry["elements"] = elements
+        record = ApplicationRecord(
+            application_id=application_id, revision=revision, status="discontinued",
+            elements=elements, packet_presentable=False, action_queue=action_queue,
+        )
+        return record, warnings
+
+    decision_records, admitted_gb_outcome, approval_decision_id, activation_source, has_inadmissible = evaluate_decisions(
+        revision, store.get("decisions", [])
+    )
+    activation = compute_activation(activation_source, rules, as_of) if activation_source is not None else None
+    monitored_conditions = extract_monitored_conditions(store)
+
+    status = compute_status(
+        intake_status="complete",
+        elements=elements,
+        admitted_gb_outcome=admitted_gb_outcome,
+        has_inadmissible_decision=has_inadmissible,
+        activation=activation,
+    )
+    packet_presentable = all(state == "resolved" for state in elements.values()) and admitted_gb_outcome is None
+
+    entry["status"] = status
+    entry["elements"] = elements
+    entry["approval_decision_id"] = approval_decision_id
+    entry["activation"] = activation.to_dict() if activation else None
+
+    record = ApplicationRecord(
+        application_id=application_id,
+        revision=revision,
+        status=status,
+        elements=elements,
+        packet_presentable=packet_presentable,
+        decisions=decision_records,
+        approval_decision_id=approval_decision_id,
+        activation=activation,
+        monitored_conditions=monitored_conditions,
+        action_queue=action_queue,
+    )
+    return record, warnings
+
+
+def process_batch(batch, ledger, rules, as_of):
+    ledger["licence_lookup_wa"] = merge_rows(ledger.get("licence_lookup_wa", []), batch.licence_lookup_wa, "credentialnumber")
+    ledger["licence_lookup_other"] = merge_rows(
+        ledger.get("licence_lookup_other", []), batch.licence_lookup_other, "licence_number"
+    )
+
+    all_ids = sorted(set(batch.application_ids()) | set(ledger["applications"].keys()))
+    records = []
+    warnings: List[str] = []
+    for application_id in all_ids:
+        record, app_warnings = process_application(application_id, batch, ledger, rules, as_of)
+        records.append(record)
+        warnings.extend(app_warnings)
+    return records, ledger, warnings

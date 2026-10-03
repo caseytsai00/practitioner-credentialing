@@ -1,0 +1,152 @@
+{
+  "cli_version": "0.10.2",
+  "checkpoint_id": "367d734d7938",
+  "session_id": "2e3323b4-00e9-4ce8-ad33-fe8b97890742",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-03T03:55:21.050959Z",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "save_step_count": 1,
+  "files_touched": [],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5",
+  "turn_id": "65a0baf3d7fa",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 546,
+    "cache_creation_tokens": 872186,
+    "cache_read_tokens": 109716707,
+    "output_tokens": 384342,
+    "api_call_count": 273
+  },
+  "skill_events_version": 1,
+  "skill_events": [
+    {
+      "id": "claude-skill-toolu_01BhxRynnio61vWHEz4SD14q",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "superpowers:brainstorming"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "65a0baf3d7fa",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 23,
+        "end": 24,
+        "entry_ids": [
+          "f5bde158-219c-41c7-a4ec-bc7f6dbc0309"
+        ],
+        "tool_use_id": "toolu_01BhxRynnio61vWHEz4SD14q"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01BhxRynnio61vWHEz4SD14q"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: superpowers:brainstorming",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "claude-skill-toolu_01Aht3rvgVBGJFqoBZhQWGpY",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "superpowers:writing-plans"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "65a0baf3d7fa",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 178,
+        "end": 179,
+        "entry_ids": [
+          "0c991a9c-dc66-4261-9a61-468d0addb3a0"
+        ],
+        "tool_use_id": "toolu_01Aht3rvgVBGJFqoBZhQWGpY"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01Aht3rvgVBGJFqoBZhQWGpY"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: superpowers:writing-plans",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "claude-skill-toolu_01Uho6azRPxC7W7GD5xLS6jV",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "superpowers:executing-plans"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "65a0baf3d7fa",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 431,
+        "end": 432,
+        "entry_ids": [
+          "50c6622d-e0c7-495d-91ab-813e733680f2"
+        ],
+        "tool_use_id": "toolu_01Uho6azRPxC7W7GD5xLS6jV"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01Uho6azRPxC7W7GD5xLS6jV"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: superpowers:executing-plans",
+        "default_collapsed": true
+      }
+    },
+    {
+      "id": "claude-skill-toolu_01E84KVvMfzvdUity9rsMpQK",
+      "event_type": "tool_invocation",
+      "skill": {
+        "name": "superpowers:test-driven-development"
+      },
+      "source": {
+        "agent": "claude-code",
+        "signal": "skill_tool_use",
+        "confidence": "explicit"
+      },
+      "turn_id": "65a0baf3d7fa",
+      "transcript_anchor": {
+        "unit": "line",
+        "start": 473,
+        "end": 474,
+        "entry_ids": [
+          "8ffb1d9a-019d-4bd4-9289-fe5860321dd5"
+        ],
+        "tool_use_id": "toolu_01E84KVvMfzvdUity9rsMpQK"
+      },
+      "native": {
+        "tool_name": "Skill",
+        "tool_use_id": "toolu_01E84KVvMfzvdUity9rsMpQK"
+      },
+      "collapse": {
+        "target": "tool_pair",
+        "label": "Skill: superpowers:test-driven-development",
+        "default_collapsed": true
+      }
+    }
+  ],
+  "session_metrics": {
+    "turn_count": 2
+  }
+}

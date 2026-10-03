@@ -4,7 +4,7 @@ import datetime
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
-from scripts.model import ActionItem
+from scripts.model import Activation, ActionItem
 
 
 def _parse_date(value: str) -> Optional[datetime.date]:
@@ -486,3 +486,42 @@ def detect_eligibility_mismatch(priv_requests, history, credentials) -> bool:
         if not any(any(token in supported for supported in supported_terms) for token in tokens):
             return True
     return False
+
+
+_VALID_OUTCOMES_BY_BODY = {
+    "Executive Committee of the Medical Staff": {"recommended"},
+    "Governing Body": {"approved", "approved-with-conditions", "deferred-pending-information", "denied"},
+}
+
+
+def admit_decision(decision: dict, already_admitted_bodies=None):
+    already_admitted_bodies = already_admitted_bodies or set()
+    body = decision.get("body", "")
+    outcome = decision.get("outcome", "")
+
+    valid_outcomes = _VALID_OUTCOMES_BY_BODY.get(body)
+    if valid_outcomes is None:
+        return False, "issuing body '{}' is not recognized".format(body)
+    if outcome not in valid_outcomes:
+        return False, "{} may not issue outcome '{}'".format(body, outcome)
+    if not decision.get("signatory"):
+        return False, "decision carries no named signatory"
+    if not decision.get("role"):
+        return False, "decision carries no signatory role"
+    if body in already_admitted_bodies:
+        return False, "a decision from {} is already admitted for this application and revision".format(body)
+    return True, None
+
+
+def compute_activation(decision: dict, rules, as_of: str) -> Activation:
+    cycle_years = rules["appointment.cycle_years"]
+    effective = _parse_date(decision.get("effective_date") or decision.get("decision_date"))
+    cycle_end = effective.replace(year=effective.year + cycle_years)
+    as_of_date = _parse_date(as_of)
+    active_at_export = effective <= as_of_date <= cycle_end
+    return Activation(
+        active_at_export=active_at_export,
+        effective_date=effective.isoformat(),
+        cycle_end=cycle_end.isoformat(),
+        privileges=list(decision.get("privileges") or []),
+    )

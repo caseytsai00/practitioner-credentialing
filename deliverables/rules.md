@@ -159,3 +159,10 @@ decision — deliberately not enforced; see design spec section 7)
   completeness condition describes "a declared history running continuously from professional
   school," which a still-open current position already satisfies (no `to_date` to compare), so
   this is a narrow gap in the check rather than a disclosed office rule.
+- The Clinical Director action item queued when a professional-practice-question "Yes" answer
+  forces a `finding` (see `process_application` in `scripts/engine.py`) is appended
+  unconditionally before dispositions are applied, so it can linger in `action_queue` after a
+  later disposition resolves the element it concerns — a stale, redundant informational entry,
+  not a wrong element state or status. Found and documented during the independent recompute in
+  `deliverables/verification.md`; deliberately left as a known limitation rather than a fourth
+  fix-and-resupersede cycle.

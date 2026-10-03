@@ -962,11 +962,6 @@
           "due": null,
           "item": "Chase peer reference reply from Dr. Mateusz Larkspur, MD",
           "owner": "Medical Services Professional"
-        },
-        {
-          "due": null,
-          "item": "A professional practice question was answered Yes; Clinical Director must judge whether this finding is disqualifying",
-          "owner": "Clinical Director"
         }
       ],
       "activation": null,
@@ -978,7 +973,7 @@
         "education": "outstanding",
         "experience": "outstanding",
         "gaps": "resolved",
-        "licensure": "finding",
+        "licensure": "resolved",
         "references": "outstanding"
       },
       "monitored_conditions": [],
@@ -1211,5 +1206,5 @@
   ],
   "rules_file": "deliverables/rules.md",
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "batch-01-20261003T040224157580Z"
+  "snapshot_id": "batch-01-20261003T034420796548Z"
 }

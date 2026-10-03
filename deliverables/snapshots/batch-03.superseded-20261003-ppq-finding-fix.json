@@ -1025,13 +1025,7 @@
       "status": "active"
     },
     {
-      "action_queue": [
-        {
-          "due": null,
-          "item": "A professional practice question was answered Yes; Clinical Director must judge whether this finding is disqualifying",
-          "owner": "Clinical Director"
-        }
-      ],
+      "action_queue": [],
       "activation": {
         "active_at_export": true,
         "cycle_end": "2028-05-15",
@@ -1396,7 +1390,7 @@
   },
   "predecessor": {
     "path": "deliverables/snapshots/batch-02.json",
-    "sha256": "4259e72e88ab5464b91c9996c735eed335357483c0e28d98c2f64d5000829577"
+    "sha256": "9f67ec44af178463ecaed5c3b12f0a34ba15ca817682afd92db7bad264919b07"
   },
   "produced": [
     "deliverables/snapshots/batch-03.json",
@@ -1405,5 +1399,5 @@
   ],
   "rules_file": "deliverables/rules.md",
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "batch-03-20261003T040224558942Z"
+  "snapshot_id": "batch-03-20261003T035841846399Z"
 }

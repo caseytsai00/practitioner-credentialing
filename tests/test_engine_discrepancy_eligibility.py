@@ -45,3 +45,20 @@ def test_eligibility_mismatch_false_when_training_supports_privilege():
 
 def test_eligibility_mismatch_false_with_no_privilege_requests():
     assert detect_eligibility_mismatch([], [], []) is False
+
+
+def test_detect_ppq_findings_true_when_any_disclosure_answered_yes():
+    from scripts.engine import detect_ppq_findings
+
+    disclosures = [
+        {"question_code": "PPQ-1", "answer": "No", "applicant_comment": ""},
+        {"question_code": "PPQ-2", "answer": "Yes", "applicant_comment": "Explained in attached letter."},
+    ]
+    assert detect_ppq_findings(disclosures) is True
+
+
+def test_detect_ppq_findings_false_when_every_disclosure_is_no():
+    from scripts.engine import detect_ppq_findings
+
+    disclosures = [{"question_code": "PPQ-1", "answer": "No", "applicant_comment": ""}]
+    assert detect_ppq_findings(disclosures) is False

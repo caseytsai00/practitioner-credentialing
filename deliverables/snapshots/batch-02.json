@@ -856,7 +856,13 @@
       "status": "packet-presentable"
     },
     {
-      "action_queue": [],
+      "action_queue": [
+        {
+          "due": null,
+          "item": "A professional practice question was answered Yes; Clinical Director must judge whether this finding is disqualifying",
+          "owner": "Clinical Director"
+        }
+      ],
       "activation": null,
       "application_id": "APP-2026-032",
       "approval_decision_id": null,
@@ -966,11 +972,33 @@
       "status": "denied"
     },
     {
-      "action_queue": [],
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Confirm whether decision MEC-2026-034 still applies now that the file is at revision 2",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Confirm whether decision GBD-2026-034 still applies now that the file is at revision 2",
+          "owner": "Medical Services Professional"
+        }
+      ],
       "activation": null,
       "application_id": "APP-2026-036",
       "approval_decision_id": null,
-      "decisions": [],
+      "decisions": [
+        {
+          "admitted": false,
+          "decision_id": "MEC-2026-034",
+          "reason": "decision names revision 1; the file is now at revision 2"
+        },
+        {
+          "admitted": false,
+          "decision_id": "GBD-2026-034",
+          "reason": "decision names revision 1; the file is now at revision 2"
+        }
+      ],
       "elements": {
         "certification": "resolved",
         "education": "resolved",
@@ -982,7 +1010,7 @@
       "monitored_conditions": [],
       "packet_presentable": true,
       "revision": 2,
-      "status": "packet-presentable"
+      "status": "decision-inadmissible"
     },
     {
       "action_queue": [],
@@ -1179,7 +1207,7 @@
   },
   "predecessor": {
     "path": "deliverables/snapshots/batch-01.json",
-    "sha256": "7382410a1d62932aa2d509e1afdcc00fa112ce05185410e72402a30c031d3c2a"
+    "sha256": "929224265bf44c01929e0bfe478e4fb55499248ecb266756844801baca63fcda"
   },
   "produced": [
     "deliverables/snapshots/batch-02.json",
@@ -1188,5 +1216,5 @@
   ],
   "rules_file": "deliverables/rules.md",
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "batch-02-20261003T035038529861Z"
+  "snapshot_id": "batch-02-20261003T040224362511Z"
 }

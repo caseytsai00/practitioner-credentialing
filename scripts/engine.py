@@ -498,6 +498,10 @@ def detect_eligibility_mismatch(priv_requests, history, credentials) -> bool:
     return False
 
 
+def detect_ppq_findings(disclosures) -> bool:
+    return any(d.get("answer") == "Yes" for d in disclosures)
+
+
 _VALID_OUTCOMES_BY_BODY = {
     "Executive Committee of the Medical Staff": {"recommended"},
     "Governing Body": {"approved", "approved-with-conditions", "deferred-pending-information", "denied"},
@@ -629,13 +633,33 @@ def apply_dispositions(elements, dispositions):
 
 
 def evaluate_decisions(revision, decisions_for_app):
-    relevant = [d for d in decisions_for_app if d.get("revision") == revision]
+    # Every decision the office ever issued for this application must appear in decision_records
+    # -- one whose revision no longer matches the file's current revision (e.g. an unrelated
+    # correction bumped the revision after the decision was issued) is refused with a reason and
+    # queued for a human, never silently dropped (real data: APP-2026-036's Governing Body
+    # approval for revision 1 would otherwise vanish once a later correction moved it to
+    # revision 2 in the same batch).
     admitted_bodies = set()
     decision_records = []
     admitted_gb_outcome = None
     approval_decision_id = None
     activation_source = None
-    for decision in sorted(relevant, key=lambda d: d.get("decision_date") or ""):
+    action_items = []
+    for decision in sorted(decisions_for_app, key=lambda d: d.get("decision_date") or ""):
+        if decision.get("revision") != revision:
+            reason = "decision names revision {}; the file is now at revision {}".format(
+                decision.get("revision"), revision
+            )
+            decision_records.append(Decision(decision_id=decision["decision_id"], admitted=False, reason=reason))
+            action_items.append(
+                ActionItem(
+                    item="Confirm whether decision {} still applies now that the file is at revision {}".format(
+                        decision["decision_id"], revision
+                    ),
+                    owner="Medical Services Professional",
+                )
+            )
+            continue
         admitted, reason = admit_decision(decision, admitted_bodies)
         decision_records.append(Decision(decision_id=decision["decision_id"], admitted=admitted, reason=reason))
         if admitted:
@@ -646,7 +670,7 @@ def evaluate_decisions(revision, decisions_for_app):
                     approval_decision_id = decision["decision_id"]
                     activation_source = decision
     has_inadmissible = any(not d.admitted for d in decision_records)
-    return decision_records, admitted_gb_outcome, approval_decision_id, activation_source, has_inadmissible
+    return decision_records, admitted_gb_outcome, approval_decision_id, activation_source, has_inadmissible, action_items
 
 
 def extract_monitored_conditions(store) -> List[MonitoredCondition]:
@@ -810,6 +834,15 @@ def process_application(application_id, batch, ledger, rules, as_of):
             )
         )
 
+    if detect_ppq_findings(store.get("disclosures", [])):
+        elements["licensure"] = "finding"
+        action_queue.append(
+            ActionItem(
+                item="A professional practice question was answered Yes; Clinical Director must judge whether this finding is disqualifying",
+                owner="Clinical Director",
+            )
+        )
+
     elements, status_override, disposition_action_items, unmatched = apply_dispositions(
         elements, store.get("dispositions", [])
     )
@@ -830,9 +863,15 @@ def process_application(application_id, batch, ledger, rules, as_of):
         )
         return record, warnings
 
-    decision_records, admitted_gb_outcome, approval_decision_id, activation_source, has_inadmissible = evaluate_decisions(
-        revision, store.get("decisions", [])
-    )
+    (
+        decision_records,
+        admitted_gb_outcome,
+        approval_decision_id,
+        activation_source,
+        has_inadmissible,
+        decision_action_items,
+    ) = evaluate_decisions(revision, store.get("decisions", []))
+    action_queue.extend(decision_action_items)
     activation = compute_activation(activation_source, rules, as_of) if activation_source is not None else None
     monitored_conditions = extract_monitored_conditions(store)
 

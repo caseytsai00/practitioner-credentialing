@@ -350,3 +350,76 @@ def test_admitted_governing_body_approval_governs_status_even_with_a_lingering_f
     assert record.elements["certification"] == "finding"
     assert record.approval_decision_id == "GBD-X"
     assert record.status == "active"
+
+
+def test_decision_for_a_superseded_revision_is_refused_not_silently_dropped():
+    # Real data: APP-2026-036 had a Governing Body approval admitted for revision 1, then an
+    # unrelated correction (an employer name fix) bumped the file to revision 2 in the same
+    # batch. The decision must not vanish from decisions[] -- it must show up refused, with a
+    # reason, and queue a human to confirm whether it still stands.
+    batch = _complete_minimal_batch(revision="2")
+    batch.decisions = {
+        "GBD-X": {
+            "decision_id": "GBD-X",
+            "body": "Governing Body",
+            "signatory": "Dr. Chair, MD",
+            "role": "Chair, Governing Body",
+            "application_id": "APP-X",
+            "revision": 1,
+            "decision_date": "2026-02-01",
+            "outcome": "approved",
+            "privileges": ["PRIV-FM"],
+            "criteria_version": "LARK-PRIV-2026.1",
+            "reason": None,
+            "effective_date": "2026-02-01",
+            "supersedes": None,
+            "filename": "d.md",
+        }
+    }
+    ledger = new_ledger()
+    ledger["licence_lookup_wa"] = list(batch.licence_lookup_wa)
+    record, warnings = process_application("APP-X", batch, ledger, RULES, "2026-03-16")
+    decision_ids = {d.decision_id: d for d in record.decisions}
+    assert "GBD-X" in decision_ids
+    assert decision_ids["GBD-X"].admitted is False
+    assert "revision" in decision_ids["GBD-X"].reason
+    assert record.approval_decision_id is None
+    assert any("GBD-X" in item.item for item in record.action_queue)
+
+
+def test_ppq_yes_disclosure_forces_a_finding_even_when_otherwise_resolved():
+    # Real data: APP-2026-032 answered PPQ-2 "Yes" with an explanation (satisfying intake) --
+    # the office's real disposition calls this a "High-risk finding" needing Clinical Director
+    # review. Nothing about the six elements themselves would otherwise flag it once licensure,
+    # certification, etc. all independently resolve, so this must be its own, explicit check.
+    batch = _complete_minimal_batch()
+    batch.disclosures = [
+        {
+            "application_id": "APP-X",
+            "revision": "1",
+            "question_code": "PPQ-2",
+            "answer": "Yes",
+            "applicant_comment": "Explained in attached letter.",
+        }
+    ]
+    ledger = new_ledger()
+    ledger["licence_lookup_wa"] = list(batch.licence_lookup_wa)
+    record, warnings = process_application("APP-X", batch, ledger, RULES, "2026-03-16")
+    assert record.elements["licensure"] == "finding"
+    assert record.status == "in-verification"
+    assert any("PPQ" in item.item or "professional practice question" in item.item for item in record.action_queue)
+
+    # Once a Clinical Director disposition clears it, the finding resolves and status can advance.
+    batch_two = _complete_minimal_batch(revision="1")
+    batch_two.disclosures = batch.disclosures
+    batch_two.dispositions = {
+        "d.md": {
+            "filename": "d.md",
+            "application_id": "APP-X",
+            "date": "2026-02-01",
+            "raw_text": "I record no bar to appointment and no condition.",
+        }
+    }
+    record_two, warnings_two = process_application("APP-X", batch_two, ledger, RULES, "2026-04-20")
+    assert record_two.elements["licensure"] == "resolved"
+    assert record_two.status == "packet-presentable"

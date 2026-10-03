@@ -303,3 +303,401 @@ it, per the schema's own definition of "sealed" (committed to the handed-off rep
 - Failures: none
 - Note: unchanged re-run; sealed snapshot left untouched
 
+## 2026-10-03T03:53:28.769226Z -- batch 1 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 1`
+- Started: 2026-10-03T03:53:28.769226Z
+- Finished: 2026-10-03T03:53:28.828228Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-02-06_gap-explanation_APP-2026-005.md, 2026-02-06_gap-explanation_APP-2026-039.md, 2026-02-13_gap-explanation_APP-2026-017.md, 2026-02-18_missing-items_APP-2026-019.md, 2026-02-20_cover-note_APP-2026-031.md, 2026-03-04_board-action_APP-2026-015.md, 2026-03-06_missing-licence_APP-2026-031.md, 2026-03-06_return-incomplete_APP-2026-018.md, 2026-03-10_MEC-2026-011.md, 2026-03-10_MEC-2026-017.md, 2026-03-10_MEC-2026-024.md, 2026-03-10_MEC-2026-034.md, 2026-03-10_discrepancy_APP-2026-030.md, 2026-03-12_MEC-2026-013.md, 2026-03-12_MEC-2026-023.md
+- Produced: deliverables/snapshots/batch-01.json, deliverables/state/batch-01.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:53:28.830604Z -- batch 2 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 2 --state deliverables/state/batch-01.state.json`
+- Started: 2026-10-03T03:53:28.830604Z
+- Finished: 2026-10-03T03:53:28.867253Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-03-17_MEC-2026-012.md, 2026-03-17_MEC-2026-035.md, 2026-03-19_MEC-2026-015.md, 2026-03-19_MEC-2026-033.md, 2026-03-24_MEC-2026-014.md, 2026-03-24_MEC-2026-025.md, 2026-03-26_MEC-2026-016.md, 2026-03-26_MEC-2026-032.md, 2026-03-26_MEC-2026-037.md, 2026-03-30_gap-explanation_APP-2026-018.md, 2026-03-31_MEC-2026-018.md, 2026-03-31_disposition_APP-2026-029.md, 2026-04-02_MEC-2026-019.md, 2026-04-02_MEC-2026-029.md, 2026-04-02_confirm-disclosure_APP-2026-015.md, 2026-04-02_discontinued_APP-2026-029.md, 2026-04-02_disposition_APP-2026-017.md, 2026-04-02_disposition_APP-2026-032.md, 2026-04-06_withdrawal_APP-2026-028.md, 2026-04-07_MEC-2026-020.md, 2026-04-08_disposition_APP-2026-027.md, 2026-04-09_MEC-2026-021.md, 2026-04-09_referee-ineligible_APP-2026-024.md, 2026-04-10_certification-lapsed_APP-2026-027.md, 2026-04-14_GBD-2026-011.md, 2026-04-14_GBD-2026-013.md, 2026-04-14_GBD-2026-017.md, 2026-04-14_GBD-2026-023.md, 2026-04-14_GBD-2026-024.md, 2026-04-14_GBD-2026-032.md, 2026-04-14_GBD-2026-033.md, 2026-04-14_GBD-2026-034.md, 2026-04-14_GBD-2026-036.md, 2026-04-14_GBD-2026-039.md, 2026-04-14_MEC-2026-022.md, 2026-04-14_MEC-2026-026.md, 2026-04-14_MEC-2026-036.md, 2026-04-15_referee-overdue_APP-2026-023.md, 2026-04-16_MEC-2026-030.md, 2026-04-16_MEC-2026-031.md, 2026-04-16_deferral-chase_APP-2026-034.md
+- Produced: deliverables/snapshots/batch-02.json, deliverables/state/batch-02.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:53:28.869028Z -- batch 3 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state.json`
+- Started: 2026-10-03T03:53:28.869028Z
+- Finished: 2026-10-03T03:53:28.903938Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-04-20_confirm-disclosure-reply_APP-2026-015.md, 2026-04-21_MEC-2026-028.md, 2026-04-23_referee-substitution_APP-2026-023.md, 2026-04-24_referee-substitution_APP-2026-034.md, 2026-05-05_MEC-2026-027.md, 2026-05-06_disposition_APP-2026-015.md, 2026-05-12_GBD-2026-012.md, 2026-05-12_GBD-2026-014.md, 2026-05-12_GBD-2026-015.md, 2026-05-12_GBD-2026-016.md, 2026-05-12_GBD-2026-018.md, 2026-05-12_GBD-2026-019.md, 2026-05-12_GBD-2026-020.md, 2026-05-12_GBD-2026-021.md, 2026-05-12_GBD-2026-022.md, 2026-05-12_GBD-2026-025.md, 2026-05-12_GBD-2026-026.md, 2026-05-12_GBD-2026-027.md, 2026-05-12_GBD-2026-028.md, 2026-05-12_GBD-2026-029.md, 2026-05-12_GBD-2026-030.md, 2026-05-12_GBD-2026-031.md, 2026-05-12_GBD-2026-035.md, 2026-05-12_GBD-2026-037.md, 2026-05-12_GBD-2026-038.md, 2026-05-14_reference-stale_APP-2026-025.md
+- Produced: deliverables/snapshots/batch-03.json, deliverables/state/batch-03.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:55:11.052802Z -- batch 1 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 1`
+- Started: 2026-10-03T03:55:11.052802Z
+- Finished: 2026-10-03T03:55:11.100506Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-02-06_gap-explanation_APP-2026-005.md, 2026-02-06_gap-explanation_APP-2026-039.md, 2026-02-13_gap-explanation_APP-2026-017.md, 2026-02-18_missing-items_APP-2026-019.md, 2026-02-20_cover-note_APP-2026-031.md, 2026-03-04_board-action_APP-2026-015.md, 2026-03-06_missing-licence_APP-2026-031.md, 2026-03-06_return-incomplete_APP-2026-018.md, 2026-03-10_MEC-2026-011.md, 2026-03-10_MEC-2026-017.md, 2026-03-10_MEC-2026-024.md, 2026-03-10_MEC-2026-034.md, 2026-03-10_discrepancy_APP-2026-030.md, 2026-03-12_MEC-2026-013.md, 2026-03-12_MEC-2026-023.md
+- Produced: deliverables/snapshots/batch-01.json, deliverables/state/batch-01.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:55:11.102500Z -- batch 2 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 2 --state deliverables/state/batch-01.state.json`
+- Started: 2026-10-03T03:55:11.102500Z
+- Finished: 2026-10-03T03:55:11.133103Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-03-17_MEC-2026-012.md, 2026-03-17_MEC-2026-035.md, 2026-03-19_MEC-2026-015.md, 2026-03-19_MEC-2026-033.md, 2026-03-24_MEC-2026-014.md, 2026-03-24_MEC-2026-025.md, 2026-03-26_MEC-2026-016.md, 2026-03-26_MEC-2026-032.md, 2026-03-26_MEC-2026-037.md, 2026-03-30_gap-explanation_APP-2026-018.md, 2026-03-31_MEC-2026-018.md, 2026-03-31_disposition_APP-2026-029.md, 2026-04-02_MEC-2026-019.md, 2026-04-02_MEC-2026-029.md, 2026-04-02_confirm-disclosure_APP-2026-015.md, 2026-04-02_discontinued_APP-2026-029.md, 2026-04-02_disposition_APP-2026-017.md, 2026-04-02_disposition_APP-2026-032.md, 2026-04-06_withdrawal_APP-2026-028.md, 2026-04-07_MEC-2026-020.md, 2026-04-08_disposition_APP-2026-027.md, 2026-04-09_MEC-2026-021.md, 2026-04-09_referee-ineligible_APP-2026-024.md, 2026-04-10_certification-lapsed_APP-2026-027.md, 2026-04-14_GBD-2026-011.md, 2026-04-14_GBD-2026-013.md, 2026-04-14_GBD-2026-017.md, 2026-04-14_GBD-2026-023.md, 2026-04-14_GBD-2026-024.md, 2026-04-14_GBD-2026-032.md, 2026-04-14_GBD-2026-033.md, 2026-04-14_GBD-2026-034.md, 2026-04-14_GBD-2026-036.md, 2026-04-14_GBD-2026-039.md, 2026-04-14_MEC-2026-022.md, 2026-04-14_MEC-2026-026.md, 2026-04-14_MEC-2026-036.md, 2026-04-15_referee-overdue_APP-2026-023.md, 2026-04-16_MEC-2026-030.md, 2026-04-16_MEC-2026-031.md, 2026-04-16_deferral-chase_APP-2026-034.md
+- Produced: deliverables/snapshots/batch-02.json, deliverables/state/batch-02.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:55:11.135010Z -- batch 3 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state.json`
+- Started: 2026-10-03T03:55:11.135010Z
+- Finished: 2026-10-03T03:55:11.165711Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-04-20_confirm-disclosure-reply_APP-2026-015.md, 2026-04-21_MEC-2026-028.md, 2026-04-23_referee-substitution_APP-2026-023.md, 2026-04-24_referee-substitution_APP-2026-034.md, 2026-05-05_MEC-2026-027.md, 2026-05-06_disposition_APP-2026-015.md, 2026-05-12_GBD-2026-012.md, 2026-05-12_GBD-2026-014.md, 2026-05-12_GBD-2026-015.md, 2026-05-12_GBD-2026-016.md, 2026-05-12_GBD-2026-018.md, 2026-05-12_GBD-2026-019.md, 2026-05-12_GBD-2026-020.md, 2026-05-12_GBD-2026-021.md, 2026-05-12_GBD-2026-022.md, 2026-05-12_GBD-2026-025.md, 2026-05-12_GBD-2026-026.md, 2026-05-12_GBD-2026-027.md, 2026-05-12_GBD-2026-028.md, 2026-05-12_GBD-2026-029.md, 2026-05-12_GBD-2026-030.md, 2026-05-12_GBD-2026-031.md, 2026-05-12_GBD-2026-035.md, 2026-05-12_GBD-2026-037.md, 2026-05-12_GBD-2026-038.md, 2026-05-14_reference-stale_APP-2026-025.md
+- Produced: deliverables/snapshots/batch-03.json, deliverables/state/batch-03.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:55:21.336059Z -- batch 1 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 1`
+- Started: 2026-10-03T03:55:21.336059Z
+- Finished: 2026-10-03T03:55:21.370359Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-02-06_gap-explanation_APP-2026-005.md, 2026-02-06_gap-explanation_APP-2026-039.md, 2026-02-13_gap-explanation_APP-2026-017.md, 2026-02-18_missing-items_APP-2026-019.md, 2026-02-20_cover-note_APP-2026-031.md, 2026-03-04_board-action_APP-2026-015.md, 2026-03-06_missing-licence_APP-2026-031.md, 2026-03-06_return-incomplete_APP-2026-018.md, 2026-03-10_MEC-2026-011.md, 2026-03-10_MEC-2026-017.md, 2026-03-10_MEC-2026-024.md, 2026-03-10_MEC-2026-034.md, 2026-03-10_discrepancy_APP-2026-030.md, 2026-03-12_MEC-2026-013.md, 2026-03-12_MEC-2026-023.md
+- Produced: deliverables/snapshots/batch-01.json, deliverables/state/batch-01.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:55:21.371996Z -- batch 2 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 2 --state deliverables/state/batch-01.state.json`
+- Started: 2026-10-03T03:55:21.371996Z
+- Finished: 2026-10-03T03:55:21.400722Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-03-17_MEC-2026-012.md, 2026-03-17_MEC-2026-035.md, 2026-03-19_MEC-2026-015.md, 2026-03-19_MEC-2026-033.md, 2026-03-24_MEC-2026-014.md, 2026-03-24_MEC-2026-025.md, 2026-03-26_MEC-2026-016.md, 2026-03-26_MEC-2026-032.md, 2026-03-26_MEC-2026-037.md, 2026-03-30_gap-explanation_APP-2026-018.md, 2026-03-31_MEC-2026-018.md, 2026-03-31_disposition_APP-2026-029.md, 2026-04-02_MEC-2026-019.md, 2026-04-02_MEC-2026-029.md, 2026-04-02_confirm-disclosure_APP-2026-015.md, 2026-04-02_discontinued_APP-2026-029.md, 2026-04-02_disposition_APP-2026-017.md, 2026-04-02_disposition_APP-2026-032.md, 2026-04-06_withdrawal_APP-2026-028.md, 2026-04-07_MEC-2026-020.md, 2026-04-08_disposition_APP-2026-027.md, 2026-04-09_MEC-2026-021.md, 2026-04-09_referee-ineligible_APP-2026-024.md, 2026-04-10_certification-lapsed_APP-2026-027.md, 2026-04-14_GBD-2026-011.md, 2026-04-14_GBD-2026-013.md, 2026-04-14_GBD-2026-017.md, 2026-04-14_GBD-2026-023.md, 2026-04-14_GBD-2026-024.md, 2026-04-14_GBD-2026-032.md, 2026-04-14_GBD-2026-033.md, 2026-04-14_GBD-2026-034.md, 2026-04-14_GBD-2026-036.md, 2026-04-14_GBD-2026-039.md, 2026-04-14_MEC-2026-022.md, 2026-04-14_MEC-2026-026.md, 2026-04-14_MEC-2026-036.md, 2026-04-15_referee-overdue_APP-2026-023.md, 2026-04-16_MEC-2026-030.md, 2026-04-16_MEC-2026-031.md, 2026-04-16_deferral-chase_APP-2026-034.md
+- Produced: deliverables/snapshots/batch-02.json, deliverables/state/batch-02.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:55:21.402125Z -- batch 3 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state.json`
+- Started: 2026-10-03T03:55:21.402125Z
+- Finished: 2026-10-03T03:55:21.430937Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-04-20_confirm-disclosure-reply_APP-2026-015.md, 2026-04-21_MEC-2026-028.md, 2026-04-23_referee-substitution_APP-2026-023.md, 2026-04-24_referee-substitution_APP-2026-034.md, 2026-05-05_MEC-2026-027.md, 2026-05-06_disposition_APP-2026-015.md, 2026-05-12_GBD-2026-012.md, 2026-05-12_GBD-2026-014.md, 2026-05-12_GBD-2026-015.md, 2026-05-12_GBD-2026-016.md, 2026-05-12_GBD-2026-018.md, 2026-05-12_GBD-2026-019.md, 2026-05-12_GBD-2026-020.md, 2026-05-12_GBD-2026-021.md, 2026-05-12_GBD-2026-022.md, 2026-05-12_GBD-2026-025.md, 2026-05-12_GBD-2026-026.md, 2026-05-12_GBD-2026-027.md, 2026-05-12_GBD-2026-028.md, 2026-05-12_GBD-2026-029.md, 2026-05-12_GBD-2026-030.md, 2026-05-12_GBD-2026-031.md, 2026-05-12_GBD-2026-035.md, 2026-05-12_GBD-2026-037.md, 2026-05-12_GBD-2026-038.md, 2026-05-14_reference-stale_APP-2026-025.md
+- Produced: deliverables/snapshots/batch-03.json, deliverables/state/batch-03.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:58:25.462798Z -- batch 1 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 1`
+- Started: 2026-10-03T03:58:25.462798Z
+- Finished: 2026-10-03T03:58:25.503261Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-02-06_gap-explanation_APP-2026-005.md, 2026-02-06_gap-explanation_APP-2026-039.md, 2026-02-13_gap-explanation_APP-2026-017.md, 2026-02-18_missing-items_APP-2026-019.md, 2026-02-20_cover-note_APP-2026-031.md, 2026-03-04_board-action_APP-2026-015.md, 2026-03-06_missing-licence_APP-2026-031.md, 2026-03-06_return-incomplete_APP-2026-018.md, 2026-03-10_MEC-2026-011.md, 2026-03-10_MEC-2026-017.md, 2026-03-10_MEC-2026-024.md, 2026-03-10_MEC-2026-034.md, 2026-03-10_discrepancy_APP-2026-030.md, 2026-03-12_MEC-2026-013.md, 2026-03-12_MEC-2026-023.md
+- Produced: deliverables/snapshots/batch-01.json, deliverables/state/batch-01.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:58:25.504932Z -- batch 2 -- blocked
+
+- Command: `python3 scripts/run_batch.py --batch 2 --state deliverables/state/batch-01.state.json`
+- Started: 2026-10-03T03:58:25.504932Z
+- Finished: 2026-10-03T03:58:25.540887Z
+- Consumed record files: (none)
+- Consumed documents: (none)
+- Produced: (none)
+- Failures:
+  - batch 2 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+- Note: Traceback (most recent call last):
+  File "/Users/caseytsai/GitRollTraining/practitioner-credentialing/scripts/run_batch.py", line 142, in main
+    "rerun with --force-resupersede to regenerate it and every later snapshot".format(args.batch)
+RuntimeError: batch 2 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+
+
+## 2026-10-03T03:58:25.555802Z -- batch 3 -- blocked
+
+- Command: `python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state.json`
+- Started: 2026-10-03T03:58:25.555802Z
+- Finished: 2026-10-03T03:58:25.589292Z
+- Consumed record files: (none)
+- Consumed documents: (none)
+- Produced: (none)
+- Failures:
+  - batch 3 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+- Note: Traceback (most recent call last):
+  File "/Users/caseytsai/GitRollTraining/practitioner-credentialing/scripts/run_batch.py", line 142, in main
+    "rerun with --force-resupersede to regenerate it and every later snapshot".format(args.batch)
+RuntimeError: batch 3 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+
+
+## 2026-10-03T03:58:41.642588Z -- batch 2 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 2 --state deliverables/state/batch-01.state.json`
+- Started: 2026-10-03T03:58:41.642588Z
+- Finished: 2026-10-03T03:58:41.699022Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-03-17_MEC-2026-012.md, 2026-03-17_MEC-2026-035.md, 2026-03-19_MEC-2026-015.md, 2026-03-19_MEC-2026-033.md, 2026-03-24_MEC-2026-014.md, 2026-03-24_MEC-2026-025.md, 2026-03-26_MEC-2026-016.md, 2026-03-26_MEC-2026-032.md, 2026-03-26_MEC-2026-037.md, 2026-03-30_gap-explanation_APP-2026-018.md, 2026-03-31_MEC-2026-018.md, 2026-03-31_disposition_APP-2026-029.md, 2026-04-02_MEC-2026-019.md, 2026-04-02_MEC-2026-029.md, 2026-04-02_confirm-disclosure_APP-2026-015.md, 2026-04-02_discontinued_APP-2026-029.md, 2026-04-02_disposition_APP-2026-017.md, 2026-04-02_disposition_APP-2026-032.md, 2026-04-06_withdrawal_APP-2026-028.md, 2026-04-07_MEC-2026-020.md, 2026-04-08_disposition_APP-2026-027.md, 2026-04-09_MEC-2026-021.md, 2026-04-09_referee-ineligible_APP-2026-024.md, 2026-04-10_certification-lapsed_APP-2026-027.md, 2026-04-14_GBD-2026-011.md, 2026-04-14_GBD-2026-013.md, 2026-04-14_GBD-2026-017.md, 2026-04-14_GBD-2026-023.md, 2026-04-14_GBD-2026-024.md, 2026-04-14_GBD-2026-032.md, 2026-04-14_GBD-2026-033.md, 2026-04-14_GBD-2026-034.md, 2026-04-14_GBD-2026-036.md, 2026-04-14_GBD-2026-039.md, 2026-04-14_MEC-2026-022.md, 2026-04-14_MEC-2026-026.md, 2026-04-14_MEC-2026-036.md, 2026-04-15_referee-overdue_APP-2026-023.md, 2026-04-16_MEC-2026-030.md, 2026-04-16_MEC-2026-031.md, 2026-04-16_deferral-chase_APP-2026-034.md
+- Produced: deliverables/snapshots/batch-02.json, deliverables/state/batch-02.state.json, deliverables/run-log.md
+- Failures: none
+
+## 2026-10-03T03:58:41.834745Z -- batch 3 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state.json`
+- Started: 2026-10-03T03:58:41.834745Z
+- Finished: 2026-10-03T03:58:41.889981Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-04-20_confirm-disclosure-reply_APP-2026-015.md, 2026-04-21_MEC-2026-028.md, 2026-04-23_referee-substitution_APP-2026-023.md, 2026-04-24_referee-substitution_APP-2026-034.md, 2026-05-05_MEC-2026-027.md, 2026-05-06_disposition_APP-2026-015.md, 2026-05-12_GBD-2026-012.md, 2026-05-12_GBD-2026-014.md, 2026-05-12_GBD-2026-015.md, 2026-05-12_GBD-2026-016.md, 2026-05-12_GBD-2026-018.md, 2026-05-12_GBD-2026-019.md, 2026-05-12_GBD-2026-020.md, 2026-05-12_GBD-2026-021.md, 2026-05-12_GBD-2026-022.md, 2026-05-12_GBD-2026-025.md, 2026-05-12_GBD-2026-026.md, 2026-05-12_GBD-2026-027.md, 2026-05-12_GBD-2026-028.md, 2026-05-12_GBD-2026-029.md, 2026-05-12_GBD-2026-030.md, 2026-05-12_GBD-2026-031.md, 2026-05-12_GBD-2026-035.md, 2026-05-12_GBD-2026-037.md, 2026-05-12_GBD-2026-038.md, 2026-05-14_reference-stale_APP-2026-025.md
+- Produced: deliverables/snapshots/batch-03.json, deliverables/state/batch-03.state.json, deliverables/run-log.md
+- Failures: none
+
+
+## Supersede note -- 2026-10-03 (second fix)
+
+`scripts/engine.py:evaluate_decisions` filtered decisions to only ones matching the application's
+*current* revision before building `decision_records`, so a decision whose revision no longer
+matched (e.g. an unrelated correction bumped the revision after the decision was issued) vanished
+from `decisions[]` entirely -- no admitted:true, no admitted:false, nothing. This violates the
+snapshot schema's own rule that a refused record stays in every later snapshot with its reason.
+Caught via `deliverables/verification.md`'s independent recompute (the Governing-Body-approval
+recount for batch 2 found 8 structurally-approval-shaped decisions in the raw data but only 7
+applications with a non-null `approval_decision_id` in the snapshot; tracing the gap found
+APP-2026-036's `GBD-2026-034` had simply disappeared). Fixed so every decision for an application
+appears in `decision_records`; one naming a now-superseded revision is refused with an explicit
+reason and queues a Medical-Services-Professional action item asking whether it still applies.
+Regression test `test_decision_for_a_superseded_revision_is_refused_not_silently_dropped` in
+`tests/test_engine_orchestration.py`, confirmed RED before the fix and GREEN after.
+
+`deliverables/snapshots/batch-02.json` and `batch-03.json` were both already sealed (committed in
+the batch-3 run's commit). Their pre-fix bytes are preserved unchanged at
+`batch-02.superseded-20261003-decision-revision-fix.json` and
+`batch-03.superseded-20261003-decision-revision-fix.json`, and both were regenerated under new
+`snapshot_id`s via `--force-resupersede`.
+## 2026-10-03T03:59:09.179143Z -- batch 1 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 1`
+- Started: 2026-10-03T03:59:09.179143Z
+- Finished: 2026-10-03T03:59:09.212623Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-02-06_gap-explanation_APP-2026-005.md, 2026-02-06_gap-explanation_APP-2026-039.md, 2026-02-13_gap-explanation_APP-2026-017.md, 2026-02-18_missing-items_APP-2026-019.md, 2026-02-20_cover-note_APP-2026-031.md, 2026-03-04_board-action_APP-2026-015.md, 2026-03-06_missing-licence_APP-2026-031.md, 2026-03-06_return-incomplete_APP-2026-018.md, 2026-03-10_MEC-2026-011.md, 2026-03-10_MEC-2026-017.md, 2026-03-10_MEC-2026-024.md, 2026-03-10_MEC-2026-034.md, 2026-03-10_discrepancy_APP-2026-030.md, 2026-03-12_MEC-2026-013.md, 2026-03-12_MEC-2026-023.md
+- Produced: deliverables/snapshots/batch-01.json, deliverables/state/batch-01.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:59:09.214086Z -- batch 2 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 2 --state deliverables/state/batch-01.state.json`
+- Started: 2026-10-03T03:59:09.214086Z
+- Finished: 2026-10-03T03:59:09.242867Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-03-17_MEC-2026-012.md, 2026-03-17_MEC-2026-035.md, 2026-03-19_MEC-2026-015.md, 2026-03-19_MEC-2026-033.md, 2026-03-24_MEC-2026-014.md, 2026-03-24_MEC-2026-025.md, 2026-03-26_MEC-2026-016.md, 2026-03-26_MEC-2026-032.md, 2026-03-26_MEC-2026-037.md, 2026-03-30_gap-explanation_APP-2026-018.md, 2026-03-31_MEC-2026-018.md, 2026-03-31_disposition_APP-2026-029.md, 2026-04-02_MEC-2026-019.md, 2026-04-02_MEC-2026-029.md, 2026-04-02_confirm-disclosure_APP-2026-015.md, 2026-04-02_discontinued_APP-2026-029.md, 2026-04-02_disposition_APP-2026-017.md, 2026-04-02_disposition_APP-2026-032.md, 2026-04-06_withdrawal_APP-2026-028.md, 2026-04-07_MEC-2026-020.md, 2026-04-08_disposition_APP-2026-027.md, 2026-04-09_MEC-2026-021.md, 2026-04-09_referee-ineligible_APP-2026-024.md, 2026-04-10_certification-lapsed_APP-2026-027.md, 2026-04-14_GBD-2026-011.md, 2026-04-14_GBD-2026-013.md, 2026-04-14_GBD-2026-017.md, 2026-04-14_GBD-2026-023.md, 2026-04-14_GBD-2026-024.md, 2026-04-14_GBD-2026-032.md, 2026-04-14_GBD-2026-033.md, 2026-04-14_GBD-2026-034.md, 2026-04-14_GBD-2026-036.md, 2026-04-14_GBD-2026-039.md, 2026-04-14_MEC-2026-022.md, 2026-04-14_MEC-2026-026.md, 2026-04-14_MEC-2026-036.md, 2026-04-15_referee-overdue_APP-2026-023.md, 2026-04-16_MEC-2026-030.md, 2026-04-16_MEC-2026-031.md, 2026-04-16_deferral-chase_APP-2026-034.md
+- Produced: deliverables/snapshots/batch-02.json, deliverables/state/batch-02.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T03:59:09.244485Z -- batch 3 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state.json`
+- Started: 2026-10-03T03:59:09.244485Z
+- Finished: 2026-10-03T03:59:09.273333Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-04-20_confirm-disclosure-reply_APP-2026-015.md, 2026-04-21_MEC-2026-028.md, 2026-04-23_referee-substitution_APP-2026-023.md, 2026-04-24_referee-substitution_APP-2026-034.md, 2026-05-05_MEC-2026-027.md, 2026-05-06_disposition_APP-2026-015.md, 2026-05-12_GBD-2026-012.md, 2026-05-12_GBD-2026-014.md, 2026-05-12_GBD-2026-015.md, 2026-05-12_GBD-2026-016.md, 2026-05-12_GBD-2026-018.md, 2026-05-12_GBD-2026-019.md, 2026-05-12_GBD-2026-020.md, 2026-05-12_GBD-2026-021.md, 2026-05-12_GBD-2026-022.md, 2026-05-12_GBD-2026-025.md, 2026-05-12_GBD-2026-026.md, 2026-05-12_GBD-2026-027.md, 2026-05-12_GBD-2026-028.md, 2026-05-12_GBD-2026-029.md, 2026-05-12_GBD-2026-030.md, 2026-05-12_GBD-2026-031.md, 2026-05-12_GBD-2026-035.md, 2026-05-12_GBD-2026-037.md, 2026-05-12_GBD-2026-038.md, 2026-05-14_reference-stale_APP-2026-025.md
+- Produced: deliverables/snapshots/batch-03.json, deliverables/state/batch-03.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T04:02:01.459441Z -- batch 1 -- blocked
+
+- Command: `python3 scripts/run_batch.py --batch 1`
+- Started: 2026-10-03T04:02:01.459441Z
+- Finished: 2026-10-03T04:02:01.499437Z
+- Consumed record files: (none)
+- Consumed documents: (none)
+- Produced: (none)
+- Failures:
+  - batch 1 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+- Note: Traceback (most recent call last):
+  File "/Users/caseytsai/GitRollTraining/practitioner-credentialing/scripts/run_batch.py", line 142, in main
+    "rerun with --force-resupersede to regenerate it and every later snapshot".format(args.batch)
+RuntimeError: batch 1 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+
+
+## 2026-10-03T04:02:01.514199Z -- batch 2 -- blocked
+
+- Command: `python3 scripts/run_batch.py --batch 2 --state deliverables/state/batch-01.state.json`
+- Started: 2026-10-03T04:02:01.514199Z
+- Finished: 2026-10-03T04:02:01.550613Z
+- Consumed record files: (none)
+- Consumed documents: (none)
+- Produced: (none)
+- Failures:
+  - batch 2 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+- Note: Traceback (most recent call last):
+  File "/Users/caseytsai/GitRollTraining/practitioner-credentialing/scripts/run_batch.py", line 142, in main
+    "rerun with --force-resupersede to regenerate it and every later snapshot".format(args.batch)
+RuntimeError: batch 2 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+
+
+## 2026-10-03T04:02:01.553244Z -- batch 3 -- blocked
+
+- Command: `python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state.json`
+- Started: 2026-10-03T04:02:01.553244Z
+- Finished: 2026-10-03T04:02:01.588112Z
+- Consumed record files: (none)
+- Consumed documents: (none)
+- Produced: (none)
+- Failures:
+  - batch 3 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+- Note: Traceback (most recent call last):
+  File "/Users/caseytsai/GitRollTraining/practitioner-credentialing/scripts/run_batch.py", line 142, in main
+    "rerun with --force-resupersede to regenerate it and every later snapshot".format(args.batch)
+RuntimeError: batch 3 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+
+
+## 2026-10-03T04:02:11.037894Z -- batch 1 -- blocked
+
+- Command: `python3 scripts/run_batch.py --batch 1`
+- Started: 2026-10-03T04:02:11.037894Z
+- Finished: 2026-10-03T04:02:11.073567Z
+- Consumed record files: (none)
+- Consumed documents: (none)
+- Produced: (none)
+- Failures:
+  - batch 1 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+- Note: Traceback (most recent call last):
+  File "/Users/caseytsai/GitRollTraining/practitioner-credentialing/scripts/run_batch.py", line 142, in main
+    "rerun with --force-resupersede to regenerate it and every later snapshot".format(args.batch)
+RuntimeError: batch 1 already has a sealed snapshot that differs from this run's result; rerun with --force-resupersede to regenerate it and every later snapshot
+
+
+## 2026-10-03T04:02:24.142082Z -- batch 1 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 1`
+- Started: 2026-10-03T04:02:24.142082Z
+- Finished: 2026-10-03T04:02:24.201733Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-02-06_gap-explanation_APP-2026-005.md, 2026-02-06_gap-explanation_APP-2026-039.md, 2026-02-13_gap-explanation_APP-2026-017.md, 2026-02-18_missing-items_APP-2026-019.md, 2026-02-20_cover-note_APP-2026-031.md, 2026-03-04_board-action_APP-2026-015.md, 2026-03-06_missing-licence_APP-2026-031.md, 2026-03-06_return-incomplete_APP-2026-018.md, 2026-03-10_MEC-2026-011.md, 2026-03-10_MEC-2026-017.md, 2026-03-10_MEC-2026-024.md, 2026-03-10_MEC-2026-034.md, 2026-03-10_discrepancy_APP-2026-030.md, 2026-03-12_MEC-2026-013.md, 2026-03-12_MEC-2026-023.md
+- Produced: deliverables/snapshots/batch-01.json, deliverables/state/batch-01.state.json, deliverables/run-log.md
+- Failures: none
+
+## 2026-10-03T04:02:24.341089Z -- batch 2 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 2 --state deliverables/state/batch-01.state.json`
+- Started: 2026-10-03T04:02:24.341089Z
+- Finished: 2026-10-03T04:02:24.402876Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-03-17_MEC-2026-012.md, 2026-03-17_MEC-2026-035.md, 2026-03-19_MEC-2026-015.md, 2026-03-19_MEC-2026-033.md, 2026-03-24_MEC-2026-014.md, 2026-03-24_MEC-2026-025.md, 2026-03-26_MEC-2026-016.md, 2026-03-26_MEC-2026-032.md, 2026-03-26_MEC-2026-037.md, 2026-03-30_gap-explanation_APP-2026-018.md, 2026-03-31_MEC-2026-018.md, 2026-03-31_disposition_APP-2026-029.md, 2026-04-02_MEC-2026-019.md, 2026-04-02_MEC-2026-029.md, 2026-04-02_confirm-disclosure_APP-2026-015.md, 2026-04-02_discontinued_APP-2026-029.md, 2026-04-02_disposition_APP-2026-017.md, 2026-04-02_disposition_APP-2026-032.md, 2026-04-06_withdrawal_APP-2026-028.md, 2026-04-07_MEC-2026-020.md, 2026-04-08_disposition_APP-2026-027.md, 2026-04-09_MEC-2026-021.md, 2026-04-09_referee-ineligible_APP-2026-024.md, 2026-04-10_certification-lapsed_APP-2026-027.md, 2026-04-14_GBD-2026-011.md, 2026-04-14_GBD-2026-013.md, 2026-04-14_GBD-2026-017.md, 2026-04-14_GBD-2026-023.md, 2026-04-14_GBD-2026-024.md, 2026-04-14_GBD-2026-032.md, 2026-04-14_GBD-2026-033.md, 2026-04-14_GBD-2026-034.md, 2026-04-14_GBD-2026-036.md, 2026-04-14_GBD-2026-039.md, 2026-04-14_MEC-2026-022.md, 2026-04-14_MEC-2026-026.md, 2026-04-14_MEC-2026-036.md, 2026-04-15_referee-overdue_APP-2026-023.md, 2026-04-16_MEC-2026-030.md, 2026-04-16_MEC-2026-031.md, 2026-04-16_deferral-chase_APP-2026-034.md
+- Produced: deliverables/snapshots/batch-02.json, deliverables/state/batch-02.state.json, deliverables/run-log.md
+- Failures: none
+
+## 2026-10-03T04:02:24.539964Z -- batch 3 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state.json`
+- Started: 2026-10-03T04:02:24.539964Z
+- Finished: 2026-10-03T04:02:24.600538Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-04-20_confirm-disclosure-reply_APP-2026-015.md, 2026-04-21_MEC-2026-028.md, 2026-04-23_referee-substitution_APP-2026-023.md, 2026-04-24_referee-substitution_APP-2026-034.md, 2026-05-05_MEC-2026-027.md, 2026-05-06_disposition_APP-2026-015.md, 2026-05-12_GBD-2026-012.md, 2026-05-12_GBD-2026-014.md, 2026-05-12_GBD-2026-015.md, 2026-05-12_GBD-2026-016.md, 2026-05-12_GBD-2026-018.md, 2026-05-12_GBD-2026-019.md, 2026-05-12_GBD-2026-020.md, 2026-05-12_GBD-2026-021.md, 2026-05-12_GBD-2026-022.md, 2026-05-12_GBD-2026-025.md, 2026-05-12_GBD-2026-026.md, 2026-05-12_GBD-2026-027.md, 2026-05-12_GBD-2026-028.md, 2026-05-12_GBD-2026-029.md, 2026-05-12_GBD-2026-030.md, 2026-05-12_GBD-2026-031.md, 2026-05-12_GBD-2026-035.md, 2026-05-12_GBD-2026-037.md, 2026-05-12_GBD-2026-038.md, 2026-05-14_reference-stale_APP-2026-025.md
+- Produced: deliverables/snapshots/batch-03.json, deliverables/state/batch-03.state.json, deliverables/run-log.md
+- Failures: none
+
+
+## Supersede note -- 2026-10-03 (third fix)
+
+The design spec called for "any professional-practice question answered Yes -> finding, routed to
+the Clinical Director" (one of the five protected judgments: whether a finding is disqualifying),
+but `scripts/engine.py` never actually implemented this trigger -- it was a genuine gap between
+the design spec and the code, found by `deliverables/verification.md`'s own cross-check: batch 1's
+`APP-2026-032` has a PPQ-2 answered "Yes", yet no element ever read `finding` for it; it only
+happened to reach `packet-presentable`/`active` because the other five elements resolved on their
+own evidence, meaning the required human escalation silently never fired. Added
+`detect_ppq_findings` and wired it into `process_application` (overriding the `licensure` element
+to `finding`, queuing a Clinical Director action item) alongside the existing discrepancy/
+eligibility overrides. Two new tests: a unit test for `detect_ppq_findings` and an orchestration
+test confirming the override fires even when every element would otherwise resolve, and that a
+clearing Clinical Director disposition still resolves it afterward -- both confirmed RED before
+the fix, GREEN after.
+
+All three sealed snapshots were affected (batch 1 directly, via APP-2026-032; batches 2-3 by
+carrying it forward). Their pre-fix bytes are preserved unchanged at
+`batch-0N.superseded-20261003-ppq-finding-fix.json` for N in 1-3, and all three were regenerated
+under new `snapshot_id`s via `--force-resupersede`.
+## 2026-10-03T04:02:42.590493Z -- batch 1 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 1`
+- Started: 2026-10-03T04:02:42.590493Z
+- Finished: 2026-10-03T04:02:42.625412Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-02-06_gap-explanation_APP-2026-005.md, 2026-02-06_gap-explanation_APP-2026-039.md, 2026-02-13_gap-explanation_APP-2026-017.md, 2026-02-18_missing-items_APP-2026-019.md, 2026-02-20_cover-note_APP-2026-031.md, 2026-03-04_board-action_APP-2026-015.md, 2026-03-06_missing-licence_APP-2026-031.md, 2026-03-06_return-incomplete_APP-2026-018.md, 2026-03-10_MEC-2026-011.md, 2026-03-10_MEC-2026-017.md, 2026-03-10_MEC-2026-024.md, 2026-03-10_MEC-2026-034.md, 2026-03-10_discrepancy_APP-2026-030.md, 2026-03-12_MEC-2026-013.md, 2026-03-12_MEC-2026-023.md
+- Produced: deliverables/snapshots/batch-01.json, deliverables/state/batch-01.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T04:02:42.627022Z -- batch 2 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 2 --state deliverables/state/batch-01.state.json`
+- Started: 2026-10-03T04:02:42.627022Z
+- Finished: 2026-10-03T04:02:42.657823Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-03-17_MEC-2026-012.md, 2026-03-17_MEC-2026-035.md, 2026-03-19_MEC-2026-015.md, 2026-03-19_MEC-2026-033.md, 2026-03-24_MEC-2026-014.md, 2026-03-24_MEC-2026-025.md, 2026-03-26_MEC-2026-016.md, 2026-03-26_MEC-2026-032.md, 2026-03-26_MEC-2026-037.md, 2026-03-30_gap-explanation_APP-2026-018.md, 2026-03-31_MEC-2026-018.md, 2026-03-31_disposition_APP-2026-029.md, 2026-04-02_MEC-2026-019.md, 2026-04-02_MEC-2026-029.md, 2026-04-02_confirm-disclosure_APP-2026-015.md, 2026-04-02_discontinued_APP-2026-029.md, 2026-04-02_disposition_APP-2026-017.md, 2026-04-02_disposition_APP-2026-032.md, 2026-04-06_withdrawal_APP-2026-028.md, 2026-04-07_MEC-2026-020.md, 2026-04-08_disposition_APP-2026-027.md, 2026-04-09_MEC-2026-021.md, 2026-04-09_referee-ineligible_APP-2026-024.md, 2026-04-10_certification-lapsed_APP-2026-027.md, 2026-04-14_GBD-2026-011.md, 2026-04-14_GBD-2026-013.md, 2026-04-14_GBD-2026-017.md, 2026-04-14_GBD-2026-023.md, 2026-04-14_GBD-2026-024.md, 2026-04-14_GBD-2026-032.md, 2026-04-14_GBD-2026-033.md, 2026-04-14_GBD-2026-034.md, 2026-04-14_GBD-2026-036.md, 2026-04-14_GBD-2026-039.md, 2026-04-14_MEC-2026-022.md, 2026-04-14_MEC-2026-026.md, 2026-04-14_MEC-2026-036.md, 2026-04-15_referee-overdue_APP-2026-023.md, 2026-04-16_MEC-2026-030.md, 2026-04-16_MEC-2026-031.md, 2026-04-16_deferral-chase_APP-2026-034.md
+- Produced: deliverables/snapshots/batch-02.json, deliverables/state/batch-02.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T04:02:42.659555Z -- batch 3 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state.json`
+- Started: 2026-10-03T04:02:42.659555Z
+- Finished: 2026-10-03T04:02:42.690650Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-04-20_confirm-disclosure-reply_APP-2026-015.md, 2026-04-21_MEC-2026-028.md, 2026-04-23_referee-substitution_APP-2026-023.md, 2026-04-24_referee-substitution_APP-2026-034.md, 2026-05-05_MEC-2026-027.md, 2026-05-06_disposition_APP-2026-015.md, 2026-05-12_GBD-2026-012.md, 2026-05-12_GBD-2026-014.md, 2026-05-12_GBD-2026-015.md, 2026-05-12_GBD-2026-016.md, 2026-05-12_GBD-2026-018.md, 2026-05-12_GBD-2026-019.md, 2026-05-12_GBD-2026-020.md, 2026-05-12_GBD-2026-021.md, 2026-05-12_GBD-2026-022.md, 2026-05-12_GBD-2026-025.md, 2026-05-12_GBD-2026-026.md, 2026-05-12_GBD-2026-027.md, 2026-05-12_GBD-2026-028.md, 2026-05-12_GBD-2026-029.md, 2026-05-12_GBD-2026-030.md, 2026-05-12_GBD-2026-031.md, 2026-05-12_GBD-2026-035.md, 2026-05-12_GBD-2026-037.md, 2026-05-12_GBD-2026-038.md, 2026-05-14_reference-stale_APP-2026-025.md
+- Produced: deliverables/snapshots/batch-03.json, deliverables/state/batch-03.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T04:04:17.618436Z -- batch 1 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 1`
+- Started: 2026-10-03T04:04:17.618436Z
+- Finished: 2026-10-03T04:04:17.656773Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-02-06_gap-explanation_APP-2026-005.md, 2026-02-06_gap-explanation_APP-2026-039.md, 2026-02-13_gap-explanation_APP-2026-017.md, 2026-02-18_missing-items_APP-2026-019.md, 2026-02-20_cover-note_APP-2026-031.md, 2026-03-04_board-action_APP-2026-015.md, 2026-03-06_missing-licence_APP-2026-031.md, 2026-03-06_return-incomplete_APP-2026-018.md, 2026-03-10_MEC-2026-011.md, 2026-03-10_MEC-2026-017.md, 2026-03-10_MEC-2026-024.md, 2026-03-10_MEC-2026-034.md, 2026-03-10_discrepancy_APP-2026-030.md, 2026-03-12_MEC-2026-013.md, 2026-03-12_MEC-2026-023.md
+- Produced: deliverables/snapshots/batch-01.json, deliverables/state/batch-01.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T04:04:17.658485Z -- batch 2 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 2 --state deliverables/state/batch-01.state.json`
+- Started: 2026-10-03T04:04:17.658485Z
+- Finished: 2026-10-03T04:04:17.693034Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-03-17_MEC-2026-012.md, 2026-03-17_MEC-2026-035.md, 2026-03-19_MEC-2026-015.md, 2026-03-19_MEC-2026-033.md, 2026-03-24_MEC-2026-014.md, 2026-03-24_MEC-2026-025.md, 2026-03-26_MEC-2026-016.md, 2026-03-26_MEC-2026-032.md, 2026-03-26_MEC-2026-037.md, 2026-03-30_gap-explanation_APP-2026-018.md, 2026-03-31_MEC-2026-018.md, 2026-03-31_disposition_APP-2026-029.md, 2026-04-02_MEC-2026-019.md, 2026-04-02_MEC-2026-029.md, 2026-04-02_confirm-disclosure_APP-2026-015.md, 2026-04-02_discontinued_APP-2026-029.md, 2026-04-02_disposition_APP-2026-017.md, 2026-04-02_disposition_APP-2026-032.md, 2026-04-06_withdrawal_APP-2026-028.md, 2026-04-07_MEC-2026-020.md, 2026-04-08_disposition_APP-2026-027.md, 2026-04-09_MEC-2026-021.md, 2026-04-09_referee-ineligible_APP-2026-024.md, 2026-04-10_certification-lapsed_APP-2026-027.md, 2026-04-14_GBD-2026-011.md, 2026-04-14_GBD-2026-013.md, 2026-04-14_GBD-2026-017.md, 2026-04-14_GBD-2026-023.md, 2026-04-14_GBD-2026-024.md, 2026-04-14_GBD-2026-032.md, 2026-04-14_GBD-2026-033.md, 2026-04-14_GBD-2026-034.md, 2026-04-14_GBD-2026-036.md, 2026-04-14_GBD-2026-039.md, 2026-04-14_MEC-2026-022.md, 2026-04-14_MEC-2026-026.md, 2026-04-14_MEC-2026-036.md, 2026-04-15_referee-overdue_APP-2026-023.md, 2026-04-16_MEC-2026-030.md, 2026-04-16_MEC-2026-031.md, 2026-04-16_deferral-chase_APP-2026-034.md
+- Produced: deliverables/snapshots/batch-02.json, deliverables/state/batch-02.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+
+## 2026-10-03T04:04:17.694495Z -- batch 3 -- supported
+
+- Command: `python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state.json`
+- Started: 2026-10-03T04:04:17.694495Z
+- Finished: 2026-10-03T04:04:17.727464Z
+- Consumed record files: application-disclosures.csv, applications.csv, certification-replies.csv, correspondence.csv, declared-credentials.csv, declared-history.csv, licence-lookup-other-states.csv, licence-lookup-wa.csv, peer-referees.csv, peer-reference-replies.csv, privilege-requests.csv, verification-attempts.csv, verification-replies.csv
+- Consumed documents: 2026-04-20_confirm-disclosure-reply_APP-2026-015.md, 2026-04-21_MEC-2026-028.md, 2026-04-23_referee-substitution_APP-2026-023.md, 2026-04-24_referee-substitution_APP-2026-034.md, 2026-05-05_MEC-2026-027.md, 2026-05-06_disposition_APP-2026-015.md, 2026-05-12_GBD-2026-012.md, 2026-05-12_GBD-2026-014.md, 2026-05-12_GBD-2026-015.md, 2026-05-12_GBD-2026-016.md, 2026-05-12_GBD-2026-018.md, 2026-05-12_GBD-2026-019.md, 2026-05-12_GBD-2026-020.md, 2026-05-12_GBD-2026-021.md, 2026-05-12_GBD-2026-022.md, 2026-05-12_GBD-2026-025.md, 2026-05-12_GBD-2026-026.md, 2026-05-12_GBD-2026-027.md, 2026-05-12_GBD-2026-028.md, 2026-05-12_GBD-2026-029.md, 2026-05-12_GBD-2026-030.md, 2026-05-12_GBD-2026-031.md, 2026-05-12_GBD-2026-035.md, 2026-05-12_GBD-2026-037.md, 2026-05-12_GBD-2026-038.md, 2026-05-14_reference-stale_APP-2026-025.md
+- Produced: deliverables/snapshots/batch-03.json, deliverables/state/batch-03.state.json, deliverables/run-log.md
+- Failures: none
+- Note: unchanged re-run; sealed snapshot left untouched
+

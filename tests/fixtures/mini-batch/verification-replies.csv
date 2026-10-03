@@ -1,0 +1,2 @@
+reply_id,application_id,entry_id,element,attester_organization,attester_name,attester_role,received_from,verified_credential,verified_from,verified_to,outcome,requested_date,received_date,reply_method,notes
+VR-T100,APP-TEST-001,ENT-T100,education-and-training,Test University School of Medicine,Pat Clerk,Registrar,Registrar's office,Degree — Doctor of Medicine,2004-08-01,2008-06-01,confirmed,2026-01-12,2026-01-20,secure portal,

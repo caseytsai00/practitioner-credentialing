@@ -1,0 +1,3 @@
+application_id,revision,applicant_id,received_date,first_received_date,last_name,first_name,middle_name,birth_year,degree,npi,practice_state,position_sought,discipline,release_signed_date,cv_received_date,revision_reason
+APP-TEST-001,1,LP-9001,2026-01-10,2026-01-10,Rivera,Sam,,1980,MD,1000000001,WA,"Staff Physician, Family Medicine",Family Medicine,2026-01-10,2026-01-10,
+APP-TEST-002,1,LP-9002,2026-01-11,2026-01-11,Nakamura,Lin,,1979,MD,1000000002,WA,"Staff Physician, Internal Medicine",Internal Medicine,,2026-01-11,

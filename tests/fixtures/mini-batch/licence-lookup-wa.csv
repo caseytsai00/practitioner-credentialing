@@ -1,0 +1,2 @@
+credentialnumber,credentialtype,status,firstissuedate,lastissuedate,expirationdate,ceduedate,actiontaken,birthyear,firstname,middlename,lastname,lookup_date
+MD90000001,Physician And Surgeon License,ACTIVE,2008-06-05,2026-01-01,2028-06-30,2027-06-30,No,1980,Sam,,Rivera,2026-01-10

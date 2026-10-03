@@ -1,0 +1,3 @@
+reply_id,referee_id,application_id,signature_date,received_date,related_or_partner,relationship_stated,referee_specialty_stated,last_worked_together_end,recommendation,comments
+RR-T100,REF-T100,APP-TEST-001,2026-01-20,2026-01-22,No,Worked together,Family Medicine,,Recommend without reservation,Good.
+RR-T101,REF-T101,APP-TEST-001,2026-01-21,2026-01-23,No,Worked together,Family Medicine,,Recommend without reservation,Good.

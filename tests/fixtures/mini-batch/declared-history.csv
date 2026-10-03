@@ -1,0 +1,3 @@
+entry_id,application_id,revision,entry_type,organization,location,role,from_date,to_date,hours_per_week,contact_name,contact_email,notes
+ENT-T100,APP-TEST-001,1,medical-school,Test University School of Medicine,"Testville, WA",Doctor of Medicine,2004-08-01,2008-06-01,,Pat Clerk,pat.clerk@test.example,
+ENT-T101,APP-TEST-001,1,employment,Test Clinic,"Testville, WA",Staff Physician,2008-07-01,2026-01-01,40,Jo Admin,jo.admin@test.example,

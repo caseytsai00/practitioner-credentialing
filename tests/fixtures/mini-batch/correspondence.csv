@@ -1,0 +1,2 @@
+letter_id,date,direction,application_id,correspondent,subject,document_path
+LTR-T001,2026-01-15,outbound,APP-TEST-002,"Dr. Lin Nakamura, MD",Missing items on your application,letters/2026-01-15_missing-items_APP-TEST-002.md

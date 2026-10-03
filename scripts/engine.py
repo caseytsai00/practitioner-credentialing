@@ -442,3 +442,47 @@ def resolve_elements(
         "references": resolve_references(referees, peer_reference_replies, as_of, rules),
         "gaps": resolve_gaps(application_id, history, correspondence, rules),
     }
+
+
+def detect_discrepancies(history, verification_replies) -> List[dict]:
+    discrepancies = []
+    for entry in history:
+        reply = next(
+            (r for r in verification_replies if r.get("entry_id") == entry.get("entry_id")), None
+        )
+        if reply is None:
+            continue
+        for field_name, verified_key in (("from_date", "verified_from"), ("to_date", "verified_to")):
+            verified_value = reply.get(verified_key)
+            declared_value = entry.get(field_name)
+            if verified_value and declared_value and verified_value != declared_value:
+                discrepancies.append(
+                    {
+                        "entry_id": entry.get("entry_id"),
+                        "field": field_name,
+                        "declared": declared_value,
+                        "verified": verified_value,
+                    }
+                )
+    return discrepancies
+
+
+def detect_eligibility_mismatch(priv_requests, history, credentials) -> bool:
+    if not priv_requests:
+        return False
+    supported_terms = set()
+    for entry in history:
+        if entry.get("entry_type") in ("residency", "medical-school", "employment", "teaching"):
+            supported_terms.add((entry.get("role") or "").lower())
+            supported_terms.add((entry.get("organization") or "").lower())
+    for cred in credentials:
+        supported_terms.add((cred.get("issuer") or "").lower())
+
+    for request in priv_requests:
+        name = (request.get("privilege_name") or "").lower()
+        tokens = [token for token in name.replace(",", " ").split() if len(token) > 3]
+        if not tokens:
+            continue
+        if not any(any(token in supported for supported in supported_terms) for token in tokens):
+            return True
+    return False

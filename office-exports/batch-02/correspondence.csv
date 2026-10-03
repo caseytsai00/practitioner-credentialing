@@ -1,0 +1,42 @@
+letter_id,date,direction,application_id,correspondent,subject,document_path
+LTR-0016,2026-03-17,inbound,APP-2026-002,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-012 — recommended,decisions/2026-03-17_MEC-2026-012.md
+LTR-0017,2026-03-17,inbound,APP-2026-037,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-035 — recommended,decisions/2026-03-17_MEC-2026-035.md
+LTR-0018,2026-03-19,inbound,APP-2026-005,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-015 — recommended,decisions/2026-03-19_MEC-2026-015.md
+LTR-0019,2026-03-19,inbound,APP-2026-035,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-033 — recommended,decisions/2026-03-19_MEC-2026-033.md
+LTR-0020,2026-03-24,inbound,APP-2026-004,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-014 — recommended,decisions/2026-03-24_MEC-2026-014.md
+LTR-0021,2026-03-24,inbound,APP-2026-016,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-025 — recommended,decisions/2026-03-24_MEC-2026-025.md
+LTR-0022,2026-03-26,inbound,APP-2026-006,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-016 — recommended,decisions/2026-03-26_MEC-2026-016.md
+LTR-0023,2026-03-26,inbound,APP-2026-034,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-032 — recommended,decisions/2026-03-26_MEC-2026-032.md
+LTR-0024,2026-03-26,inbound,APP-2026-039,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-037 — recommended,decisions/2026-03-26_MEC-2026-037.md
+LTR-0025,2026-03-30,inbound,APP-2026-018,"Anaya Banerjee, MD",Explanation of period 2024-05-02 to 2024-06-01,letters/2026-03-30_gap-explanation_APP-2026-018.md
+LTR-0026,2026-03-31,inbound,APP-2026-008,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-018 — recommended,decisions/2026-03-31_MEC-2026-018.md
+LTR-0027,2026-03-31,inbound,APP-2026-029,"Dr. Marguerite Oyelaran, MD, Clinical Director",Disposition — Threshold eligibility — orthopaedic surgery privileges,dispositions/2026-03-31_disposition_APP-2026-029.md
+LTR-0028,2026-04-02,inbound,APP-2026-009,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-019 — recommended,decisions/2026-04-02_MEC-2026-019.md
+LTR-0029,2026-04-02,outbound,APP-2026-015,"Dr. Hideo Tachibana, MD",Request to confirm your answer to professional practice question PPQ-1,letters/2026-04-02_confirm-disclosure_APP-2026-015.md
+LTR-0030,2026-04-02,inbound,APP-2026-017,"Dr. Marguerite Oyelaran, MD, Clinical Director","Disposition — Gap of 219 days, 2019-04-01 to 2019-11-05",dispositions/2026-04-02_disposition_APP-2026-017.md
+LTR-0031,2026-04-02,inbound,APP-2026-026,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-029 — recommended,decisions/2026-04-02_MEC-2026-029.md
+LTR-0032,2026-04-02,outbound,APP-2026-029,"Dr. Aurelio Castellanos, MD",Application discontinued,letters/2026-04-02_discontinued_APP-2026-029.md
+LTR-0033,2026-04-02,inbound,APP-2026-032,"Dr. Marguerite Oyelaran, MD, Clinical Director",Disposition — High-risk finding — professional practice question PPQ-2,dispositions/2026-04-02_disposition_APP-2026-032.md
+LTR-0034,2026-04-06,inbound,APP-2026-028,"Dr. Vesna Kovačević, MD",Withdrawal of my application,letters/2026-04-06_withdrawal_APP-2026-028.md
+LTR-0035,2026-04-07,inbound,APP-2026-010,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-020 — recommended,decisions/2026-04-07_MEC-2026-020.md
+LTR-0036,2026-04-08,inbound,APP-2026-027,"Dr. Marguerite Oyelaran, MD, Clinical Director",Disposition — Threshold eligibility — general surgery privileges,dispositions/2026-04-08_disposition_APP-2026-027.md
+LTR-0037,2026-04-09,inbound,APP-2026-011,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-021 — recommended,decisions/2026-04-09_MEC-2026-021.md
+LTR-0038,2026-04-09,outbound,APP-2026-024,"Dr. Mira Chatterji, MD",Peer reference cannot be counted — please name an additional referee,letters/2026-04-09_referee-ineligible_APP-2026-024.md
+LTR-0039,2026-04-10,outbound,APP-2026-027,"Dr. Kwabena Boateng, MD",Board certification reported as inactive,letters/2026-04-10_certification-lapsed_APP-2026-027.md
+LTR-0040,2026-04-14,inbound,APP-2026-001,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-011 — approved,decisions/2026-04-14_GBD-2026-011.md
+LTR-0041,2026-04-14,inbound,APP-2026-003,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-013 — approved,decisions/2026-04-14_GBD-2026-013.md
+LTR-0042,2026-04-14,inbound,APP-2026-007,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-017 — approved,decisions/2026-04-14_GBD-2026-017.md
+LTR-0043,2026-04-14,inbound,APP-2026-012,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-022 — recommended,decisions/2026-04-14_MEC-2026-022.md
+LTR-0044,2026-04-14,inbound,APP-2026-013,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-023 — approved,decisions/2026-04-14_GBD-2026-023.md
+LTR-0045,2026-04-14,inbound,APP-2026-014,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-024 — approved,decisions/2026-04-14_GBD-2026-024.md
+LTR-0046,2026-04-14,inbound,APP-2026-017,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-026 — recommended,decisions/2026-04-14_MEC-2026-026.md
+LTR-0047,2026-04-14,inbound,APP-2026-034,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-032 — deferred-pending-information,decisions/2026-04-14_GBD-2026-032.md
+LTR-0048,2026-04-14,inbound,APP-2026-035,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-033 — denied,decisions/2026-04-14_GBD-2026-033.md
+LTR-0049,2026-04-14,inbound,APP-2026-036,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-034 — approved,decisions/2026-04-14_GBD-2026-034.md
+LTR-0050,2026-04-14,inbound,APP-2026-037,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-036 — approved,decisions/2026-04-14_GBD-2026-036.md
+LTR-0051,2026-04-14,inbound,APP-2026-038,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-036 — approved,decisions/2026-04-14_MEC-2026-036.md
+LTR-0052,2026-04-14,inbound,APP-2026-039,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-039 — approved-with-conditions,decisions/2026-04-14_GBD-2026-039.md
+LTR-0053,2026-04-15,outbound,APP-2026-023,"Dr. Joaquin Esposito-Vela, MD",Peer reference overdue — please name an additional referee,letters/2026-04-15_referee-overdue_APP-2026-023.md
+LTR-0054,2026-04-16,inbound,APP-2026-031,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-030 — recommended,decisions/2026-04-16_MEC-2026-030.md
+LTR-0055,2026-04-16,inbound,APP-2026-032,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-031 — recommended,decisions/2026-04-16_MEC-2026-031.md
+LTR-0056,2026-04-16,outbound,APP-2026-034,"Dr. Ingrid Solheim, MD",Further reference required before the Governing Body decides,letters/2026-04-16_deferral-chase_APP-2026-034.md

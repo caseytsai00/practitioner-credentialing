@@ -1,0 +1,18 @@
+entry_id,application_id,revision,entry_type,organization,location,role,from_date,to_date,hours_per_week,contact_name,contact_email,notes
+ENT-1800,APP-2026-018,2,medical-school,Thistlewood University School of Medicine,"Thistlewood, NY",Doctor of Medicine,2010-08-23,2014-06-30,,Priya Bergmann,priya.bergmann@thistlewood.example,
+ENT-1801,APP-2026-018,2,residency,Cedar Quarry University Hospital,"Cedar Quarry, OR",Internal Medicine Residency,2014-07-01,2017-06-30,60,Rafael Nordstrand,rafael.nordstrand@cedar.example,
+ENT-1802,APP-2026-018,2,employment,Willowmere Health Cooperative,"Willowmere, WA",Staff Physician,2017-07-10,2024-05-01,40,Anaya Sarpong,anaya.sarpong@willowmere.example,
+ENT-1803,APP-2026-018,2,employment,Silverbeck Physicians Group,"Silverbeck, WA",Staff Physician,2024-06-02,,40,Leander Ferndale,leander.ferndale@silverbeck.example,
+ENT-3000,APP-2026-030,2,medical-school,Corvale College of Osteopathic Medicine,"Corvale, IA",Doctor of Medicine,2008-08-25,2012-06-30,,Priya Oduya,priya.oduya@corvale.example,
+ENT-3001,APP-2026-030,2,residency,Fernhollow Medical Center,"Fernhollow, WA",Internal Medicine Residency,2012-07-01,2015-06-30,60,Rafael Okonkwo,rafael.okonkwo@fernhollow.example,
+ENT-3002,APP-2026-030,2,employment,Mosswater Valley Hospital,"Mosswater, WA",Staff Physician,2018-03-05,2021-11-30,40,Anaya Mendez-Ruiz,anaya.mendez@mosswater.example,
+ENT-3003,APP-2026-030,2,employment,Northsound Medical Group,"Everleigh, WA",Staff Physician,2022-09-12,,40,Leander Vandermeer,leander.vandermeer@northsound.example,
+ENT-3004,APP-2026-030,2,employment,Larkhollow Physicians Network,"Larkhollow, WA",Staff Physician,2015-07-13,2018-02-28,40,Nadira Eze-Okafor,nadira.eze@larkhollow.example,
+ENT-3090,APP-2026-030,2,employment,Two Rivers Health Partners,"Two Rivers, OR",Locum Physician,2021-12-06,2022-09-05,24,Cordelia Banerjee,cordelia.banerjee@two.example,
+ENT-3100,APP-2026-031,2,medical-school,Ravensmoor University School of Medicine,"Ravensmoor, MI",Doctor of Medicine,2005-08-22,2009-06-30,,Yolanda Bergmann,yolanda.bergmann@ravensmoor.example,
+ENT-3101,APP-2026-031,2,residency,Westmarch University Medical Center,"Westmarch, CO",Internal Medicine Residency,2009-07-01,2012-06-30,60,Emeka Nordstrand,emeka.nordstrand@westmarch.example,
+ENT-3102,APP-2026-031,2,employment,Two Rivers Health Partners,"Two Rivers, OR",Hospitalist,2012-07-16,,40,Vesna Sarpong,vesna.sarpong@two.example,
+ENT-3600,APP-2026-036,2,medical-school,Marrowfield College of Medicine,"Marrowfield, IL",Doctor of Medicine,2005-08-22,2009-06-30,,Priya Holloway,priya.holloway@marrowfield.example,
+ENT-3601,APP-2026-036,2,residency,Braypoint Regional Medical Center,"Braypoint, WA",Family Medicine Residency,2009-07-01,2012-06-30,60,Rafael Orlovsky,rafael.orlovsky@braypoint.example,
+ENT-3602,APP-2026-036,2,employment,Silverbeck Physicians Group,"Silverbeck, WA",Staff Physician,2012-07-16,2019-08-31,40,Ingrid Lindqvist,ingrid.lindqvist@silverbeck.example,Practice acquired by Silverbeck Physicians Group on 2021-04-01; supervising physician changed at the same time. Dates unchanged.
+ENT-3603,APP-2026-036,2,employment,Silverbeck Physicians Group,"Silverbeck, WA",Staff Physician,2019-09-09,,40,Leander Thornbury,leander.thornbury@silverbeck.example,

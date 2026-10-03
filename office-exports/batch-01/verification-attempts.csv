@@ -1,0 +1,237 @@
+attempt_id,application_id,element,subject_ref,attempted_with,attempt_date,method,outcome,comment
+ATT-0100,APP-2026-001,education-and-training,ENT-0100,"Registrar's office, Dunleath University School of Medicine",2026-01-29,secure portal,reply received,First request.
+ATT-0101,APP-2026-001,education-and-training,ENT-0101,"Graduate medical education office, Braypoint Regional Medical Center",2026-01-29,secure portal,reply received,First request.
+ATT-0102,APP-2026-001,affiliation-and-employment,ENT-0102,"Medical staff office, Kettlebrook Family Clinic",2026-01-29,secure portal,reply received,First request.
+ATT-0103,APP-2026-001,affiliation-and-employment,ENT-0103,"Medical staff office, Northsound Medical Group",2026-01-29,secure portal,reply received,First request.
+ATT-0104,APP-2026-001,peer-reference,REF-0100,"Dr. Priya Sternhagen, MD",2026-02-02,secure portal,reply received,First request.
+ATT-0105,APP-2026-001,peer-reference,REF-0101,"Dr. Callum Whitcombe, MD",2026-02-02,secure portal,reply received,First request.
+ATT-0200,APP-2026-002,education-and-training,ENT-0200,"Registrar's office, Marrowfield College of Medicine",2026-02-05,secure portal,reply received,First request.
+ATT-0201,APP-2026-002,education-and-training,ENT-0201,"Graduate medical education office, Cedar Quarry University Hospital",2026-02-05,secure portal,reply received,First request.
+ATT-0202,APP-2026-002,affiliation-and-employment,ENT-0202,"Medical staff office, Harrowgate Community Health",2026-02-05,secure portal,reply received,First request.
+ATT-0203,APP-2026-002,affiliation-and-employment,ENT-0203,"Medical staff office, Silverbeck Physicians Group",2026-02-05,secure portal,reply received,First request.
+ATT-0204,APP-2026-002,peer-reference,REF-0200,"Dr. Benedikt Sandvik, MD",2026-02-09,secure portal,reply received,First request.
+ATT-0205,APP-2026-002,peer-reference,REF-0201,"Dr. Linnea Vandermeer, MD",2026-02-09,secure portal,reply received,First request.
+ATT-0300,APP-2026-003,education-and-training,ENT-0300,"Registrar's office, Quillhaven State University School of Medicine",2026-02-01,secure portal,reply received,First request.
+ATT-0301,APP-2026-003,education-and-training,ENT-0301,"Graduate medical education office, Ashgrove Memorial Hospital",2026-02-01,secure portal,reply received,First request.
+ATT-0302,APP-2026-003,affiliation-and-employment,ENT-0302,"Medical staff office, Mosswater Valley Hospital",2026-02-01,secure portal,reply received,First request.
+ATT-0303,APP-2026-003,affiliation-and-employment,ENT-0303,"Medical staff office, Two Rivers Health Partners",2026-02-01,secure portal,reply received,First request.
+ATT-0304,APP-2026-003,peer-reference,REF-0300,"Dr. Imani Lindqvist, MD",2026-02-05,secure portal,reply received,First request.
+ATT-0305,APP-2026-003,peer-reference,REF-0301,"Dr. Hideo Matsuda, MD",2026-02-05,secure portal,reply received,First request.
+ATT-0400,APP-2026-004,education-and-training,ENT-0400,"Registrar's office, Aldersgate University School of Medicine",2026-02-12,secure portal,reply received,First request.
+ATT-0401,APP-2026-004,education-and-training,ENT-0401,"Graduate medical education office, Fernhollow Medical Center",2026-02-12,secure portal,reply received,First request.
+ATT-0402,APP-2026-004,affiliation-and-employment,ENT-0402,"Medical staff office, Bellamy Creek Medical Center",2026-02-12,secure portal,reply received,First request.
+ATT-0403,APP-2026-004,affiliation-and-employment,ENT-0403,"Medical staff office, Orchard Row Specialty Clinic",2026-02-12,secure portal,reply received,First request.
+ATT-0404,APP-2026-004,peer-reference,REF-0400,"Dr. Dmitri Halvorsen, MD",2026-02-16,secure portal,reply received,First request.
+ATT-0405,APP-2026-004,peer-reference,REF-0401,"Dr. Anaya Thornbury, MD",2026-02-16,secure portal,reply received,First request.
+ATT-0500,APP-2026-005,education-and-training,ENT-0500,"Registrar's office, Brackenridge College of Osteopathic Medicine",2026-02-08,secure portal,reply received,First request.
+ATT-0501,APP-2026-005,education-and-training,ENT-0501,"Graduate medical education office, Tolliver General Hospital",2026-02-08,secure portal,reply received,First request.
+ATT-0502,APP-2026-005,affiliation-and-employment,ENT-0502,"Medical staff office, Larkhollow Physicians Network",2026-02-08,secure portal,reply received,First request.
+ATT-0503,APP-2026-005,affiliation-and-employment,ENT-0503,"Medical staff office, Greyfen Regional Hospital",2026-02-08,secure portal,reply received,First request.
+ATT-0504,APP-2026-005,peer-reference,REF-0500,"Dr. Marguerite Boateng, MD",2026-02-12,secure portal,reply received,First request.
+ATT-0505,APP-2026-005,peer-reference,REF-0501,"Dr. Emeka Nowicki, MD",2026-02-12,secure portal,reply received,First request.
+ATT-0600,APP-2026-006,education-and-training,ENT-0600,"Registrar's office, Thistlewood University School of Medicine",2026-02-15,secure portal,reply received,First request.
+ATT-0601,APP-2026-006,education-and-training,ENT-0601,"Graduate medical education office, Westmarch University Medical Center",2026-02-15,secure portal,reply received,First request.
+ATT-0602,APP-2026-006,affiliation-and-employment,ENT-0602,"Medical staff office, Willowmere Health Cooperative",2026-02-15,secure portal,reply received,First request.
+ATT-0603,APP-2026-006,peer-reference,REF-0600,"Dr. Fionn Pennington, MD",2026-02-19,secure portal,reply received,First request.
+ATT-0604,APP-2026-006,peer-reference,REF-0601,"Dr. Mira Larkspur, MD",2026-02-19,secure portal,reply received,First request.
+ATT-0700,APP-2026-007,education-and-training,ENT-0700,"Registrar's office, Pellingham University School of Medicine",2026-01-29,secure portal,reply received,First request.
+ATT-0701,APP-2026-007,education-and-training,ENT-0701,"Graduate medical education office, Saltmarsh Regional Health",2026-01-29,secure portal,reply received,First request.
+ATT-0702,APP-2026-007,affiliation-and-employment,ENT-0702,"Medical staff office, Stonebridge Medical Associates",2026-01-29,secure portal,reply received,First request.
+ATT-0703,APP-2026-007,affiliation-and-employment,ENT-0703,"Medical staff office, Kettlebrook Family Clinic",2026-01-29,secure portal,reply received,First request.
+ATT-0704,APP-2026-007,peer-reference,REF-0700,"Dr. Sigrid Bergmann, MD",2026-02-02,secure portal,reply received,First request.
+ATT-0705,APP-2026-007,peer-reference,REF-0701,"Dr. Kwabena Pryce-Jones, MD",2026-02-02,secure portal,reply received,First request.
+ATT-0800,APP-2026-008,education-and-training,ENT-0800,"Registrar's office, Corvale College of Osteopathic Medicine",2026-02-19,secure portal,reply received,First request.
+ATT-0801,APP-2026-008,education-and-training,ENT-0801,"Graduate medical education office, Kirkwallow Teaching Hospital",2026-02-19,secure portal,reply received,First request.
+ATT-0802,APP-2026-008,affiliation-and-employment,ENT-0802,"Medical staff office, Northsound Medical Group",2026-02-19,secure portal,reply received,First request.
+ATT-0803,APP-2026-008,peer-reference,REF-0800,"Dr. Leander Montalvo, MD",2026-02-23,secure portal,reply received,First request.
+ATT-0804,APP-2026-008,peer-reference,REF-0801,"Dr. Delphine Kettering, MD",2026-02-23,secure portal,reply received,First request.
+ATT-0900,APP-2026-009,education-and-training,ENT-0900,"Registrar's office, Brackenridge College of Osteopathic Medicine",2026-02-22,secure portal,reply received,First request.
+ATT-0901,APP-2026-009,education-and-training,ENT-0901,"Graduate medical education office, Drumlin Bay Medical Center",2026-02-22,secure portal,reply received,First request.
+ATT-0902,APP-2026-009,affiliation-and-employment,ENT-0902,"Medical staff office, Two Rivers Health Partners",2026-02-22,secure portal,reply received,First request.
+ATT-0903,APP-2026-009,affiliation-and-employment,ENT-0903,"Medical staff office, Harrowgate Community Health",2026-02-22,secure portal,reply received,First request.
+ATT-0904,APP-2026-009,peer-reference,REF-0900,"Dr. Vesna Vasquez-Ruiz, MD",2026-02-26,secure portal,reply received,First request.
+ATT-0905,APP-2026-009,peer-reference,REF-0901,"Dr. Thaddeus Vukovic, MD",2026-02-26,secure portal,reply received,First request.
+ATT-1000,APP-2026-010,education-and-training,ENT-1000,"Registrar's office, Ravensmoor University School of Medicine",2026-02-26,secure portal,reply received,First request.
+ATT-1001,APP-2026-010,education-and-training,ENT-1001,"Graduate medical education office, Pinevale University Hospital",2026-02-26,secure portal,reply received,First request.
+ATT-1002,APP-2026-010,affiliation-and-employment,ENT-1002,"Medical staff office, Larkhollow Physicians Network",2026-02-26,secure portal,reply received,First request.
+ATT-1003,APP-2026-010,peer-reference,REF-1000,"Dr. Kenji Kjeldsen, MD",2026-03-02,secure portal,reply received,First request.
+ATT-1004,APP-2026-010,peer-reference,REF-1001,"Dr. Piotr Okpara, MD",2026-03-02,secure portal,reply received,First request.
+ATT-1100,APP-2026-011,education-and-training,ENT-1100,"Registrar's office, Steadmere University School of Medicine",2026-03-01,secure portal,reply received,First request.
+ATT-1101,APP-2026-011,education-and-training,ENT-1101,"Graduate medical education office, Tolliver General Hospital",2026-03-01,secure portal,reply received,First request.
+ATT-1102,APP-2026-011,affiliation-and-employment,ENT-1102,"Medical staff office, Greyfen Regional Hospital",2026-03-01,secure portal,reply received,First request.
+ATT-1103,APP-2026-011,affiliation-and-employment,ENT-1103,"Medical staff office, Willowmere Health Cooperative",2026-03-01,secure portal,reply received,First request.
+ATT-1104,APP-2026-011,peer-reference,REF-1100,"Dr. Ingrid Oduya, MD",2026-03-05,secure portal,reply received,First request.
+ATT-1105,APP-2026-011,peer-reference,REF-1101,"Dr. Hanne Ferndale, MD",2026-03-05,secure portal,reply received,First request.
+ATT-1106,APP-2026-011,peer-reference,REF-1102,"Dr. Desmond Banerjee, MD",2026-03-05,secure portal,reply received,First request.
+ATT-1200,APP-2026-012,education-and-training,ENT-1200,"Registrar's office, Halloway Point School of Medicine",2026-03-05,secure portal,reply received,First request.
+ATT-1201,APP-2026-012,education-and-training,ENT-1201,"Graduate medical education office, Westmarch University Medical Center",2026-03-05,secure portal,reply received,First request.
+ATT-1202,APP-2026-012,affiliation-and-employment,ENT-1202,"Medical staff office, Stonebridge Medical Associates",2026-03-05,secure portal,reply received,First request.
+ATT-1203,APP-2026-012,affiliation-and-employment,ENT-1203,"Medical staff office, Northsound Medical Group",2026-03-05,secure portal,reply received,First request.
+ATT-1204,APP-2026-012,peer-reference,REF-1200,"Dr. Clementine Ndiaye, MD",2026-03-09,secure portal,reply received,First request.
+ATT-1205,APP-2026-012,peer-reference,REF-1201,"Dr. Mateusz Nwachukwu, MD",2026-03-09,secure portal,reply received,First request.
+ATT-1300,APP-2026-013,education-and-training,ENT-1300,"Registrar's office, Windthorne University College of Medicine",2026-02-01,secure portal,reply received,First request.
+ATT-1301,APP-2026-013,education-and-training,ENT-1301,"Graduate medical education office, Saltmarsh Regional Health",2026-02-01,secure portal,reply received,First request.
+ATT-1302,APP-2026-013,affiliation-and-employment,ENT-1302,"Medical staff office, Silverbeck Physicians Group",2026-02-01,secure portal,reply received,First request.
+ATT-1303,APP-2026-013,affiliation-and-employment,ENT-1303,"Medical staff office, Mosswater Valley Hospital",2026-02-01,secure portal,reply received,First request.
+ATT-1304,APP-2026-013,peer-reference,REF-1300,"Dr. Zubin Holloway, MD",2026-02-05,secure portal,reply received,First request.
+ATT-1305,APP-2026-013,peer-reference,REF-1301,"Dr. Lucia Tachibana, MD",2026-02-05,secure portal,reply received,First request.
+ATT-1400,APP-2026-014,education-and-training,ENT-1400,"Registrar's office, Dunleath University School of Medicine",2026-02-05,secure portal,reply received,First request.
+ATT-1401,APP-2026-014,education-and-training,ENT-1401,"Graduate medical education office, Kirkwallow Teaching Hospital",2026-02-05,secure portal,reply received,First request.
+ATT-1402,APP-2026-014,affiliation-and-employment,ENT-1402,"Medical staff office, Two Rivers Health Partners",2026-02-05,secure portal,reply received,First request.
+ATT-1403,APP-2026-014,affiliation-and-employment,ENT-1403,"Medical staff office, Bellamy Creek Medical Center",2026-02-05,secure portal,reply received,First request.
+ATT-1404,APP-2026-014,peer-reference,REF-1400,"Dr. Annika Sternhagen, MD",2026-02-09,secure portal,reply received,First request.
+ATT-1405,APP-2026-014,peer-reference,REF-1401,"Dr. Tarek Whitcombe, MD",2026-02-09,secure portal,no response,First request.
+ATT-1406,APP-2026-014,peer-reference,REF-1401,"Dr. Tarek Whitcombe, MD",2026-03-02,secure portal,no response,Second request.
+ATT-1500,APP-2026-015,education-and-training,ENT-1500,"Registrar's office, Quillhaven State University School of Medicine",2026-02-08,secure portal,reply received,First request.
+ATT-1501,APP-2026-015,education-and-training,ENT-1501,"Graduate medical education office, Drumlin Bay Medical Center",2026-02-08,secure portal,reply received,First request.
+ATT-1502,APP-2026-015,affiliation-and-employment,ENT-1502,"Medical staff office, Orchard Row Specialty Clinic",2026-02-08,secure portal,reply received,First request.
+ATT-1503,APP-2026-015,affiliation-and-employment,ENT-1503,"Medical staff office, Greyfen Regional Hospital",2026-02-08,secure portal,reply received,First request.
+ATT-1504,APP-2026-015,peer-reference,REF-1500,"Dr. Farhan Sandvik, MD",2026-02-12,secure portal,reply received,First request.
+ATT-1505,APP-2026-015,peer-reference,REF-1501,"Dr. Xiomara Vandermeer, MD",2026-02-12,secure portal,reply received,First request.
+ATT-1600,APP-2026-016,education-and-training,ENT-1600,"Registrar's office, Pellingham University School of Medicine",2026-02-12,secure portal,reply received,First request.
+ATT-1601,APP-2026-016,education-and-training,ENT-1601,"Graduate medical education office, Pinevale University Hospital",2026-02-12,secure portal,reply received,First request.
+ATT-1602,APP-2026-016,affiliation-and-employment,ENT-1602,"Medical staff office, Larkhollow Physicians Network",2026-02-12,secure portal,reply received,First request.
+ATT-1603,APP-2026-016,affiliation-and-employment,ENT-1603,"Medical staff office, Willowmere Health Cooperative",2026-02-12,secure portal,reply received,First request.
+ATT-1604,APP-2026-016,affiliation-and-employment,ENT-1604,"Medical staff office, Harrowgate Community Health",2026-02-12,secure portal,reply received,First request.
+ATT-1605,APP-2026-016,peer-reference,REF-1600,"Dr. Genevieve Lindqvist, MD",2026-02-16,secure portal,reply received,First request.
+ATT-1606,APP-2026-016,peer-reference,REF-1601,"Dr. Iyanla Matsuda, MD",2026-02-16,secure portal,reply received,First request.
+ATT-1700,APP-2026-017,education-and-training,ENT-1700,"Registrar's office, Steadmere University School of Medicine",2026-02-15,secure portal,reply received,First request.
+ATT-1701,APP-2026-017,education-and-training,ENT-1701,"Graduate medical education office, Braypoint Regional Medical Center",2026-02-15,secure portal,reply received,First request.
+ATT-1702,APP-2026-017,affiliation-and-employment,ENT-1702,"Medical staff office, Mosswater Valley Hospital",2026-02-15,secure portal,reply received,First request.
+ATT-1703,APP-2026-017,affiliation-and-employment,ENT-1703,"Medical staff office, Stonebridge Medical Associates",2026-02-15,secure portal,reply received,First request.
+ATT-1704,APP-2026-017,affiliation-and-employment,ENT-1704,"Medical staff office, Kettlebrook Family Clinic",2026-02-15,secure portal,reply received,First request.
+ATT-1705,APP-2026-017,peer-reference,REF-1700,"Dr. Anders Halvorsen, MD",2026-02-19,secure portal,reply received,First request.
+ATT-1706,APP-2026-017,peer-reference,REF-1701,"Dr. Oluwaseun Thornbury, MD",2026-02-19,secure portal,reply received,First request.
+ATT-1800,APP-2026-018,education-and-training,ENT-1800,"Registrar's office, Thistlewood University School of Medicine",2026-02-26,secure portal,reply received,First request.
+ATT-1801,APP-2026-018,education-and-training,ENT-1801,"Graduate medical education office, Cedar Quarry University Hospital",2026-02-26,secure portal,reply received,First request.
+ATT-1802,APP-2026-018,affiliation-and-employment,ENT-1802,"Medical staff office, Willowmere Health Cooperative",2026-02-26,secure portal,reply received,First request.
+ATT-1803,APP-2026-018,affiliation-and-employment,ENT-1803,"Medical staff office, Silverbeck Physicians Group",2026-02-26,secure portal,reply received,First request.
+ATT-1804,APP-2026-018,peer-reference,REF-1800,"Dr. Gustav Boateng, MD",2026-03-02,secure portal,reply received,First request.
+ATT-1805,APP-2026-018,peer-reference,REF-1801,"Dr. Solveig Nowicki, MD",2026-03-02,secure portal,reply received,First request.
+ATT-2000,APP-2026-020,education-and-training,ENT-2000,"Registrar's office, Steadmere University School of Medicine",2026-02-12,hand-delivered,reply received,First request.
+ATT-2001,APP-2026-020,education-and-training,ENT-2001,"Graduate medical education office, Fernhollow Medical Center",2026-02-12,secure portal,reply received,First request.
+ATT-2002,APP-2026-020,affiliation-and-employment,ENT-2002,"Medical staff office, Orchard Row Specialty Clinic",2026-02-12,secure portal,reply received,First request.
+ATT-2003,APP-2026-020,education-and-training,ENT-2000,"Registrar's office, Steadmere University School of Medicine",2026-02-12,secure portal,no response,First request. Portal acknowledged receipt; no reply.
+ATT-2004,APP-2026-020,education-and-training,ENT-2000,"Registrar's office, Steadmere University School of Medicine",2026-03-05,secure portal,no response,Second request.
+ATT-2006,APP-2026-020,peer-reference,REF-2000,"Dr. Marcus Bergmann, MD",2026-02-16,secure portal,reply received,First request.
+ATT-2007,APP-2026-020,peer-reference,REF-2001,"Dr. Noor Pryce-Jones, MD",2026-02-16,secure portal,reply received,First request.
+ATT-2100,APP-2026-021,education-and-training,ENT-2100,"Registrar's office, Cascade Valley College of Medicine",2026-02-19,letter,reply received,First request.
+ATT-2101,APP-2026-021,education-and-training,ENT-2101,"Graduate medical education office, Tolliver General Hospital",2026-02-19,secure portal,reply received,First request.
+ATT-2102,APP-2026-021,affiliation-and-employment,ENT-2102,"Medical staff office, Larkhollow Physicians Network",2026-02-19,secure portal,reply received,First request.
+ATT-2103,APP-2026-021,affiliation-and-employment,ENT-2103,"Medical staff office, Greyfen Regional Hospital",2026-02-19,secure portal,reply received,First request.
+ATT-2104,APP-2026-021,education-and-training,ENT-2100,"Registrar's office, Cascade Valley College of Medicine",2026-02-19,letter,undeliverable,Returned by the postal service. The institution closed on 2019-06-30.
+ATT-2105,APP-2026-021,education-and-training,ENT-2100,Federation Credentials Verification Service,2026-03-09,secure portal,reply received,Designated equivalent source attempted. No record held.
+ATT-2107,APP-2026-021,peer-reference,REF-2100,"Dr. Priya Montalvo, MD",2026-02-23,secure portal,reply received,First request.
+ATT-2108,APP-2026-021,peer-reference,REF-2101,"Dr. Callum Kettering, MD",2026-02-23,secure portal,reply received,First request.
+ATT-2200,APP-2026-022,education-and-training,ENT-2200,"Registrar's office, Aldersgate University School of Medicine",2026-02-22,secure portal,reply received,First request.
+ATT-2201,APP-2026-022,education-and-training,ENT-2201,"Graduate medical education office, Westmarch University Medical Center",2026-02-22,email,reply received,First request.
+ATT-2202,APP-2026-022,affiliation-and-employment,ENT-2202,"Medical staff office, Stonebridge Medical Associates",2026-02-22,secure portal,reply received,First request.
+ATT-2203,APP-2026-022,education-and-training,ENT-2201,"Graduate medical education office, Westmarch University Medical Center",2026-02-22,secure portal,no response,First request.
+ATT-2204,APP-2026-022,education-and-training,ENT-2201,"Graduate medical education office, Westmarch University Medical Center",2026-03-12,secure portal,no response,Second request.
+ATT-2206,APP-2026-022,peer-reference,REF-2200,"Dr. Benedikt Vasquez-Ruiz, MD",2026-02-26,secure portal,reply received,First request.
+ATT-2207,APP-2026-022,peer-reference,REF-2201,"Dr. Linnea Vukovic, MD",2026-02-26,secure portal,reply received,First request.
+ATT-2300,APP-2026-023,education-and-training,ENT-2300,"Registrar's office, Ravensmoor University School of Medicine",2026-02-05,secure portal,reply received,First request.
+ATT-2301,APP-2026-023,education-and-training,ENT-2301,"Graduate medical education office, Saltmarsh Regional Health",2026-02-05,secure portal,reply received,First request.
+ATT-2302,APP-2026-023,affiliation-and-employment,ENT-2302,"Medical staff office, Kettlebrook Family Clinic",2026-02-05,secure portal,reply received,First request.
+ATT-2303,APP-2026-023,affiliation-and-employment,ENT-2303,"Medical staff office, Two Rivers Health Partners",2026-02-05,secure portal,reply received,First request.
+ATT-2304,APP-2026-023,peer-reference,REF-2300,"Dr. Imani Kjeldsen, MD",2026-02-09,secure portal,reply received,First request.
+ATT-2305,APP-2026-023,peer-reference,REF-2301,"Dr. Hideo Okpara, MD",2026-02-09,secure portal,no response,First request.
+ATT-2306,APP-2026-023,peer-reference,REF-2301,"Dr. Hideo Okpara, MD",2026-03-02,secure portal,no response,Second request.
+ATT-2400,APP-2026-024,education-and-training,ENT-2400,"Registrar's office, Marrowfield College of Medicine",2026-02-08,secure portal,reply received,First request.
+ATT-2401,APP-2026-024,education-and-training,ENT-2401,"Graduate medical education office, Kirkwallow Teaching Hospital",2026-02-08,secure portal,reply received,First request.
+ATT-2402,APP-2026-024,affiliation-and-employment,ENT-2402,"Medical staff office, Harrowgate Community Health",2026-02-08,secure portal,reply received,First request.
+ATT-2403,APP-2026-024,peer-reference,REF-2400,"Dr. Dmitri Oduya, MD",2026-02-12,secure portal,reply received,First request.
+ATT-2404,APP-2026-024,peer-reference,REF-2401,"Dr. Anaya Ferndale, MD",2026-02-12,secure portal,reply received,First request.
+ATT-2500,APP-2026-025,education-and-training,ENT-2500,"Registrar's office, Windthorne University College of Medicine",2024-04-25,secure portal,reply received,First request.
+ATT-2501,APP-2026-025,education-and-training,ENT-2501,"Graduate medical education office, Pinevale University Hospital",2024-04-25,secure portal,reply received,First request.
+ATT-2502,APP-2026-025,affiliation-and-employment,ENT-2502,"Medical staff office, Two Rivers Health Partners",2024-04-25,secure portal,reply received,First request.
+ATT-2503,APP-2026-025,affiliation-and-employment,ENT-2503,"Medical staff office, Stonebridge Medical Associates",2024-04-25,secure portal,reply received,First request.
+ATT-2504,APP-2026-025,peer-reference,REF-2500,"Dr. Marguerite Ndiaye, MD",2024-04-29,secure portal,reply received,First request.
+ATT-2505,APP-2026-025,peer-reference,REF-2501,"Dr. Emeka Nwachukwu, MD",2024-04-29,secure portal,reply received,First request.
+ATT-2600,APP-2026-026,education-and-training,ENT-2600,"Registrar's office, Brackenridge College of Osteopathic Medicine",2026-02-19,secure portal,reply received,First request.
+ATT-2601,APP-2026-026,education-and-training,ENT-2601,"Graduate medical education office, Braypoint Regional Medical Center",2026-02-19,secure portal,reply received,First request.
+ATT-2602,APP-2026-026,affiliation-and-employment,ENT-2602,"Medical staff office, Mosswater Valley Hospital",2026-02-19,secure portal,reply received,First request.
+ATT-2603,APP-2026-026,affiliation-and-employment,ENT-2603,"Medical staff office, Willowmere Health Cooperative",2026-02-19,secure portal,reply received,First request.
+ATT-2604,APP-2026-026,peer-reference,REF-2600,"Dr. Fionn Holloway, MD",2026-02-23,secure portal,reply received,First request.
+ATT-2605,APP-2026-026,peer-reference,REF-2601,"Dr. Mira Tachibana, MD",2026-02-23,secure portal,reply received,First request.
+ATT-2700,APP-2026-027,education-and-training,ENT-2700,"Registrar's office, Quillhaven State University School of Medicine",2026-02-22,secure portal,reply received,First request.
+ATT-2701,APP-2026-027,education-and-training,ENT-2701,"Graduate medical education office, Tolliver General Hospital",2026-02-22,secure portal,reply received,First request.
+ATT-2702,APP-2026-027,education-and-training,ENT-2702,"Graduate medical education office, Drumlin Bay Medical Center",2026-02-22,secure portal,reply received,First request.
+ATT-2703,APP-2026-027,affiliation-and-employment,ENT-2703,"Medical staff office, Silverbeck Physicians Group",2026-02-22,secure portal,reply received,First request.
+ATT-2704,APP-2026-027,affiliation-and-employment,ENT-2704,"Medical staff office, Orchard Row Specialty Clinic",2026-02-22,secure portal,reply received,First request.
+ATT-2705,APP-2026-027,peer-reference,REF-2700,"Dr. Sigrid Sternhagen, MD",2026-02-26,secure portal,reply received,First request.
+ATT-2706,APP-2026-027,peer-reference,REF-2701,"Dr. Kwabena Whitcombe, MD",2026-02-26,secure portal,reply received,First request.
+ATT-2800,APP-2026-028,education-and-training,ENT-2800,"Registrar's office, Pellingham University School of Medicine",2026-02-12,secure portal,reply received,First request.
+ATT-2801,APP-2026-028,education-and-training,ENT-2801,"Graduate medical education office, Cedar Quarry University Hospital",2026-02-12,secure portal,reply received,First request.
+ATT-2802,APP-2026-028,affiliation-and-employment,ENT-2802,"Medical staff office, Bellamy Creek Medical Center",2026-02-12,secure portal,reply received,First request.
+ATT-2803,APP-2026-028,peer-reference,REF-2800,"Dr. Leander Sandvik, MD",2026-02-16,secure portal,reply received,First request.
+ATT-2804,APP-2026-028,peer-reference,REF-2801,"Dr. Delphine Vandermeer, MD",2026-02-16,secure portal,reply received,First request.
+ATT-2900,APP-2026-029,education-and-training,ENT-2900,"Registrar's office, Thistlewood University School of Medicine",2026-02-15,secure portal,reply received,First request.
+ATT-2901,APP-2026-029,education-and-training,ENT-2901,"Graduate medical education office, Ashgrove Memorial Hospital",2026-02-15,secure portal,reply received,First request.
+ATT-2902,APP-2026-029,affiliation-and-employment,ENT-2902,"Medical staff office, Larkhollow Physicians Network",2026-02-15,secure portal,reply received,First request.
+ATT-2903,APP-2026-029,peer-reference,REF-2900,"Dr. Vesna Lindqvist, MD",2026-02-19,secure portal,reply received,First request.
+ATT-2904,APP-2026-029,peer-reference,REF-2901,"Dr. Thaddeus Matsuda, MD",2026-02-19,secure portal,reply received,First request.
+ATT-3000,APP-2026-030,education-and-training,ENT-3000,"Registrar's office, Corvale College of Osteopathic Medicine",2026-02-08,secure portal,reply received,First request.
+ATT-3001,APP-2026-030,education-and-training,ENT-3001,"Graduate medical education office, Fernhollow Medical Center",2026-02-08,secure portal,reply received,First request.
+ATT-3002,APP-2026-030,affiliation-and-employment,ENT-3002,"Medical staff office, Mosswater Valley Hospital",2026-02-08,secure portal,reply received,First request.
+ATT-3003,APP-2026-030,affiliation-and-employment,ENT-3003,"Medical staff office, Northsound Medical Group",2026-02-08,secure portal,reply received,First request.
+ATT-3004,APP-2026-030,affiliation-and-employment,ENT-3004,"Medical staff office, Larkhollow Physicians Network",2026-02-08,secure portal,reply received,First request.
+ATT-3006,APP-2026-030,peer-reference,REF-3000,"Dr. Kenji Halvorsen, MD",2026-02-12,secure portal,reply received,First request.
+ATT-3007,APP-2026-030,peer-reference,REF-3001,"Dr. Piotr Thornbury, MD",2026-02-12,secure portal,reply received,First request.
+ATT-3100,APP-2026-031,education-and-training,ENT-3100,"Registrar's office, Ravensmoor University School of Medicine",2026-02-19,secure portal,reply received,First request.
+ATT-3101,APP-2026-031,education-and-training,ENT-3101,"Graduate medical education office, Westmarch University Medical Center",2026-02-19,secure portal,reply received,First request.
+ATT-3102,APP-2026-031,affiliation-and-employment,ENT-3102,"Medical staff office, Two Rivers Health Partners",2026-02-19,secure portal,reply received,First request.
+ATT-3103,APP-2026-031,peer-reference,REF-3100,"Dr. Ingrid Boateng, MD",2026-02-23,secure portal,reply received,First request.
+ATT-3104,APP-2026-031,peer-reference,REF-3101,"Dr. Hanne Nowicki, MD",2026-02-23,secure portal,reply received,First request.
+ATT-3200,APP-2026-032,education-and-training,ENT-3200,"Registrar's office, Steadmere University School of Medicine",2026-02-26,secure portal,reply received,First request.
+ATT-3201,APP-2026-032,education-and-training,ENT-3201,"Graduate medical education office, Saltmarsh Regional Health",2026-02-26,secure portal,reply received,First request.
+ATT-3202,APP-2026-032,affiliation-and-employment,ENT-3202,"Medical staff office, Bellamy Creek Medical Center",2026-02-26,secure portal,reply received,First request.
+ATT-3203,APP-2026-032,affiliation-and-employment,ENT-3203,"Medical staff office, Willowmere Health Cooperative",2026-02-26,secure portal,reply received,First request.
+ATT-3204,APP-2026-032,peer-reference,REF-3200,"Dr. Clementine Pennington, MD",2026-03-02,secure portal,reply received,First request.
+ATT-3205,APP-2026-032,peer-reference,REF-3201,"Dr. Mateusz Larkspur, MD",2026-03-02,secure portal,reply received,First request.
+ATT-3300,APP-2026-033,education-and-training,ENT-3300,"Registrar's office, Windthorne University College of Medicine",2026-02-22,secure portal,reply received,First request.
+ATT-3301,APP-2026-033,education-and-training,ENT-3301,"Graduate medical education office, Kirkwallow Teaching Hospital",2026-02-22,secure portal,reply received,First request.
+ATT-3302,APP-2026-033,affiliation-and-employment,ENT-3302,"Medical staff office, Harrowgate Community Health",2026-02-22,secure portal,reply received,First request.
+ATT-3303,APP-2026-033,affiliation-and-employment,ENT-3303,"Medical staff office, Willowmere Health Cooperative",2026-02-22,secure portal,no response,First request.
+ATT-3304,APP-2026-033,affiliation-and-employment,ENT-3303,"Medical staff office, Willowmere Health Cooperative",2026-03-15,fax,no response,Second request. Fax confirmation received; no reply.
+ATT-3306,APP-2026-033,peer-reference,REF-3300,"Dr. Zubin Bergmann, MD",2026-02-26,secure portal,reply received,First request.
+ATT-3307,APP-2026-033,peer-reference,REF-3301,"Dr. Lucia Pryce-Jones, MD",2026-02-26,secure portal,reply received,First request.
+ATT-3400,APP-2026-034,education-and-training,ENT-3400,"Registrar's office, Halloway Point School of Medicine",2026-02-01,secure portal,reply received,First request.
+ATT-3401,APP-2026-034,education-and-training,ENT-3401,"Graduate medical education office, Drumlin Bay Medical Center",2026-02-01,secure portal,reply received,First request.
+ATT-3402,APP-2026-034,affiliation-and-employment,ENT-3402,"Medical staff office, Kettlebrook Family Clinic",2026-02-01,secure portal,reply received,First request.
+ATT-3403,APP-2026-034,peer-reference,REF-3400,"Dr. Annika Montalvo, MD",2026-02-05,secure portal,reply received,First request.
+ATT-3404,APP-2026-034,peer-reference,REF-3401,"Dr. Tarek Kettering, MD",2026-02-05,secure portal,reply received,First request.
+ATT-3500,APP-2026-035,education-and-training,ENT-3500,"Registrar's office, Aldersgate University School of Medicine",2026-02-08,secure portal,reply received,First request.
+ATT-3501,APP-2026-035,education-and-training,ENT-3501,"Graduate medical education office, Pinevale University Hospital",2026-02-08,secure portal,reply received,First request.
+ATT-3502,APP-2026-035,affiliation-and-employment,ENT-3502,"Medical staff office, Greyfen Regional Hospital",2026-02-08,secure portal,reply received,First request.
+ATT-3503,APP-2026-035,affiliation-and-employment,ENT-3503,"Medical staff office, Mosswater Valley Hospital",2026-02-08,secure portal,reply received,First request.
+ATT-3504,APP-2026-035,peer-reference,REF-3500,"Dr. Farhan Vasquez-Ruiz, MD",2026-02-12,secure portal,reply received,First request.
+ATT-3505,APP-2026-035,peer-reference,REF-3501,"Dr. Xiomara Vukovic, MD",2026-02-12,secure portal,reply received,First request.
+ATT-3600,APP-2026-036,education-and-training,ENT-3600,"Registrar's office, Marrowfield College of Medicine",2026-02-01,secure portal,reply received,First request.
+ATT-3601,APP-2026-036,education-and-training,ENT-3601,"Graduate medical education office, Braypoint Regional Medical Center",2026-02-01,secure portal,reply received,First request.
+ATT-3602,APP-2026-036,affiliation-and-employment,ENT-3602,"Medical staff office, Willowmere Health Cooperative",2026-02-01,secure portal,reply received,First request.
+ATT-3603,APP-2026-036,affiliation-and-employment,ENT-3603,"Medical staff office, Silverbeck Physicians Group",2026-02-01,secure portal,reply received,First request.
+ATT-3605,APP-2026-036,peer-reference,REF-3600,"Dr. Genevieve Kjeldsen, MD",2026-02-05,secure portal,reply received,First request.
+ATT-3606,APP-2026-036,peer-reference,REF-3601,"Dr. Iyanla Okpara, MD",2026-02-05,secure portal,reply received,First request.
+ATT-3700,APP-2026-037,education-and-training,ENT-3700,"Registrar's office, Dunleath University School of Medicine",2026-02-05,secure portal,reply received,First request.
+ATT-3701,APP-2026-037,education-and-training,ENT-3701,"Graduate medical education office, Cedar Quarry University Hospital",2026-02-05,secure portal,reply received,First request.
+ATT-3702,APP-2026-037,affiliation-and-employment,ENT-3702,"Medical staff office, Orchard Row Specialty Clinic",2026-02-05,secure portal,reply received,First request.
+ATT-3703,APP-2026-037,affiliation-and-employment,ENT-3703,"Medical staff office, Kettlebrook Family Clinic",2026-02-05,secure portal,reply received,First request.
+ATT-3704,APP-2026-037,peer-reference,REF-3700,"Dr. Anders Oduya, MD",2026-02-09,secure portal,reply received,First request.
+ATT-3705,APP-2026-037,peer-reference,REF-3701,"Dr. Oluwaseun Ferndale, MD",2026-02-09,secure portal,reply received,First request.
+ATT-3800,APP-2026-038,education-and-training,ENT-3800,"Registrar's office, Brackenridge College of Osteopathic Medicine",2026-02-15,secure portal,reply received,First request.
+ATT-3801,APP-2026-038,education-and-training,ENT-3801,"Graduate medical education office, Ashgrove Memorial Hospital",2026-02-15,secure portal,reply received,First request.
+ATT-3802,APP-2026-038,affiliation-and-employment,ENT-3802,"Medical staff office, Northsound Medical Group",2026-02-15,secure portal,reply received,First request.
+ATT-3803,APP-2026-038,peer-reference,REF-3800,"Dr. Gustav Ndiaye, MD",2026-02-19,secure portal,reply received,First request.
+ATT-3804,APP-2026-038,peer-reference,REF-3801,"Dr. Solveig Nwachukwu, MD",2026-02-19,secure portal,reply received,First request.
+ATT-3900,APP-2026-039,education-and-training,ENT-3900,"Registrar's office, Pellingham University School of Medicine",2026-02-08,secure portal,reply received,First request.
+ATT-3901,APP-2026-039,education-and-training,ENT-3901,"Graduate medical education office, Tolliver General Hospital",2026-02-08,secure portal,reply received,First request.
+ATT-3902,APP-2026-039,affiliation-and-employment,ENT-3902,"Medical staff office, Stonebridge Medical Associates",2026-02-08,secure portal,reply received,First request.
+ATT-3903,APP-2026-039,affiliation-and-employment,ENT-3903,"Medical staff office, Larkhollow Physicians Network",2026-02-08,secure portal,reply received,First request.
+ATT-3904,APP-2026-039,peer-reference,REF-3900,"Dr. Marit Holloway, MD",2026-02-12,secure portal,reply received,First request.
+ATT-3905,APP-2026-039,peer-reference,REF-3901,"Dr. Tomasz Tachibana, MD",2026-02-12,secure portal,reply received,First request.
+ATT-4000,APP-2026-040,education-and-training,ENT-4000,"Registrar's office, Thistlewood University School of Medicine",2026-01-29,secure portal,reply received,First request.
+ATT-4001,APP-2026-040,education-and-training,ENT-4001,"Graduate medical education office, Fernhollow Medical Center",2026-01-29,secure portal,reply received,First request.
+ATT-4002,APP-2026-040,affiliation-and-employment,ENT-4002,"Medical staff office, Silverbeck Physicians Group",2026-01-29,secure portal,reply received,First request.
+ATT-4005,APP-2026-040,peer-reference,REF-4000,"Dr. Marcus Sternhagen, MD",2026-02-02,secure portal,reply received,First request.
+ATT-4006,APP-2026-040,peer-reference,REF-4001,"Dr. Noor Whitcombe, MD",2026-02-02,secure portal,reply received,First request.

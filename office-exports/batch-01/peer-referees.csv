@@ -1,0 +1,80 @@
+referee_id,application_id,revision,referee_name,referee_credential,referee_organization,referee_specialty,relationship_declared,source,first_request_date
+REF-0100,APP-2026-001,1,"Dr. Priya Sternhagen, MD",MD,Northsound Medical Group,Family Medicine,Worked together in the same department,application,2026-02-02
+REF-0101,APP-2026-001,1,"Dr. Callum Whitcombe, MD",MD,Two Rivers Health Partners,Family Medicine,Worked together in the same department,application,2026-02-02
+REF-0200,APP-2026-002,1,"Dr. Benedikt Sandvik, MD",MD,Harrowgate Community Health,Internal Medicine,Worked together in the same department,application,2026-02-09
+REF-0201,APP-2026-002,1,"Dr. Linnea Vandermeer, MD",MD,Bellamy Creek Medical Center,Internal Medicine,Worked together in the same department,application,2026-02-09
+REF-0300,APP-2026-003,1,"Dr. Imani Lindqvist, MD",MD,Silverbeck Physicians Group,Emergency Medicine,Worked together in the same department,application,2026-02-05
+REF-0301,APP-2026-003,1,"Dr. Hideo Matsuda, MD",MD,Orchard Row Specialty Clinic,Emergency Medicine,Worked together in the same department,application,2026-02-05
+REF-0400,APP-2026-004,1,"Dr. Dmitri Halvorsen, MD",MD,Mosswater Valley Hospital,Pediatrics,Worked together in the same department,application,2026-02-16
+REF-0401,APP-2026-004,1,"Dr. Anaya Thornbury, MD",MD,Larkhollow Physicians Network,Pediatrics,Worked together in the same department,application,2026-02-16
+REF-0500,APP-2026-005,1,"Dr. Marguerite Boateng, MD",MD,Two Rivers Health Partners,Diagnostic Radiology,Worked together in the same department,application,2026-02-12
+REF-0501,APP-2026-005,1,"Dr. Emeka Nowicki, MD",MD,Greyfen Regional Hospital,Diagnostic Radiology,Worked together in the same department,application,2026-02-12
+REF-0600,APP-2026-006,1,"Dr. Fionn Pennington, MD",MD,Bellamy Creek Medical Center,Anesthesiology,Worked together in the same department,application,2026-02-19
+REF-0601,APP-2026-006,1,"Dr. Mira Larkspur, MD",MD,Willowmere Health Cooperative,Anesthesiology,Worked together in the same department,application,2026-02-19
+REF-0700,APP-2026-007,1,"Dr. Sigrid Bergmann, MD",MD,Orchard Row Specialty Clinic,Psychiatry,Worked together in the same department,application,2026-02-02
+REF-0701,APP-2026-007,1,"Dr. Kwabena Pryce-Jones, MD",MD,Stonebridge Medical Associates,Psychiatry,Worked together in the same department,application,2026-02-02
+REF-0800,APP-2026-008,1,"Dr. Leander Montalvo, MD",MD,Larkhollow Physicians Network,Obstetrics and Gynecology,Worked together in the same department,application,2026-02-23
+REF-0801,APP-2026-008,1,"Dr. Delphine Kettering, MD",MD,Kettlebrook Family Clinic,Obstetrics and Gynecology,Worked together in the same department,application,2026-02-23
+REF-0900,APP-2026-009,1,"Dr. Vesna Vasquez-Ruiz, MD",MD,Greyfen Regional Hospital,Family Medicine,Worked together in the same department,application,2026-02-26
+REF-0901,APP-2026-009,1,"Dr. Thaddeus Vukovic, MD",MD,Northsound Medical Group,Family Medicine,Worked together in the same department,application,2026-02-26
+REF-1000,APP-2026-010,1,"Dr. Kenji Kjeldsen, MD",MD,Willowmere Health Cooperative,Pediatrics,Worked together in the same department,application,2026-03-02
+REF-1001,APP-2026-010,1,"Dr. Piotr Okpara, MD",MD,Harrowgate Community Health,Pediatrics,Worked together in the same department,application,2026-03-02
+REF-1100,APP-2026-011,1,"Dr. Ingrid Oduya, MD",MD,Stonebridge Medical Associates,General Surgery,Worked together in the same department,application,2026-03-05
+REF-1101,APP-2026-011,1,"Dr. Hanne Ferndale, MD",MD,Silverbeck Physicians Group,General Surgery,Worked together in the same department,application,2026-03-05
+REF-1102,APP-2026-011,1,"Dr. Desmond Banerjee, MD",MD,Orchard Row Specialty Clinic,General Surgery,Worked together in the same department,application,2026-03-05
+REF-1200,APP-2026-012,1,"Dr. Clementine Ndiaye, MD",MD,Kettlebrook Family Clinic,Internal Medicine,Worked together in the same department,application,2026-03-09
+REF-1201,APP-2026-012,1,"Dr. Mateusz Nwachukwu, MD",MD,Mosswater Valley Hospital,Internal Medicine,Worked together in the same department,application,2026-03-09
+REF-1300,APP-2026-013,1,"Dr. Zubin Holloway, MD",MD,Northsound Medical Group,Internal Medicine,Worked together in the same department,application,2026-02-05
+REF-1301,APP-2026-013,1,"Dr. Lucia Tachibana, MD",MD,Two Rivers Health Partners,Internal Medicine,Worked together in the same department,application,2026-02-05
+REF-1400,APP-2026-014,1,"Dr. Annika Sternhagen, MD",MD,Harrowgate Community Health,Internal Medicine,Worked together in the same department,application,2026-02-09
+REF-1401,APP-2026-014,1,"Dr. Tarek Whitcombe, MD",MD,Bellamy Creek Medical Center,Internal Medicine,Worked together in the same department,application,2026-02-09
+REF-1500,APP-2026-015,1,"Dr. Farhan Sandvik, MD",MD,Silverbeck Physicians Group,General Surgery,Worked together in the same department,application,2026-02-12
+REF-1501,APP-2026-015,1,"Dr. Xiomara Vandermeer, MD",MD,Orchard Row Specialty Clinic,General Surgery,Worked together in the same department,application,2026-02-12
+REF-1600,APP-2026-016,1,"Dr. Genevieve Lindqvist, MD",MD,Mosswater Valley Hospital,Family Medicine,Worked together in the same department,application,2026-02-16
+REF-1601,APP-2026-016,1,"Dr. Iyanla Matsuda, MD",MD,Larkhollow Physicians Network,Family Medicine,Worked together in the same department,application,2026-02-16
+REF-1700,APP-2026-017,1,"Dr. Anders Halvorsen, MD",MD,Two Rivers Health Partners,Emergency Medicine,Worked together in the same department,application,2026-02-19
+REF-1701,APP-2026-017,1,"Dr. Oluwaseun Thornbury, MD",MD,Greyfen Regional Hospital,Emergency Medicine,Worked together in the same department,application,2026-02-19
+REF-1800,APP-2026-018,1,"Dr. Gustav Boateng, MD",MD,Bellamy Creek Medical Center,Internal Medicine,Worked together in the same department,application,2026-03-02
+REF-1801,APP-2026-018,1,"Dr. Solveig Nowicki, MD",MD,Willowmere Health Cooperative,Internal Medicine,Worked together in the same department,application,2026-03-02
+REF-2000,APP-2026-020,1,"Dr. Marcus Bergmann, MD",MD,Larkhollow Physicians Network,Diagnostic Radiology,Worked together in the same department,application,2026-02-16
+REF-2001,APP-2026-020,1,"Dr. Noor Pryce-Jones, MD",MD,Kettlebrook Family Clinic,Diagnostic Radiology,Worked together in the same department,application,2026-02-16
+REF-2100,APP-2026-021,1,"Dr. Priya Montalvo, MD",MD,Greyfen Regional Hospital,Family Medicine,Worked together in the same department,application,2026-02-23
+REF-2101,APP-2026-021,1,"Dr. Callum Kettering, MD",MD,Northsound Medical Group,Family Medicine,Worked together in the same department,application,2026-02-23
+REF-2200,APP-2026-022,1,"Dr. Benedikt Vasquez-Ruiz, MD",MD,Willowmere Health Cooperative,Psychiatry,Worked together in the same department,application,2026-02-26
+REF-2201,APP-2026-022,1,"Dr. Linnea Vukovic, MD",MD,Harrowgate Community Health,Psychiatry,Worked together in the same department,application,2026-02-26
+REF-2300,APP-2026-023,1,"Dr. Imani Kjeldsen, MD",MD,Stonebridge Medical Associates,Anesthesiology,Worked together in the same department,application,2026-02-09
+REF-2301,APP-2026-023,1,"Dr. Hideo Okpara, MD",MD,Silverbeck Physicians Group,Anesthesiology,Worked together in the same department,application,2026-02-09
+REF-2400,APP-2026-024,1,"Dr. Dmitri Oduya, MD",MD,Kettlebrook Family Clinic,Obstetrics and Gynecology,Worked together in the same department,application,2026-02-12
+REF-2401,APP-2026-024,1,"Dr. Anaya Ferndale, MD",MD,Mosswater Valley Hospital,Obstetrics and Gynecology,Worked together in the same department,application,2026-02-12
+REF-2500,APP-2026-025,1,"Dr. Marguerite Ndiaye, MD",MD,Northsound Medical Group,Internal Medicine,Worked together in the same department,application,2024-04-29
+REF-2501,APP-2026-025,1,"Dr. Emeka Nwachukwu, MD",MD,Two Rivers Health Partners,Internal Medicine,Worked together in the same department,application,2024-04-29
+REF-2600,APP-2026-026,1,"Dr. Fionn Holloway, MD",MD,Harrowgate Community Health,Internal Medicine,Worked together in the same department,application,2026-02-23
+REF-2601,APP-2026-026,1,"Dr. Mira Tachibana, MD",MD,Bellamy Creek Medical Center,Internal Medicine,Worked together in the same department,application,2026-02-23
+REF-2700,APP-2026-027,1,"Dr. Sigrid Sternhagen, MD",MD,Silverbeck Physicians Group,Family Medicine,Worked together in the same department,application,2026-02-26
+REF-2701,APP-2026-027,1,"Dr. Kwabena Whitcombe, MD",MD,Orchard Row Specialty Clinic,Family Medicine,Worked together in the same department,application,2026-02-26
+REF-2800,APP-2026-028,1,"Dr. Leander Sandvik, MD",MD,Mosswater Valley Hospital,Pediatrics,Worked together in the same department,application,2026-02-16
+REF-2801,APP-2026-028,1,"Dr. Delphine Vandermeer, MD",MD,Larkhollow Physicians Network,Pediatrics,Worked together in the same department,application,2026-02-16
+REF-2900,APP-2026-029,1,"Dr. Vesna Lindqvist, MD",MD,Two Rivers Health Partners,Family Medicine,Worked together in the same department,application,2026-02-19
+REF-2901,APP-2026-029,1,"Dr. Thaddeus Matsuda, MD",MD,Greyfen Regional Hospital,Family Medicine,Worked together in the same department,application,2026-02-19
+REF-3000,APP-2026-030,1,"Dr. Kenji Halvorsen, MD",MD,Bellamy Creek Medical Center,Internal Medicine,Worked together in the same department,application,2026-02-12
+REF-3001,APP-2026-030,1,"Dr. Piotr Thornbury, MD",MD,Willowmere Health Cooperative,Internal Medicine,Worked together in the same department,application,2026-02-12
+REF-3100,APP-2026-031,1,"Dr. Ingrid Boateng, MD",MD,Orchard Row Specialty Clinic,Hospital Medicine,Worked together in the same department,application,2026-02-23
+REF-3101,APP-2026-031,1,"Dr. Hanne Nowicki, MD",MD,Stonebridge Medical Associates,Hospital Medicine,Worked together in the same department,application,2026-02-23
+REF-3200,APP-2026-032,1,"Dr. Clementine Pennington, MD",MD,Larkhollow Physicians Network,Obstetrics and Gynecology,Worked together in the same department,application,2026-03-02
+REF-3201,APP-2026-032,1,"Dr. Mateusz Larkspur, MD",MD,Kettlebrook Family Clinic,Obstetrics and Gynecology,Worked together in the same department,application,2026-03-02
+REF-3300,APP-2026-033,1,"Dr. Zubin Bergmann, MD",MD,Greyfen Regional Hospital,Diagnostic Radiology,Worked together in the same department,application,2026-02-26
+REF-3301,APP-2026-033,1,"Dr. Lucia Pryce-Jones, MD",MD,Northsound Medical Group,Diagnostic Radiology,Worked together in the same department,application,2026-02-26
+REF-3400,APP-2026-034,1,"Dr. Annika Montalvo, MD",MD,Willowmere Health Cooperative,Emergency Medicine,Worked together in the same department,application,2026-02-05
+REF-3401,APP-2026-034,1,"Dr. Tarek Kettering, MD",MD,Harrowgate Community Health,Emergency Medicine,Worked together in the same department,application,2026-02-05
+REF-3500,APP-2026-035,1,"Dr. Farhan Vasquez-Ruiz, MD",MD,Stonebridge Medical Associates,General Surgery,Worked together in the same department,application,2026-02-12
+REF-3501,APP-2026-035,1,"Dr. Xiomara Vukovic, MD",MD,Silverbeck Physicians Group,General Surgery,Worked together in the same department,application,2026-02-12
+REF-3600,APP-2026-036,1,"Dr. Genevieve Kjeldsen, MD",MD,Kettlebrook Family Clinic,Family Medicine,Worked together in the same department,application,2026-02-05
+REF-3601,APP-2026-036,1,"Dr. Iyanla Okpara, MD",MD,Mosswater Valley Hospital,Family Medicine,Worked together in the same department,application,2026-02-05
+REF-3700,APP-2026-037,1,"Dr. Anders Oduya, MD",MD,Northsound Medical Group,Family Medicine,Worked together in the same department,application,2026-02-09
+REF-3701,APP-2026-037,1,"Dr. Oluwaseun Ferndale, MD",MD,Two Rivers Health Partners,Family Medicine,Worked together in the same department,application,2026-02-09
+REF-3800,APP-2026-038,1,"Dr. Gustav Ndiaye, MD",MD,Harrowgate Community Health,Emergency Medicine,Worked together in the same department,application,2026-02-19
+REF-3801,APP-2026-038,1,"Dr. Solveig Nwachukwu, MD",MD,Bellamy Creek Medical Center,Emergency Medicine,Worked together in the same department,application,2026-02-19
+REF-3900,APP-2026-039,1,"Dr. Marit Holloway, MD",MD,Silverbeck Physicians Group,Internal Medicine,Worked together in the same department,application,2026-02-12
+REF-3901,APP-2026-039,1,"Dr. Tomasz Tachibana, MD",MD,Orchard Row Specialty Clinic,Internal Medicine,Worked together in the same department,application,2026-02-12
+REF-4000,APP-2026-040,1,"Dr. Marcus Sternhagen, MD",MD,Mosswater Valley Hospital,Hospital Medicine,Worked together in the same department,application,2026-02-02
+REF-4001,APP-2026-040,1,"Dr. Noor Whitcombe, MD",MD,Larkhollow Physicians Network,Hospital Medicine,Worked together in the same department,application,2026-02-02

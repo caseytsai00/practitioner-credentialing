@@ -1,0 +1,5 @@
+request_id,application_id,revision,privilege_code,privilege_name,criteria_version_cited
+REQ-1801,APP-2026-018,2,PRIV-IM,Internal Medicine,LARK-PRIV-2026.1
+REQ-3001,APP-2026-030,2,PRIV-IM,Internal Medicine,LARK-PRIV-2026.1
+REQ-3101,APP-2026-031,2,PRIV-HOSP,Hospital Medicine,LARK-PRIV-2026.1
+REQ-3601,APP-2026-036,2,PRIV-FM,Family Medicine,LARK-PRIV-2026.1

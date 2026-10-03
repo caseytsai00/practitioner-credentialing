@@ -1,0 +1,10 @@
+attempt_id,application_id,element,subject_ref,attempted_with,attempt_date,method,outcome,comment
+ATT-1407,APP-2026-014,peer-reference,REF-1401,"Dr. Tarek Whitcombe, MD",2026-03-23,letter,reply received,"Third request, by post."
+ATT-2005,APP-2026-020,education-and-training,ENT-2000,"Registrar's office, Steadmere University School of Medicine",2026-03-26,letter,reply received,"Third request, by post. Reply received 2026-05-04."
+ATT-2106,APP-2026-021,education-and-training,ENT-2100,"Medical staff office, Greyfen Regional Hospital",2026-03-16,letter,reply received,"Most recent affiliation asked how it obtained its own verification, under the impossibility route."
+ATT-2205,APP-2026-022,education-and-training,ENT-2201,"Graduate medical education office, Westmarch University Medical Center",2026-04-02,letter,no response,"Third request, by post. No reply as at this export."
+ATT-2307,APP-2026-023,peer-reference,REF-2301,"Dr. Hideo Okpara, MD",2026-03-23,letter,no response,"Third request, by post."
+ATT-3005,APP-2026-030,affiliation-and-employment,ENT-3090,"Medical staff office, Two Rivers Health Partners",2026-04-16,secure portal,reply received,First request.
+ATT-3305,APP-2026-033,affiliation-and-employment,ENT-3303,"Medical staff office, Willowmere Health Cooperative",2026-04-06,letter,no response,"Third request, by post. No reply as at this export. The institution is open and trading; this is non-response, not impossibility."
+ATT-3604,APP-2026-036,affiliation-and-employment,ENT-3602,"Medical staff office, Silverbeck Physicians Group",2026-04-02,secure portal,reply received,First request.
+ATT-4003,APP-2026-040,licensure,the Washington credential,Washington State Department of Health,2026-04-16,secure portal,reply received,Lookup run after the credential's expiry date of 2026-04-10. The board reports the credential expired.

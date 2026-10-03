@@ -1,0 +1,6 @@
+attempt_id,application_id,element,subject_ref,attempted_with,attempt_date,method,outcome,comment
+ATT-2308,APP-2026-023,peer-reference,REF-2302,"Dr. Tabitha Orlovsky, MD",2026-04-27,secure portal,reply received,First request.
+ATT-2405,APP-2026-024,peer-reference,REF-2402,"Dr. Joaquin Banerjee, MD",2026-04-20,secure portal,reply received,First request.
+ATT-2506,APP-2026-025,peer-reference,REF-2502,"Dr. Rosalind Esposito-Vela, MD",2026-05-14,secure portal,no response,First request.
+ATT-3405,APP-2026-034,peer-reference,REF-3402,"Dr. Perpetua Okonkwo, MD",2026-04-28,secure portal,reply received,First request.
+ATT-4004,APP-2026-040,licensure,the Washington credential,Washington State Department of Health,2026-05-14,secure portal,reply received,Re-verification on expiry. The board reports the credential renewed on 2026-05-04 and active to 2028-04-30.

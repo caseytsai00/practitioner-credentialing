@@ -1,0 +1,27 @@
+letter_id,date,direction,application_id,correspondent,subject,document_path
+LTR-0057,2026-04-20,inbound,APP-2026-015,"Dr. Hideo Tachibana, MD",Confirmation of my answer to professional practice question PPQ-1,letters/2026-04-20_confirm-disclosure-reply_APP-2026-015.md
+LTR-0058,2026-04-21,inbound,APP-2026-021,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-028 — recommended,decisions/2026-04-21_MEC-2026-028.md
+LTR-0059,2026-04-23,inbound,APP-2026-023,"Dr. Joaquin Esposito-Vela, MD",Additional referee,letters/2026-04-23_referee-substitution_APP-2026-023.md
+LTR-0060,2026-04-24,inbound,APP-2026-034,"Dr. Ingrid Solheim, MD",Additional referee,letters/2026-04-24_referee-substitution_APP-2026-034.md
+LTR-0061,2026-05-05,inbound,APP-2026-018,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-027 — recommended,decisions/2026-05-05_MEC-2026-027.md
+LTR-0062,2026-05-06,inbound,APP-2026-015,"Dr. Marguerite Oyelaran, MD, Clinical Director",Disposition — Licensure finding and high-risk finding,dispositions/2026-05-06_disposition_APP-2026-015.md
+LTR-0063,2026-05-12,inbound,APP-2026-002,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-012 — approved,decisions/2026-05-12_GBD-2026-012.md
+LTR-0064,2026-05-12,inbound,APP-2026-004,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-014 — approved,decisions/2026-05-12_GBD-2026-014.md
+LTR-0065,2026-05-12,inbound,APP-2026-005,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-015 — approved,decisions/2026-05-12_GBD-2026-015.md
+LTR-0066,2026-05-12,inbound,APP-2026-006,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-016 — approved,decisions/2026-05-12_GBD-2026-016.md
+LTR-0067,2026-05-12,inbound,APP-2026-008,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-018 — approved,decisions/2026-05-12_GBD-2026-018.md
+LTR-0068,2026-05-12,inbound,APP-2026-009,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-019 — approved,decisions/2026-05-12_GBD-2026-019.md
+LTR-0069,2026-05-12,inbound,APP-2026-010,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-020 — approved,decisions/2026-05-12_GBD-2026-020.md
+LTR-0070,2026-05-12,inbound,APP-2026-011,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-021 — approved,decisions/2026-05-12_GBD-2026-021.md
+LTR-0071,2026-05-12,inbound,APP-2026-012,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-022 — approved,decisions/2026-05-12_GBD-2026-022.md
+LTR-0072,2026-05-12,inbound,APP-2026-016,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-025 — approved,decisions/2026-05-12_GBD-2026-025.md
+LTR-0073,2026-05-12,inbound,APP-2026-017,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-026 — approved,decisions/2026-05-12_GBD-2026-026.md
+LTR-0074,2026-05-12,inbound,APP-2026-018,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-027 — approved,decisions/2026-05-12_GBD-2026-027.md
+LTR-0075,2026-05-12,inbound,APP-2026-021,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-028 — approved,decisions/2026-05-12_GBD-2026-028.md
+LTR-0076,2026-05-12,inbound,APP-2026-026,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-029 — approved,decisions/2026-05-12_GBD-2026-029.md
+LTR-0077,2026-05-12,inbound,APP-2026-031,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-030 — approved,decisions/2026-05-12_GBD-2026-030.md
+LTR-0078,2026-05-12,inbound,APP-2026-032,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-031 — approved,decisions/2026-05-12_GBD-2026-031.md
+LTR-0079,2026-05-12,inbound,APP-2026-036,Governing Body — Mr. Desmond Ihejirika,Governing Body record GBD-2026-035 — approved,decisions/2026-05-12_GBD-2026-035.md
+LTR-0080,2026-05-12,inbound,APP-2026-037,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-037 — approved,decisions/2026-05-12_GBD-2026-037.md
+LTR-0081,2026-05-12,inbound,APP-2026-038,Governing Body — Ms. Corinne Batiste,Governing Body record GBD-2026-038 — approved,decisions/2026-05-12_GBD-2026-038.md
+LTR-0082,2026-05-14,outbound,APP-2026-025,"Dr. Leander Vandermeer, MD",One peer reference is no longer current,letters/2026-05-14_reference-stale_APP-2026-025.md

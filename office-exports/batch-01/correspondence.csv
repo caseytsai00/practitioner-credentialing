@@ -1,0 +1,16 @@
+letter_id,date,direction,application_id,correspondent,subject,document_path
+LTR-0001,2026-02-06,inbound,APP-2026-005,"Elliot Ferndale, MD",Explanation of period 2013-07-01 to 2013-07-30,letters/2026-02-06_gap-explanation_APP-2026-005.md
+LTR-0002,2026-02-06,inbound,APP-2026-039,"Hanne Bergmann, MD",Explanation of period 2021-04-01 to 2021-07-04,letters/2026-02-06_gap-explanation_APP-2026-039.md
+LTR-0003,2026-02-13,inbound,APP-2026-017,"Oskar Lindqvist, MD",Explanation of period 2019-04-01 to 2019-11-05,letters/2026-02-13_gap-explanation_APP-2026-017.md
+LTR-0004,2026-02-18,outbound,APP-2026-019,"Dr. Fionn Callaghan, MD",Missing items on your application,letters/2026-02-18_missing-items_APP-2026-019.md
+LTR-0005,2026-02-20,inbound,APP-2026-031,"Dr. Kenji Matsuda, MD",Cover note with my application,letters/2026-02-20_cover-note_APP-2026-031.md
+LTR-0006,2026-03-04,inbound,APP-2026-015,Washington State Department of Health,Board action summary for credential MD60069441,letters/2026-03-04_board-action_APP-2026-015.md
+LTR-0007,2026-03-06,outbound,APP-2026-018,"Dr. Anaya Banerjee, MD",Application returned as incomplete — unexplained period 2024-05-02 to 2024-06-01,letters/2026-03-06_return-incomplete_APP-2026-018.md
+LTR-0008,2026-03-06,outbound,APP-2026-031,"Dr. Kenji Matsuda, MD",A Washington licence is required by the bylaws,letters/2026-03-06_missing-licence_APP-2026-031.md
+LTR-0009,2026-03-10,inbound,APP-2026-001,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-011 — recommended,decisions/2026-03-10_MEC-2026-011.md
+LTR-0010,2026-03-10,inbound,APP-2026-007,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-017 — recommended,decisions/2026-03-10_MEC-2026-017.md
+LTR-0011,2026-03-10,inbound,APP-2026-014,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-024 — recommended,decisions/2026-03-10_MEC-2026-024.md
+LTR-0012,2026-03-10,outbound,APP-2026-030,"Dr. Delphine Beaumont, MD",Discrepancy on the Mosswater Valley Hospital appointment,letters/2026-03-10_discrepancy_APP-2026-030.md
+LTR-0013,2026-03-10,inbound,APP-2026-036,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-034 — recommended,decisions/2026-03-10_MEC-2026-034.md
+LTR-0014,2026-03-12,inbound,APP-2026-003,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-013 — recommended,decisions/2026-03-12_MEC-2026-013.md
+LTR-0015,2026-03-12,inbound,APP-2026-013,"Executive Committee of the Medical Staff — Dr. Peter Vandermolen, MD",Executive Committee of the Medical Staff record MEC-2026-023 — recommended,decisions/2026-03-12_MEC-2026-023.md

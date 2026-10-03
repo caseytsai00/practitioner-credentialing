@@ -1,0 +1,29 @@
+Build the Agent Skill for this project. Read README.md, snapshot.schema.json,
+  and the full assignment doc for the complete requirements.
+
+  Read my interview export at
+  interviews/project-e-practitioner-credentialing-20261002-2128.md for the
+  office's actual rules and thresholds.
+
+  The three office export batches are already in the repo at
+  office-exports/batch-01/, batch-02/, batch-03/ (each with its own README
+  describing its files).
+
+  Key constraints:
+  - The Skill reads one batch + the state my previous run left, and produces
+    the next state (a sealed snapshot per snapshot.schema.json) + a human
+    action queue.
+  - Five judgments must never be automated — whether a gap explanation is
+    satisfactory, whether a finding is disqualifying, whether to discontinue
+    on eligibility grounds, whether to recommend appointment and which
+    privileges, whether to grant/modify/defer/deny. These only ever become
+    action-queue items for a human, never a value the Skill computes.
+  - Rules come from my interview, not from you — put them in
+    deliverables/rules.md and have the code read from there, don't hardcode
+    case-specific thresholds.
+  - Run it across all 3 batches, with the third resuming from the second's
+    output, not starting over.
+  - Produce all the deliverables listed in the assignment doc (SKILL.md,
+    README, snapshots, rules.md, verification.md, run-log.md).
+
+  Ask me if anything in the rules is ambiguous rather than guessing.

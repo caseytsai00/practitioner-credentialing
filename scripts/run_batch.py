@@ -1,10 +1,19 @@
 from __future__ import annotations
 
+import os
+import sys
+
+# Make `python3 scripts/run_batch.py` work as documented: running the file directly only puts
+# scripts/ itself on sys.path, not the repo root, so the `from scripts.X import ...` imports below
+# would fail with ModuleNotFoundError without this. `python3 -m scripts.run_batch` doesn't need it
+# (the repo root is already on sys.path in that form), so this is a no-op there.
+_REPO_ROOT_FOR_IMPORT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _REPO_ROOT_FOR_IMPORT not in sys.path:
+    sys.path.insert(0, _REPO_ROOT_FOR_IMPORT)
+
 import argparse
 import datetime
 import json
-import os
-import sys
 import traceback
 from typing import List, Optional
 

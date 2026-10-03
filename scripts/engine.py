@@ -665,12 +665,14 @@ def extract_monitored_conditions(store) -> List[MonitoredCondition]:
 def compute_status(*, intake_status, elements, admitted_gb_outcome, has_inadmissible_decision, activation):
     if intake_status != "complete":
         return intake_status
-    # The status enum's precedence order treats decision-inadmissible, deferred, denied, and
-    # approval outcomes as all further along than packet-presentable -- so none of them can
-    # apply to a file whose elements are not all resolved yet; such a file is simply
-    # in-verification regardless of any decision record that happens to exist for it.
-    if not all(state == "resolved" for state in elements.values()):
-        return "in-verification"
+    # An admitted Governing Body decision is the office's real authority and governs the status
+    # regardless of whether this engine's own element tracking still shows a lingering finding --
+    # real batch data surfaced files the Governing Body approved while one element (e.g. a
+    # certification lapse no disposition ever explicitly cleared) still read "finding" here. That
+    # finding belongs in the action queue, not in blocking an already-decided file at
+    # "in-verification" forever. Only in the ABSENCE of an admitted Governing Body outcome does
+    # the status enum's precedence order apply: decision-inadmissible and packet-presentable both
+    # require every element resolved first; short of that, the file is simply in-verification.
     if admitted_gb_outcome == "denied":
         return "denied"
     if admitted_gb_outcome == "deferred-pending-information":
@@ -679,6 +681,8 @@ def compute_status(*, intake_status, elements, admitted_gb_outcome, has_inadmiss
         if activation is not None and activation.active_at_export:
             return "active-with-conditions" if admitted_gb_outcome == "approved-with-conditions" else "active"
         return "approved-not-yet-effective"
+    if not all(state == "resolved" for state in elements.values()):
+        return "in-verification"
     if has_inadmissible_decision:
         return "decision-inadmissible"
     return "packet-presentable"

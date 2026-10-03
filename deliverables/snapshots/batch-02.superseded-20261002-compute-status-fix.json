@@ -426,7 +426,7 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "approved-not-yet-effective"
+      "status": "in-verification"
     },
     {
       "action_queue": [
@@ -1087,7 +1087,7 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "approved-not-yet-effective"
+      "status": "in-verification"
     },
     {
       "action_queue": [
@@ -1188,5 +1188,5 @@
   ],
   "rules_file": "deliverables/rules.md",
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "batch-02-20261003T035038529861Z"
+  "snapshot_id": "batch-02-20261003T034553863835Z"
 }

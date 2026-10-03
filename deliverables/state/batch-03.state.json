@@ -2,7 +2,7 @@
   "applications": {
     "APP-2026-001": {
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
@@ -484,11 +484,18 @@
           }
         ]
       },
-      "status": "approved-not-yet-effective"
+      "status": "active"
     },
     "APP-2026-002": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": false,
+        "cycle_end": "2028-06-01",
+        "effective_date": "2026-06-01",
+        "privileges": [
+          "PRIV-HOSP; PRIV-IM"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-012",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -549,6 +556,15 @@
             "document_path": "decisions/2026-03-17_MEC-2026-012.md",
             "letter_id": "LTR-0016",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-012 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-002",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-012.md",
+            "letter_id": "LTR-0063",
+            "subject": "Governing Body record GBD-2026-012 \u2014 approved"
           }
         ],
         "decisions": [
@@ -569,6 +585,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-002",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-012",
+            "effective_date": "2026-06-01",
+            "filename": "2026-05-12_GBD-2026-012.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-HOSP; PRIV-IM"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-012\n\n**Decision ID:** GBD-2026-012  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-002  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-HOSP; PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-06-01  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -943,7 +978,7 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "approved-not-yet-effective"
     },
     "APP-2026-003": {
       "activation": {
@@ -1432,8 +1467,15 @@
       "status": "active"
     },
     "APP-2026-004": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-PED"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-014",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -1494,6 +1536,15 @@
             "document_path": "decisions/2026-03-24_MEC-2026-014.md",
             "letter_id": "LTR-0020",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-014 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-004",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-014.md",
+            "letter_id": "LTR-0064",
+            "subject": "Governing Body record GBD-2026-014 \u2014 approved"
           }
         ],
         "decisions": [
@@ -1514,6 +1565,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-004",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-014",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-014.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-PED"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-014\n\n**Decision ID:** GBD-2026-014  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-004  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-PED  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -1880,11 +1950,18 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "active"
     },
     "APP-2026-005": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-RAD"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-015",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -1954,6 +2031,15 @@
             "document_path": "decisions/2026-03-19_MEC-2026-015.md",
             "letter_id": "LTR-0018",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-015 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-005",
+            "correspondent": "Governing Body \u2014 Mr. Desmond Ihejirika",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-015.md",
+            "letter_id": "LTR-0065",
+            "subject": "Governing Body record GBD-2026-015 \u2014 approved"
           }
         ],
         "decisions": [
@@ -1974,6 +2060,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-005",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-015",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-015.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-RAD"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-015\n\n**Decision ID:** GBD-2026-015  \n**Body:** Governing Body  \n**Signatory:** Mr. Desmond Ihejirika  \n**Role:** Vice-Chair, Governing Body  \n**Application:** APP-2026-005  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-RAD  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Mr. Desmond Ihejirika, Vice-Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Vice-Chair, Governing Body",
+            "signatory": "Mr. Desmond Ihejirika",
             "supersedes": null
           }
         ],
@@ -2348,11 +2453,18 @@
           }
         ]
       },
-      "status": "in-verification"
+      "status": "active"
     },
     "APP-2026-006": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-ANES"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-016",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -2413,6 +2525,15 @@
             "document_path": "decisions/2026-03-26_MEC-2026-016.md",
             "letter_id": "LTR-0022",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-016 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-006",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-016.md",
+            "letter_id": "LTR-0066",
+            "subject": "Governing Body record GBD-2026-016 \u2014 approved"
           }
         ],
         "decisions": [
@@ -2433,6 +2554,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-006",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-016",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-016.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-ANES"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-016\n\n**Decision ID:** GBD-2026-016  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-006  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-ANES  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -2755,11 +2895,11 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "active"
     },
     "APP-2026-007": {
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-04-27",
         "effective_date": "2026-04-27",
         "privileges": [
@@ -3241,11 +3381,18 @@
           }
         ]
       },
-      "status": "approved-not-yet-effective"
+      "status": "active"
     },
     "APP-2026-008": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": false,
+        "cycle_end": "2028-06-15",
+        "effective_date": "2026-06-15",
+        "privileges": [
+          "PRIV-OBG"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-018",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -3306,6 +3453,15 @@
             "document_path": "decisions/2026-03-31_MEC-2026-018.md",
             "letter_id": "LTR-0026",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-018 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-008",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-018.md",
+            "letter_id": "LTR-0067",
+            "subject": "Governing Body record GBD-2026-018 \u2014 approved"
           }
         ],
         "decisions": [
@@ -3326,6 +3482,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-008",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-018",
+            "effective_date": "2026-06-15",
+            "filename": "2026-05-12_GBD-2026-018.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-OBG"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-018\n\n**Decision ID:** GBD-2026-018  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-008  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-OBG  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-06-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -3648,11 +3823,18 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "approved-not-yet-effective"
     },
     "APP-2026-009": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-FM"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-019",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -3713,6 +3895,15 @@
             "document_path": "decisions/2026-04-02_MEC-2026-019.md",
             "letter_id": "LTR-0028",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-019 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-009",
+            "correspondent": "Governing Body \u2014 Mr. Desmond Ihejirika",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-019.md",
+            "letter_id": "LTR-0068",
+            "subject": "Governing Body record GBD-2026-019 \u2014 approved"
           }
         ],
         "decisions": [
@@ -3733,6 +3924,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-009",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-019",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-019.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-FM"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-019\n\n**Decision ID:** GBD-2026-019  \n**Body:** Governing Body  \n**Signatory:** Mr. Desmond Ihejirika  \n**Role:** Vice-Chair, Governing Body  \n**Application:** APP-2026-009  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-FM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Mr. Desmond Ihejirika, Vice-Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Vice-Chair, Governing Body",
+            "signatory": "Mr. Desmond Ihejirika",
             "supersedes": null
           }
         ],
@@ -4111,11 +4321,18 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "active"
     },
     "APP-2026-010": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-PED"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-020",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -4176,6 +4393,15 @@
             "document_path": "decisions/2026-04-07_MEC-2026-020.md",
             "letter_id": "LTR-0035",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-020 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-010",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-020.md",
+            "letter_id": "LTR-0069",
+            "subject": "Governing Body record GBD-2026-020 \u2014 approved"
           }
         ],
         "decisions": [
@@ -4196,6 +4422,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-010",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-020",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-020.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-PED"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-020\n\n**Decision ID:** GBD-2026-020  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-010  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-PED  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -4518,11 +4763,18 @@
           }
         ]
       },
-      "status": "in-verification"
+      "status": "active"
     },
     "APP-2026-011": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-GS"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-021",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -4583,6 +4835,15 @@
             "document_path": "decisions/2026-04-09_MEC-2026-021.md",
             "letter_id": "LTR-0037",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-021 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-011",
+            "correspondent": "Governing Body \u2014 Mr. Desmond Ihejirika",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-021.md",
+            "letter_id": "LTR-0070",
+            "subject": "Governing Body record GBD-2026-021 \u2014 approved"
           }
         ],
         "decisions": [
@@ -4603,6 +4864,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-011",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-021",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-021.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-GS"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-021\n\n**Decision ID:** GBD-2026-021  \n**Body:** Governing Body  \n**Signatory:** Mr. Desmond Ihejirika  \n**Role:** Vice-Chair, Governing Body  \n**Application:** APP-2026-011  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-GS  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Mr. Desmond Ihejirika, Vice-Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Vice-Chair, Governing Body",
+            "signatory": "Mr. Desmond Ihejirika",
             "supersedes": null
           }
         ],
@@ -5005,11 +5285,18 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "active"
     },
     "APP-2026-012": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-IM"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-022",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -5070,6 +5357,15 @@
             "document_path": "decisions/2026-04-14_MEC-2026-022.md",
             "letter_id": "LTR-0043",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-022 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-012",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-022.md",
+            "letter_id": "LTR-0071",
+            "subject": "Governing Body record GBD-2026-022 \u2014 approved"
           }
         ],
         "decisions": [
@@ -5090,6 +5386,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-012",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-022",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-022.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-IM"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-022\n\n**Decision ID:** GBD-2026-022  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-012  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -5456,11 +5771,11 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "active"
     },
     "APP-2026-013": {
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
@@ -5942,11 +6257,11 @@
           }
         ]
       },
-      "status": "approved-not-yet-effective"
+      "status": "active"
     },
     "APP-2026-014": {
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
@@ -5963,7 +6278,7 @@
         "experience": "resolved",
         "gaps": "resolved",
         "licensure": "resolved",
-        "references": "outstanding"
+        "references": "resolved"
       },
       "last_application_row": {
         "applicant_id": "LP-1014",
@@ -6260,6 +6575,19 @@
             "relationship_stated": "We worked in the same department and I supervised several of the applicant's cases.",
             "reply_id": "RR-1400",
             "signature_date": "2026-02-16"
+          },
+          {
+            "application_id": "APP-2026-014",
+            "comments": "Sound clinical judgment, reliable with colleagues and with patients, and no concern about character or competency in the time I have known them.",
+            "last_worked_together_end": "",
+            "received_date": "2026-05-08",
+            "recommendation": "Recommend without reservation",
+            "referee_id": "REF-1401",
+            "referee_specialty_stated": "Internal Medicine",
+            "related_or_partner": "No",
+            "relationship_stated": "We worked in the same department and I supervised several of the applicant's cases.",
+            "reply_id": "RR-1401",
+            "signature_date": "2026-05-06"
           }
         ],
         "privilege_requests": [
@@ -6445,7 +6773,7 @@
           }
         ]
       },
-      "status": "approved-not-yet-effective"
+      "status": "active"
     },
     "APP-2026-015": {
       "activation": null,
@@ -6458,7 +6786,7 @@
         "education": "resolved",
         "experience": "resolved",
         "gaps": "resolved",
-        "licensure": "finding",
+        "licensure": "resolved",
         "references": "resolved"
       },
       "last_application_row": {
@@ -6519,6 +6847,24 @@
             "document_path": "letters/2026-04-02_confirm-disclosure_APP-2026-015.md",
             "letter_id": "LTR-0029",
             "subject": "Request to confirm your answer to professional practice question PPQ-1"
+          },
+          {
+            "application_id": "APP-2026-015",
+            "correspondent": "Dr. Hideo Tachibana, MD",
+            "date": "2026-04-20",
+            "direction": "inbound",
+            "document_path": "letters/2026-04-20_confirm-disclosure-reply_APP-2026-015.md",
+            "letter_id": "LTR-0057",
+            "subject": "Confirmation of my answer to professional practice question PPQ-1"
+          },
+          {
+            "application_id": "APP-2026-015",
+            "correspondent": "Dr. Marguerite Oyelaran, MD, Clinical Director",
+            "date": "2026-05-06",
+            "direction": "inbound",
+            "document_path": "dispositions/2026-05-06_disposition_APP-2026-015.md",
+            "letter_id": "LTR-0062",
+            "subject": "Disposition \u2014 Licensure finding and high-risk finding"
           }
         ],
         "decisions": [],
@@ -6676,7 +7022,15 @@
             "revision": "1"
           }
         ],
-        "dispositions": [],
+        "dispositions": [
+          {
+            "application_id": "APP-2026-015",
+            "date": "2026-05-06",
+            "filename": "2026-05-06_disposition_APP-2026-015.md",
+            "raw_text": "# Clinical Director's disposition \u2014 Licensure finding and high-risk finding\n\n**Date:** 2026-05-06  \n**Application:** APP-2026-015  \n**Applicant:** Dr. Hideo Tachibana, MD  \n**Recorded by:** Dr. Marguerite Oyelaran, MD, Clinical Director  \n\nI have read the board's action summary of 2026-03-04 and the applicant's written confirmation of 2026-04-20. The credential is current but it is not full and unrestricted while the stipulated agreement is in force. Present the file to the Executive Committee of the Medical Staff and the Governing Body with the board's summary attached. Do not discontinue the application. I make no recommendation on the privileges themselves.\n\nMarguerite Oyelaran, MD\nClinical Director\n",
+            "recorded_by": "Dr. Marguerite Oyelaran, MD, Clinical Director"
+          }
+        ],
         "letters": [
           {
             "application_id": "APP-2026-015",
@@ -6691,6 +7045,13 @@
             "filename": "2026-04-02_confirm-disclosure_APP-2026-015.md",
             "letter_type": "confirm-disclosure",
             "raw_text": "# Request to confirm your answer to professional practice question PPQ-1\n\n**Date:** 2026-04-02  \n**To:** Dr. Hideo Tachibana, MD  \n**Application:** APP-2026-015  \n**Applicant:** Dr. Hideo Tachibana, MD  \n\nThe Washington State Department of Health has told us that a stipulated agreement entered on 2024-03-18 is in force against your credential MD60069441. Your application answers No to the question about action by a licensing board. Before your file goes any further, please confirm in writing whether that answer is correct, or submit a revision. We are not asking you to justify the agreement; we are asking you to confirm the answer.\n\nRenata Kowalczyk, CPMSM\nMedical Services Professional\nLarkhollow Community Hospital, Larkhollow, Washington\n"
+          },
+          {
+            "application_id": "APP-2026-015",
+            "date": "2026-04-20",
+            "filename": "2026-04-20_confirm-disclosure-reply_APP-2026-015.md",
+            "letter_type": "confirm-disclosure-reply",
+            "raw_text": "# Confirmation of my answer to professional practice question PPQ-1\n\n**Date:** 2026-04-20  \n**From:** Dr. Hideo Tachibana, MD  \n**Application:** APP-2026-015  \n**Applicant:** Dr. Hideo Tachibana, MD  \n\nMy answer of No was wrong and I am correcting it here in writing. A stipulated agreement with the Washington board has been in force since 2024-03-18. I practise under a board-approved monitoring physician and participate in the monitoring programme through 2027-08-31. I should have answered Yes and explained it on the application.\n\nHideo Tachibana, MD\n"
           }
         ],
         "peer_referees": [
@@ -6900,11 +7261,18 @@
           }
         ]
       },
-      "status": "in-verification"
+      "status": "packet-presentable"
     },
     "APP-2026-016": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-FM"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-025",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -6965,6 +7333,15 @@
             "document_path": "decisions/2026-03-24_MEC-2026-025.md",
             "letter_id": "LTR-0021",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-025 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-016",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-025.md",
+            "letter_id": "LTR-0072",
+            "subject": "Governing Body record GBD-2026-025 \u2014 approved"
           }
         ],
         "decisions": [
@@ -6985,6 +7362,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-016",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-025",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-025.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-FM"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-025\n\n**Decision ID:** GBD-2026-025  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-016  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-FM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -7395,11 +7791,18 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "active"
     },
     "APP-2026-017": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-EM"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-026",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -7478,6 +7881,15 @@
             "document_path": "decisions/2026-04-14_MEC-2026-026.md",
             "letter_id": "LTR-0046",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-026 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-017",
+            "correspondent": "Governing Body \u2014 Mr. Desmond Ihejirika",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-026.md",
+            "letter_id": "LTR-0073",
+            "subject": "Governing Body record GBD-2026-026 \u2014 approved"
           }
         ],
         "decisions": [
@@ -7498,6 +7910,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-017",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-026",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-026.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-EM"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-026\n\n**Decision ID:** GBD-2026-026  \n**Body:** Governing Body  \n**Signatory:** Mr. Desmond Ihejirika  \n**Role:** Vice-Chair, Governing Body  \n**Application:** APP-2026-017  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-EM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Mr. Desmond Ihejirika, Vice-Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Vice-Chair, Governing Body",
+            "signatory": "Mr. Desmond Ihejirika",
             "supersedes": null
           }
         ],
@@ -7924,11 +8355,18 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "active"
     },
     "APP-2026-018": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-IM"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-027",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -7998,9 +8436,66 @@
             "document_path": "letters/2026-03-30_gap-explanation_APP-2026-018.md",
             "letter_id": "LTR-0025",
             "subject": "Explanation of period 2024-05-02 to 2024-06-01"
+          },
+          {
+            "application_id": "APP-2026-018",
+            "correspondent": "Executive Committee of the Medical Staff \u2014 Dr. Peter Vandermolen, MD",
+            "date": "2026-05-05",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-05_MEC-2026-027.md",
+            "letter_id": "LTR-0061",
+            "subject": "Executive Committee of the Medical Staff record MEC-2026-027 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-018",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-027.md",
+            "letter_id": "LTR-0074",
+            "subject": "Governing Body record GBD-2026-027 \u2014 approved"
           }
         ],
-        "decisions": [],
+        "decisions": [
+          {
+            "application_id": "APP-2026-018",
+            "body": "Executive Committee of the Medical Staff",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-05",
+            "decision_id": "MEC-2026-027",
+            "effective_date": null,
+            "filename": "2026-05-05_MEC-2026-027.md",
+            "outcome": "recommended",
+            "privileges": [
+              "PRIV-IM"
+            ],
+            "raw_text": "# Executive Committee of the Medical Staff \u2014 minute extract MEC-2026-027\n\n**Decision ID:** MEC-2026-027  \n**Body:** Executive Committee of the Medical Staff  \n**Signatory:** Dr. Peter Vandermolen, MD  \n**Role:** Chair, Executive Committee of the Medical Staff  \n**Application:** APP-2026-018  \n**Revision:** 2  \n**Decision date:** 2026-05-05  \n**Outcome:** recommended  \n**Privileges:** PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:**   \n**Supersedes:**   \n\n## Minute\n\nThe Executive Committee reviewed the file as presented by the Medical Staff Office and recommends the appointment and the privileges named above to the Governing Body.\n\nSigned: Dr. Peter Vandermolen, MD, Chair, Executive Committee of the Medical Staff, 2026-05-05.\n",
+            "reason": null,
+            "revision": 2,
+            "role": "Chair, Executive Committee of the Medical Staff",
+            "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-018",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-027",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-027.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-IM"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-027\n\n**Decision ID:** GBD-2026-027  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-018  \n**Revision:** 2  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 2,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
+            "supersedes": null
+          }
+        ],
         "declared_credentials": [
           {
             "application_id": "APP-2026-018",
@@ -8387,7 +8882,7 @@
           }
         ]
       },
-      "status": "in-verification"
+      "status": "active"
     },
     "APP-2026-019": {
       "activation": null,
@@ -9009,14 +9504,39 @@
             "verified_credential": "Employment \u2014 Radiologist",
             "verified_from": "2013-07-22",
             "verified_to": ""
+          },
+          {
+            "application_id": "APP-2026-020",
+            "attester_name": "Desmond Pennington",
+            "attester_organization": "Steadmere University School of Medicine",
+            "attester_role": "Assistant Registrar",
+            "element": "education-and-training",
+            "entry_id": "ENT-2000",
+            "notes": "",
+            "outcome": "confirmed",
+            "received_date": "2026-05-04",
+            "received_from": "Registrar's office \u2014 Steadmere University School of Medicine",
+            "reply_id": "VR-2003",
+            "reply_method": "secure portal",
+            "requested_date": "2026-02-12",
+            "verified_credential": "Degree \u2014 Doctor of Medicine",
+            "verified_from": "2005-08-22",
+            "verified_to": "2009-06-30"
           }
         ]
       },
       "status": "packet-presentable"
     },
     "APP-2026-021": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-FM"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-028",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -9068,8 +9588,66 @@
             "requested_date": "2026-02-19"
           }
         ],
-        "correspondence": [],
-        "decisions": [],
+        "correspondence": [
+          {
+            "application_id": "APP-2026-021",
+            "correspondent": "Executive Committee of the Medical Staff \u2014 Dr. Peter Vandermolen, MD",
+            "date": "2026-04-21",
+            "direction": "inbound",
+            "document_path": "decisions/2026-04-21_MEC-2026-028.md",
+            "letter_id": "LTR-0058",
+            "subject": "Executive Committee of the Medical Staff record MEC-2026-028 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-021",
+            "correspondent": "Governing Body \u2014 Mr. Desmond Ihejirika",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-028.md",
+            "letter_id": "LTR-0075",
+            "subject": "Governing Body record GBD-2026-028 \u2014 approved"
+          }
+        ],
+        "decisions": [
+          {
+            "application_id": "APP-2026-021",
+            "body": "Executive Committee of the Medical Staff",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-04-21",
+            "decision_id": "MEC-2026-028",
+            "effective_date": null,
+            "filename": "2026-04-21_MEC-2026-028.md",
+            "outcome": "recommended",
+            "privileges": [
+              "PRIV-FM"
+            ],
+            "raw_text": "# Executive Committee of the Medical Staff \u2014 minute extract MEC-2026-028\n\n**Decision ID:** MEC-2026-028  \n**Body:** Executive Committee of the Medical Staff  \n**Signatory:** Dr. Peter Vandermolen, MD  \n**Role:** Chair, Executive Committee of the Medical Staff  \n**Application:** APP-2026-021  \n**Revision:** 1  \n**Decision date:** 2026-04-21  \n**Outcome:** recommended  \n**Privileges:** PRIV-FM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:**   \n**Supersedes:**   \n\n## Minute\n\nThe Executive Committee reviewed the file as presented by the Medical Staff Office and recommends the appointment and the privileges named above to the Governing Body.\n\nSigned: Dr. Peter Vandermolen, MD, Chair, Executive Committee of the Medical Staff, 2026-04-21.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Executive Committee of the Medical Staff",
+            "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-021",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-028",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-028.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-FM"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-028\n\n**Decision ID:** GBD-2026-028  \n**Body:** Governing Body  \n**Signatory:** Mr. Desmond Ihejirika  \n**Role:** Vice-Chair, Governing Body  \n**Application:** APP-2026-021  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-FM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Mr. Desmond Ihejirika, Vice-Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Vice-Chair, Governing Body",
+            "signatory": "Mr. Desmond Ihejirika",
+            "supersedes": null
+          }
+        ],
         "declared_credentials": [
           {
             "application_id": "APP-2026-021",
@@ -9484,7 +10062,7 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "active"
     },
     "APP-2026-022": {
       "activation": null,
@@ -9908,7 +10486,7 @@
         "experience": "resolved",
         "gaps": "resolved",
         "licensure": "resolved",
-        "references": "outstanding"
+        "references": "resolved"
       },
       "last_application_row": {
         "applicant_id": "LP-1023",
@@ -9959,6 +10537,15 @@
             "document_path": "letters/2026-04-15_referee-overdue_APP-2026-023.md",
             "letter_id": "LTR-0053",
             "subject": "Peer reference overdue \u2014 please name an additional referee"
+          },
+          {
+            "application_id": "APP-2026-023",
+            "correspondent": "Dr. Joaquin Esposito-Vela, MD",
+            "date": "2026-04-23",
+            "direction": "inbound",
+            "document_path": "letters/2026-04-23_referee-substitution_APP-2026-023.md",
+            "letter_id": "LTR-0059",
+            "subject": "Additional referee"
           }
         ],
         "decisions": [],
@@ -10124,6 +10711,13 @@
             "filename": "2026-04-15_referee-overdue_APP-2026-023.md",
             "letter_type": "referee-overdue",
             "raw_text": "# Peer reference overdue \u2014 please name an additional referee\n\n**Date:** 2026-04-15  \n**To:** Dr. Joaquin Esposito-Vela, MD  \n**Application:** APP-2026-023  \n**Applicant:** Dr. Joaquin Esposito-Vela, MD  \n\nWe wrote to one of your referees on 2026-02-09, 2026-03-02 and 2026-03-23 and have had no reply. Under our procedure a reference is overdue once 64 days have passed since the first request, which was 2026-04-14. The request stays open and we will record whatever arrives, but it cannot be counted while it is unanswered. Please name one additional referee who has worked directly with you within the past two years and practises anesthesiology.\n\nRenata Kowalczyk, CPMSM\nMedical Services Professional\nLarkhollow Community Hospital, Larkhollow, Washington\n"
+          },
+          {
+            "application_id": "APP-2026-023",
+            "date": "2026-04-23",
+            "filename": "2026-04-23_referee-substitution_APP-2026-023.md",
+            "letter_type": "referee-substitution",
+            "raw_text": "# Additional referee\n\n**Date:** 2026-04-23  \n**From:** Dr. Joaquin Esposito-Vela, MD  \n**Application:** APP-2026-023  \n**Applicant:** Dr. Joaquin Esposito-Vela, MD  \n\nFurther to your letter of 2026-04-15, please write to my additional referee named on the enclosed sheet. We worked together in the same department until this year and they are an anesthesiologist.\n\nJoaquin Esposito-Vela, MD\n"
           }
         ],
         "peer_referees": [
@@ -10150,6 +10744,18 @@
             "relationship_declared": "Worked together in the same department",
             "revision": "1",
             "source": "application"
+          },
+          {
+            "application_id": "APP-2026-023",
+            "first_request_date": "2026-04-27",
+            "referee_credential": "MD",
+            "referee_id": "REF-2302",
+            "referee_name": "Dr. Tabitha Orlovsky, MD",
+            "referee_organization": "Orchard Row Specialty Clinic",
+            "referee_specialty": "Anesthesiology",
+            "relationship_declared": "Worked together in the same department",
+            "revision": "1",
+            "source": "applicant-substitution"
           }
         ],
         "peer_reference_replies": [
@@ -10165,6 +10771,19 @@
             "relationship_stated": "We worked in the same department and I supervised several of the applicant's cases.",
             "reply_id": "RR-2300",
             "signature_date": "2026-02-22"
+          },
+          {
+            "application_id": "APP-2026-023",
+            "comments": "Sound clinical judgment, reliable with colleagues and with patients, and no concern about character or competency in the time I have known them.",
+            "last_worked_together_end": "",
+            "received_date": "2026-05-11",
+            "recommendation": "Recommend without reservation",
+            "referee_id": "REF-2302",
+            "referee_specialty_stated": "Anesthesiology",
+            "related_or_partner": "No",
+            "relationship_stated": "We worked in the same department and I supervised several of the applicant's cases.",
+            "reply_id": "RR-2302",
+            "signature_date": "2026-05-09"
           }
         ],
         "privilege_requests": [
@@ -10265,6 +10884,17 @@
             "method": "letter",
             "outcome": "no response",
             "subject_ref": "REF-2301"
+          },
+          {
+            "application_id": "APP-2026-023",
+            "attempt_date": "2026-04-27",
+            "attempt_id": "ATT-2308",
+            "attempted_with": "Dr. Tabitha Orlovsky, MD",
+            "comment": "First request.",
+            "element": "peer-reference",
+            "method": "secure portal",
+            "outcome": "reply received",
+            "subject_ref": "REF-2302"
           }
         ],
         "verification_replies": [
@@ -10342,7 +10972,7 @@
           }
         ]
       },
-      "status": "in-verification"
+      "status": "packet-presentable"
     },
     "APP-2026-024": {
       "activation": null,
@@ -10356,7 +10986,7 @@
         "experience": "resolved",
         "gaps": "resolved",
         "licensure": "resolved",
-        "references": "outstanding"
+        "references": "resolved"
       },
       "last_application_row": {
         "applicant_id": "LP-1024",
@@ -10583,6 +11213,18 @@
             "relationship_declared": "Worked together in the same department",
             "revision": "1",
             "source": "application"
+          },
+          {
+            "application_id": "APP-2026-024",
+            "first_request_date": "2026-04-20",
+            "referee_credential": "MD",
+            "referee_id": "REF-2402",
+            "referee_name": "Dr. Joaquin Banerjee, MD",
+            "referee_organization": "Larkhollow Physicians Network",
+            "referee_specialty": "Obstetrics and Gynecology",
+            "relationship_declared": "Worked together in the same department",
+            "revision": "1",
+            "source": "applicant-substitution"
           }
         ],
         "peer_reference_replies": [
@@ -10611,6 +11253,19 @@
             "relationship_stated": "I am the applicant's sister-in-law. We have also worked in the same department since 2019.",
             "reply_id": "RR-2401",
             "signature_date": "2026-04-04"
+          },
+          {
+            "application_id": "APP-2026-024",
+            "comments": "Sound clinical judgment, reliable with colleagues and with patients, and no concern about character or competency in the time I have known them.",
+            "last_worked_together_end": "",
+            "received_date": "2026-05-06",
+            "recommendation": "Recommend without reservation",
+            "referee_id": "REF-2402",
+            "referee_specialty_stated": "Obstetrics and Gynecology",
+            "related_or_partner": "No",
+            "relationship_stated": "We worked in the same department and I supervised several of the applicant's cases.",
+            "reply_id": "RR-2402",
+            "signature_date": "2026-05-04"
           }
         ],
         "privilege_requests": [
@@ -10678,6 +11333,17 @@
             "method": "secure portal",
             "outcome": "reply received",
             "subject_ref": "REF-2401"
+          },
+          {
+            "application_id": "APP-2026-024",
+            "attempt_date": "2026-04-20",
+            "attempt_id": "ATT-2405",
+            "attempted_with": "Dr. Joaquin Banerjee, MD",
+            "comment": "First request.",
+            "element": "peer-reference",
+            "method": "secure portal",
+            "outcome": "reply received",
+            "subject_ref": "REF-2402"
           }
         ],
         "verification_replies": [
@@ -10737,7 +11403,7 @@
           }
         ]
       },
-      "status": "in-verification"
+      "status": "packet-presentable"
     },
     "APP-2026-025": {
       "activation": null,
@@ -10751,7 +11417,7 @@
         "experience": "resolved",
         "gaps": "resolved",
         "licensure": "resolved",
-        "references": "resolved"
+        "references": "outstanding"
       },
       "last_application_row": {
         "applicant_id": "LP-1025",
@@ -10793,7 +11459,17 @@
             "requested_date": "2024-04-25"
           }
         ],
-        "correspondence": [],
+        "correspondence": [
+          {
+            "application_id": "APP-2026-025",
+            "correspondent": "Dr. Leander Vandermeer, MD",
+            "date": "2026-05-14",
+            "direction": "outbound",
+            "document_path": "letters/2026-05-14_reference-stale_APP-2026-025.md",
+            "letter_id": "LTR-0082",
+            "subject": "One peer reference is no longer current"
+          }
+        ],
         "decisions": [],
         "declared_credentials": [
           {
@@ -10962,7 +11638,15 @@
           }
         ],
         "dispositions": [],
-        "letters": [],
+        "letters": [
+          {
+            "application_id": "APP-2026-025",
+            "date": "2026-05-14",
+            "filename": "2026-05-14_reference-stale_APP-2026-025.md",
+            "letter_type": "reference-stale",
+            "raw_text": "# One peer reference is no longer current\n\n**Date:** 2026-05-14  \n**To:** Dr. Leander Vandermeer, MD  \n**Application:** APP-2026-025  \n**Applicant:** Dr. Leander Vandermeer, MD  \n\nOne of the two references on your file was signed on 2024-05-05. A reference is current only while the presentation date is within two years of the signature date, so that one stopped being current on 2026-05-05. We have written to the referee again today. The second reference, signed 2024-05-20, is current until 2026-05-20, so the file needs to be presented before then or that one will need refreshing too.\n\nRenata Kowalczyk, CPMSM\nMedical Services Professional\nLarkhollow Community Hospital, Larkhollow, Washington\n"
+          }
+        ],
         "peer_referees": [
           {
             "application_id": "APP-2026-025",
@@ -10987,6 +11671,18 @@
             "relationship_declared": "Worked together in the same department",
             "revision": "1",
             "source": "application"
+          },
+          {
+            "application_id": "APP-2026-025",
+            "first_request_date": "2026-05-14",
+            "referee_credential": "MD",
+            "referee_id": "REF-2502",
+            "referee_name": "Dr. Rosalind Esposito-Vela, MD",
+            "referee_organization": "Greyfen Regional Hospital",
+            "referee_specialty": "Internal Medicine",
+            "relationship_declared": "Worked together in the same department",
+            "revision": "2",
+            "source": "applicant-substitution"
           }
         ],
         "peer_reference_replies": [
@@ -11101,6 +11797,17 @@
             "method": "secure portal",
             "outcome": "reply received",
             "subject_ref": "REF-2501"
+          },
+          {
+            "application_id": "APP-2026-025",
+            "attempt_date": "2026-05-14",
+            "attempt_id": "ATT-2506",
+            "attempted_with": "Dr. Rosalind Esposito-Vela, MD",
+            "comment": "First request.",
+            "element": "peer-reference",
+            "method": "secure portal",
+            "outcome": "no response",
+            "subject_ref": "REF-2502"
           }
         ],
         "verification_replies": [
@@ -11178,11 +11885,18 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "in-verification"
     },
     "APP-2026-026": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-IM; PRIV-HOSP"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-029",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -11243,6 +11957,15 @@
             "document_path": "decisions/2026-04-02_MEC-2026-029.md",
             "letter_id": "LTR-0031",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-029 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-026",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-029.md",
+            "letter_id": "LTR-0076",
+            "subject": "Governing Body record GBD-2026-029 \u2014 approved"
           }
         ],
         "decisions": [
@@ -11263,6 +11986,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-026",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-029",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-029.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-IM; PRIV-HOSP"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-029\n\n**Decision ID:** GBD-2026-029  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-026  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-IM; PRIV-HOSP  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:** Cardiovascular disease privileges are not supported by the criteria version cited: the applicant holds no cardiovascular disease certification and no cardiovascular disease fellowship is verified. Internal medicine and hospital medicine privileges are granted.  \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": "Cardiovascular disease privileges are not supported by the criteria version cited: the applicant holds no cardiovascular disease certification and no cardiovascular disease fellowship is verified. Internal medicine and hospital medicine privileges are granted.",
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -11645,7 +12387,7 @@
           }
         ]
       },
-      "status": "in-verification"
+      "status": "active"
     },
     "APP-2026-027": {
       "activation": null,
@@ -11675,13 +12417,13 @@
         "npi": "1238405346",
         "position_sought": "Staff Physician, Family Medicine",
         "practice_state": "WA",
-        "received_date": "2026-02-19",
+        "received_date": "2026-04-27",
         "release_signed_date": "2026-02-19",
-        "revision": "1",
-        "revision_reason": ""
+        "revision": "2",
+        "revision_reason": "Amended the privilege request from general surgery to family medicine, after the office told me on 2026-04-10 that my surgical certification lapsed in 2019."
       },
       "monitored_conditions": [],
-      "revision": 1,
+      "revision": 2,
       "revision_data": {
         "certification_replies": [
           {
@@ -11749,7 +12491,7 @@
             "issuer": "Washington State Department of Health",
             "jurisdiction_or_board": "WA",
             "number_declared": "MD60035528",
-            "revision": "1"
+            "revision": "2"
           },
           {
             "application_id": "APP-2026-027",
@@ -11761,7 +12503,7 @@
             "issuer": "American Board of Surgery",
             "jurisdiction_or_board": "ABS",
             "number_declared": "",
-            "revision": "1"
+            "revision": "2"
           },
           {
             "application_id": "APP-2026-027",
@@ -11773,7 +12515,7 @@
             "issuer": "American Board of Family Medicine",
             "jurisdiction_or_board": "ABFM",
             "number_declared": "",
-            "revision": "1"
+            "revision": "2"
           }
         ],
         "declared_history": [
@@ -11788,7 +12530,7 @@
             "location": "Quillhaven, OR",
             "notes": "",
             "organization": "Quillhaven State University School of Medicine",
-            "revision": "1",
+            "revision": "2",
             "role": "Doctor of Medicine",
             "to_date": "2001-06-30"
           },
@@ -11803,7 +12545,7 @@
             "location": "Tolliver, MN",
             "notes": "",
             "organization": "Tolliver General Hospital",
-            "revision": "1",
+            "revision": "2",
             "role": "General Surgery Residency",
             "to_date": "2006-06-30"
           },
@@ -11818,7 +12560,7 @@
             "location": "Drumlin Bay, WA",
             "notes": "",
             "organization": "Drumlin Bay Medical Center",
-            "revision": "1",
+            "revision": "2",
             "role": "Family Medicine Residency",
             "to_date": "2009-06-30"
           },
@@ -11833,7 +12575,7 @@
             "location": "Silverbeck, WA",
             "notes": "",
             "organization": "Silverbeck Physicians Group",
-            "revision": "1",
+            "revision": "2",
             "role": "Staff Physician",
             "to_date": "2018-04-30"
           },
@@ -11848,7 +12590,7 @@
             "location": "Orchard Row, WA",
             "notes": "",
             "organization": "Orchard Row Specialty Clinic",
-            "revision": "1",
+            "revision": "2",
             "role": "Staff Physician",
             "to_date": ""
           }
@@ -11860,7 +12602,7 @@
             "application_id": "APP-2026-027",
             "question_code": "PPQ-1",
             "question_text": "Has any licence or registration you hold or have held ever been denied, suspended, revoked, restricted, placed on probation, made subject to a monitoring agreement, surrendered, or subjected to any other action by a licensing board?",
-            "revision": "1"
+            "revision": "2"
           },
           {
             "answer": "No",
@@ -11868,7 +12610,7 @@
             "application_id": "APP-2026-027",
             "question_code": "PPQ-2",
             "question_text": "Have your clinical privileges at any institution ever been denied, reduced, restricted, suspended, revoked, not renewed, or made subject to conditions?",
-            "revision": "1"
+            "revision": "2"
           },
           {
             "answer": "No",
@@ -11876,7 +12618,7 @@
             "application_id": "APP-2026-027",
             "question_code": "PPQ-3",
             "question_text": "Have you ever resigned from, or withdrawn an application to, a medical staff or training programme while an investigation was pending or in exchange for not conducting an investigation?",
-            "revision": "1"
+            "revision": "2"
           },
           {
             "answer": "No",
@@ -11884,7 +12626,7 @@
             "application_id": "APP-2026-027",
             "question_code": "PPQ-4",
             "question_text": "Has any board certification you hold or have held ever been revoked, suspended, or not renewed for cause?",
-            "revision": "1"
+            "revision": "2"
           },
           {
             "answer": "No",
@@ -11892,7 +12634,7 @@
             "application_id": "APP-2026-027",
             "question_code": "PPQ-5",
             "question_text": "Have you ever been the subject of a professional review action reportable to a national data bank?",
-            "revision": "1"
+            "revision": "2"
           },
           {
             "answer": "No",
@@ -11900,7 +12642,7 @@
             "application_id": "APP-2026-027",
             "question_code": "PPQ-6",
             "question_text": "Have you ever been excluded, debarred or suspended from participation in a federal or state health care programme?",
-            "revision": "1"
+            "revision": "2"
           },
           {
             "answer": "No",
@@ -11908,7 +12650,7 @@
             "application_id": "APP-2026-027",
             "question_code": "PPQ-7",
             "question_text": "Have you ever been convicted of, or pleaded guilty or no contest to, a criminal offence other than a minor traffic violation?",
-            "revision": "1"
+            "revision": "2"
           },
           {
             "answer": "No",
@@ -11916,7 +12658,7 @@
             "application_id": "APP-2026-027",
             "question_code": "PPQ-8",
             "question_text": "Is there any physical or mental condition, or any use of a substance, that currently impairs your ability to perform the privileges you are requesting, with or without accommodation?",
-            "revision": "1"
+            "revision": "2"
           }
         ],
         "dispositions": [
@@ -11999,6 +12741,14 @@
             "privilege_name": "General Surgery",
             "request_id": "REQ-2700",
             "revision": "1"
+          },
+          {
+            "application_id": "APP-2026-027",
+            "criteria_version_cited": "LARK-PRIV-2026.1",
+            "privilege_code": "PRIV-FM",
+            "privilege_name": "Family Medicine",
+            "request_id": "REQ-2701",
+            "revision": "2"
           }
         ],
         "verification_attempts": [
@@ -13494,14 +14244,39 @@
             "verified_credential": "Employment \u2014 Staff Physician",
             "verified_from": "2015-07-13",
             "verified_to": "2018-02-28"
+          },
+          {
+            "application_id": "APP-2026-030",
+            "attester_name": "Cordelia Banerjee",
+            "attester_organization": "Two Rivers Health Partners",
+            "attester_role": "Director, Medical Staff Services",
+            "element": "affiliation-and-employment",
+            "entry_id": "ENT-3090",
+            "notes": "",
+            "outcome": "confirmed",
+            "received_date": "2026-05-06",
+            "received_from": "Medical staff office \u2014 Two Rivers Health Partners",
+            "reply_id": "VR-3005",
+            "reply_method": "secure portal",
+            "requested_date": "2026-04-16",
+            "verified_credential": "Employment \u2014 Locum Physician",
+            "verified_from": "2021-12-06",
+            "verified_to": "2022-09-05"
           }
         ]
       },
       "status": "in-verification"
     },
     "APP-2026-031": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-HOSP"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-030",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -13580,6 +14355,15 @@
             "document_path": "decisions/2026-04-16_MEC-2026-030.md",
             "letter_id": "LTR-0054",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-030 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-031",
+            "correspondent": "Governing Body \u2014 Mr. Desmond Ihejirika",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-030.md",
+            "letter_id": "LTR-0077",
+            "subject": "Governing Body record GBD-2026-030 \u2014 approved"
           }
         ],
         "decisions": [
@@ -13600,6 +14384,25 @@
             "revision": 2,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-031",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-030",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-030.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-HOSP"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-030\n\n**Decision ID:** GBD-2026-030  \n**Body:** Governing Body  \n**Signatory:** Mr. Desmond Ihejirika  \n**Role:** Vice-Chair, Governing Body  \n**Application:** APP-2026-031  \n**Revision:** 2  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-HOSP  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Mr. Desmond Ihejirika, Vice-Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 2,
+            "role": "Vice-Chair, Governing Body",
+            "signatory": "Mr. Desmond Ihejirika",
             "supersedes": null
           }
         ],
@@ -13957,11 +14760,18 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "active"
     },
     "APP-2026-032": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-OBG"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-031",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -14031,6 +14841,15 @@
             "document_path": "decisions/2026-04-16_MEC-2026-031.md",
             "letter_id": "LTR-0055",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-031 \u2014 recommended"
+          },
+          {
+            "application_id": "APP-2026-032",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-031.md",
+            "letter_id": "LTR-0078",
+            "subject": "Governing Body record GBD-2026-031 \u2014 approved"
           }
         ],
         "decisions": [
@@ -14051,6 +14870,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-032",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-031",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-031.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-OBG"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-031\n\n**Decision ID:** GBD-2026-031  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-032  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-OBG  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -14425,7 +15263,7 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "active"
     },
     "APP-2026-033": {
       "activation": null,
@@ -14933,6 +15771,15 @@
             "document_path": "letters/2026-04-16_deferral-chase_APP-2026-034.md",
             "letter_id": "LTR-0056",
             "subject": "Further reference required before the Governing Body decides"
+          },
+          {
+            "application_id": "APP-2026-034",
+            "correspondent": "Dr. Ingrid Solheim, MD",
+            "date": "2026-04-24",
+            "direction": "inbound",
+            "document_path": "letters/2026-04-24_referee-substitution_APP-2026-034.md",
+            "letter_id": "LTR-0060",
+            "subject": "Additional referee"
           }
         ],
         "decisions": [
@@ -15122,6 +15969,13 @@
             "filename": "2026-04-16_deferral-chase_APP-2026-034.md",
             "letter_type": "deferral-chase",
             "raw_text": "# Further reference required before the Governing Body decides\n\n**Date:** 2026-04-16  \n**To:** Dr. Ingrid Solheim, MD  \n**Application:** APP-2026-034  \n**Applicant:** Dr. Ingrid Lindholm, MD  \n\nThe Governing Body considered your file on 2026-04-14 and deferred its decision pending one further peer reference from a referee outside your current group practice. Your file does not advance while we wait for it. Please name a referee who has worked directly with you within the past two years, practises emergency medicine, and is not employed by your current practice.\n\nRenata Kowalczyk, CPMSM\nMedical Services Professional\nLarkhollow Community Hospital, Larkhollow, Washington\n"
+          },
+          {
+            "application_id": "APP-2026-034",
+            "date": "2026-04-24",
+            "filename": "2026-04-24_referee-substitution_APP-2026-034.md",
+            "letter_type": "referee-substitution",
+            "raw_text": "# Additional referee\n\n**Date:** 2026-04-24  \n**From:** Dr. Ingrid Solheim, MD  \n**Application:** APP-2026-034  \n**Applicant:** Dr. Ingrid Lindholm, MD  \n\nPlease write to the referee named on the enclosed sheet. They are an emergency physician at a different hospital and we worked together on the regional trauma rota until last year.\n\nIngrid Lindholm, MD\n"
           }
         ],
         "peer_referees": [
@@ -15148,6 +16002,18 @@
             "relationship_declared": "Worked together in the same department",
             "revision": "1",
             "source": "application"
+          },
+          {
+            "application_id": "APP-2026-034",
+            "first_request_date": "2026-04-28",
+            "referee_credential": "MD",
+            "referee_id": "REF-3402",
+            "referee_name": "Dr. Perpetua Okonkwo, MD",
+            "referee_organization": "Bellamy Creek Medical Center",
+            "referee_specialty": "Emergency Medicine",
+            "relationship_declared": "Worked together in the same department",
+            "revision": "1",
+            "source": "applicant-substitution"
           }
         ],
         "peer_reference_replies": [
@@ -15176,6 +16042,19 @@
             "relationship_stated": "We worked in the same department and I supervised several of the applicant's cases.",
             "reply_id": "RR-3401",
             "signature_date": "2026-02-24"
+          },
+          {
+            "application_id": "APP-2026-034",
+            "comments": "Sound clinical judgment, reliable with colleagues and with patients, and no concern about character or competency in the time I have known them.",
+            "last_worked_together_end": "",
+            "received_date": "2026-05-11",
+            "recommendation": "Recommend without reservation",
+            "referee_id": "REF-3402",
+            "referee_specialty_stated": "Emergency Medicine",
+            "related_or_partner": "No",
+            "relationship_stated": "We worked in the same department and I supervised several of the applicant's cases.",
+            "reply_id": "RR-3402",
+            "signature_date": "2026-05-08"
           }
         ],
         "privilege_requests": [
@@ -15243,6 +16122,17 @@
             "method": "secure portal",
             "outcome": "reply received",
             "subject_ref": "REF-3401"
+          },
+          {
+            "application_id": "APP-2026-034",
+            "attempt_date": "2026-04-28",
+            "attempt_id": "ATT-3405",
+            "attempted_with": "Dr. Perpetua Okonkwo, MD",
+            "comment": "First request.",
+            "element": "peer-reference",
+            "method": "secure portal",
+            "outcome": "reply received",
+            "subject_ref": "REF-3402"
           }
         ],
         "verification_replies": [
@@ -15782,8 +16672,15 @@
       "status": "denied"
     },
     "APP-2026-036": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": false,
+        "cycle_end": "2028-06-01",
+        "effective_date": "2026-06-01",
+        "privileges": [
+          "PRIV-FM"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-035",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -15853,6 +16750,15 @@
             "document_path": "decisions/2026-04-14_GBD-2026-034.md",
             "letter_id": "LTR-0049",
             "subject": "Governing Body record GBD-2026-034 \u2014 approved"
+          },
+          {
+            "application_id": "APP-2026-036",
+            "correspondent": "Governing Body \u2014 Mr. Desmond Ihejirika",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-035.md",
+            "letter_id": "LTR-0079",
+            "subject": "Governing Body record GBD-2026-035 \u2014 approved"
           }
         ],
         "decisions": [
@@ -15893,6 +16799,25 @@
             "role": "Chair, Governing Body",
             "signatory": "Ms. Corinne Batiste",
             "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-036",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-035",
+            "effective_date": "2026-06-01",
+            "filename": "2026-05-12_GBD-2026-035.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-FM"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-035\n\n**Decision ID:** GBD-2026-035  \n**Body:** Governing Body  \n**Signatory:** Mr. Desmond Ihejirika  \n**Role:** Vice-Chair, Governing Body  \n**Application:** APP-2026-036  \n**Revision:** 2  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-FM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:** Reconsidered on application revision 2, after the affiliation verification was obtained from the successor employer. This decision supersedes the earlier decision this Governing Body recorded against revision 1, which is named in the record block above.  \n**Effective date:** 2026-06-01  \n**Supersedes:** GBD-2026-034  \n\n## Minute\n\nThe Governing Body considered the file again and recorded the outcome above.\n\nSigned: Mr. Desmond Ihejirika, Vice-Chair, Governing Body, 2026-05-12.\n",
+            "reason": "Reconsidered on application revision 2, after the affiliation verification was obtained from the successor employer. This decision supersedes the earlier decision this Governing Body recorded against revision 1, which is named in the record block above.",
+            "revision": 2,
+            "role": "Vice-Chair, Governing Body",
+            "signatory": "Mr. Desmond Ihejirika",
+            "supersedes": "GBD-2026-034"
           }
         ],
         "declared_credentials": [
@@ -16274,14 +17199,32 @@
             "verified_credential": "Employment \u2014 Staff Physician",
             "verified_from": "2019-09-09",
             "verified_to": ""
+          },
+          {
+            "application_id": "APP-2026-036",
+            "attester_name": "Ingrid Lindqvist",
+            "attester_organization": "Silverbeck Physicians Group",
+            "attester_role": "Director, Medical Staff Services",
+            "element": "affiliation-and-employment",
+            "entry_id": "ENT-3602",
+            "notes": "",
+            "outcome": "confirmed",
+            "received_date": "2026-05-06",
+            "received_from": "Medical staff office \u2014 Silverbeck Physicians Group",
+            "reply_id": "VR-3604",
+            "reply_method": "secure portal",
+            "requested_date": "2026-04-02",
+            "verified_credential": "Employment \u2014 Staff Physician",
+            "verified_from": "2012-07-16",
+            "verified_to": "2019-08-31"
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "approved-not-yet-effective"
     },
     "APP-2026-037": {
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
@@ -16358,6 +17301,15 @@
             "document_path": "decisions/2026-04-14_GBD-2026-036.md",
             "letter_id": "LTR-0050",
             "subject": "Governing Body record GBD-2026-036 \u2014 approved"
+          },
+          {
+            "application_id": "APP-2026-037",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-037.md",
+            "letter_id": "LTR-0080",
+            "subject": "Governing Body record GBD-2026-037 \u2014 approved"
           }
         ],
         "decisions": [
@@ -16397,6 +17349,25 @@
             "revision": 1,
             "role": "Vice-Chair, Governing Body",
             "signatory": "Mr. Desmond Ihejirika",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-037",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-037",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-037.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-FM; PRIV-HOSP"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-037\n\n**Decision ID:** GBD-2026-037  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-037  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-FM; PRIV-HOSP  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file again and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -16763,11 +17734,18 @@
           }
         ]
       },
-      "status": "approved-not-yet-effective"
+      "status": "active"
     },
     "APP-2026-038": {
-      "activation": null,
-      "approval_decision_id": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-EM"
+        ]
+      },
+      "approval_decision_id": "GBD-2026-038",
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -16828,6 +17806,15 @@
             "document_path": "decisions/2026-04-14_MEC-2026-036.md",
             "letter_id": "LTR-0051",
             "subject": "Executive Committee of the Medical Staff record MEC-2026-036 \u2014 approved"
+          },
+          {
+            "application_id": "APP-2026-038",
+            "correspondent": "Governing Body \u2014 Ms. Corinne Batiste",
+            "date": "2026-05-12",
+            "direction": "inbound",
+            "document_path": "decisions/2026-05-12_GBD-2026-038.md",
+            "letter_id": "LTR-0081",
+            "subject": "Governing Body record GBD-2026-038 \u2014 approved"
           }
         ],
         "decisions": [
@@ -16848,6 +17835,25 @@
             "revision": 1,
             "role": "Chair, Executive Committee of the Medical Staff",
             "signatory": "Dr. Peter Vandermolen, MD",
+            "supersedes": null
+          },
+          {
+            "application_id": "APP-2026-038",
+            "body": "Governing Body",
+            "criteria_version": "LARK-PRIV-2026.1",
+            "decision_date": "2026-05-12",
+            "decision_id": "GBD-2026-038",
+            "effective_date": "2026-05-15",
+            "filename": "2026-05-12_GBD-2026-038.md",
+            "outcome": "approved",
+            "privileges": [
+              "PRIV-EM"
+            ],
+            "raw_text": "# Governing Body \u2014 record of decision GBD-2026-038\n\n**Decision ID:** GBD-2026-038  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-038  \n**Revision:** 1  \n**Decision date:** 2026-05-12  \n**Outcome:** approved  \n**Privileges:** PRIV-EM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-15  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-05-12.\n",
+            "reason": null,
+            "revision": 1,
+            "role": "Chair, Governing Body",
+            "signatory": "Ms. Corinne Batiste",
             "supersedes": null
           }
         ],
@@ -17170,11 +18176,11 @@
           }
         ]
       },
-      "status": "decision-inadmissible"
+      "status": "active"
     },
     "APP-2026-039": {
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
@@ -17681,7 +18687,7 @@
           }
         ]
       },
-      "status": "approved-not-yet-effective"
+      "status": "active-with-conditions"
     },
     "APP-2026-040": {
       "activation": null,
@@ -17694,7 +18700,7 @@
         "education": "resolved",
         "experience": "resolved",
         "gaps": "resolved",
-        "licensure": "outstanding",
+        "licensure": "resolved",
         "references": "resolved"
       },
       "last_application_row": {
@@ -18010,6 +19016,17 @@
             "method": "secure portal",
             "outcome": "reply received",
             "subject_ref": "the Washington credential"
+          },
+          {
+            "application_id": "APP-2026-040",
+            "attempt_date": "2026-05-14",
+            "attempt_id": "ATT-4004",
+            "attempted_with": "Washington State Department of Health",
+            "comment": "Re-verification on expiry. The board reports the credential renewed on 2026-05-04 and active to 2028-04-30.",
+            "element": "licensure",
+            "method": "secure portal",
+            "outcome": "reply received",
+            "subject_ref": "the Washington credential"
           }
         ],
         "verification_replies": [
@@ -18069,7 +19086,7 @@
           }
         ]
       },
-      "status": "in-verification"
+      "status": "packet-presentable"
     }
   },
   "licence_lookup_other": [
@@ -18257,7 +19274,7 @@
       "firstname": "Emeka",
       "lastissuedate": "2025-06-30",
       "lastname": "Adeyemi",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "K",
       "status": "ACTIVE"
     },
@@ -18332,7 +19349,7 @@
       "firstname": "Noor",
       "lastissuedate": "2024-11-30",
       "lastname": "Al-Hassani",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -18542,7 +19559,7 @@
       "firstname": "Rosalind",
       "lastissuedate": "2025-05-31",
       "lastname": "Ashworth",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "E",
       "status": "ACTIVE"
     },
@@ -18587,7 +19604,7 @@
       "firstname": "Anaya",
       "lastissuedate": "2025-10-31",
       "lastname": "Banerjee",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -18812,7 +19829,7 @@
       "firstname": "Delphine",
       "lastissuedate": "2025-07-31",
       "lastname": "Beaumont",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -18887,7 +19904,7 @@
       "firstname": "Hanne",
       "lastissuedate": "2023-12-31",
       "lastname": "Bergmann",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "L",
       "status": "ACTIVE"
     },
@@ -19037,7 +20054,7 @@
       "firstname": "Kwabena",
       "lastissuedate": "2025-08-31",
       "lastname": "Boateng",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -19112,7 +20129,7 @@
       "firstname": "Callum",
       "lastissuedate": "2024-12-31",
       "lastname": "Brackwood",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "D",
       "status": "ACTIVE"
     },
@@ -19262,7 +20279,7 @@
       "firstname": "Rafael",
       "lastissuedate": "2024-08-31",
       "lastname": "Cabrera-Lima",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "E",
       "status": "ACTIVE"
     },
@@ -19337,7 +20354,7 @@
       "firstname": "Fionn",
       "lastissuedate": "2025-11-30",
       "lastname": "Callaghan",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "P",
       "status": "ACTIVE"
     },
@@ -19517,7 +20534,7 @@
       "firstname": "Mira",
       "lastissuedate": "2025-04-30",
       "lastname": "Chatterji",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -19592,7 +20609,7 @@
       "firstname": "Marguerite",
       "lastissuedate": "2024-10-31",
       "lastname": "Delacroix",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "R",
       "status": "ACTIVE"
     },
@@ -19757,7 +20774,7 @@
       "firstname": "Joaquin",
       "lastissuedate": "2025-03-31",
       "lastname": "Esposito-Vela",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "R",
       "status": "ACTIVE"
     },
@@ -19832,7 +20849,7 @@
       "firstname": "Obi",
       "lastissuedate": "2025-05-31",
       "lastname": "Eze-Okafor",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -19952,7 +20969,7 @@
       "firstname": "Soraya",
       "lastissuedate": "2025-03-31",
       "lastname": "Farahani",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -19982,7 +20999,7 @@
       "firstname": "Elliot",
       "lastissuedate": "2025-05-31",
       "lastname": "Ferndale",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "J",
       "status": "ACTIVE"
     },
@@ -20162,7 +21179,7 @@
       "firstname": "Samira",
       "lastissuedate": "2025-06-30",
       "lastname": "Haddad",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -20252,7 +21269,7 @@
       "firstname": "Sigrid",
       "lastissuedate": "2025-02-28",
       "lastname": "Halvorsen",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -20492,7 +21509,7 @@
       "firstname": "Marcus",
       "lastissuedate": "2025-08-14",
       "lastname": "Holloway",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "T",
       "status": "ACTIVE"
     },
@@ -20837,7 +21854,7 @@
       "firstname": "Vesna",
       "lastissuedate": "2024-12-31",
       "lastname": "Kova\u010devi\u0107",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -21122,7 +22139,7 @@
       "firstname": "Ingrid",
       "lastissuedate": "2024-08-31",
       "lastname": "Lindholm",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "B",
       "status": "ACTIVE"
     },
@@ -21227,7 +22244,7 @@
       "firstname": "Oskar",
       "lastissuedate": "2025-09-30",
       "lastname": "Lindqvist",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "H",
       "status": "ACTIVE"
     },
@@ -21362,7 +22379,7 @@
       "firstname": "Aurelio",
       "lastissuedate": "2025-01-31",
       "lastname": "Marchetti",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "M",
       "status": "ACTIVE"
     },
@@ -21617,7 +22634,7 @@
       "firstname": "Yolanda",
       "lastissuedate": "2024-11-30",
       "lastname": "Mendez-Ruiz",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "A",
       "status": "ACTIVE"
     },
@@ -21654,17 +22671,17 @@
     {
       "actiontaken": "No",
       "birthyear": "1982",
-      "ceduedate": "2026-04-10",
+      "ceduedate": "2028-04-30",
       "credentialnumber": "MD60096330",
       "credentialtype": "Physician And Surgeon License",
-      "expirationdate": "2026-04-10",
+      "expirationdate": "2028-04-30",
       "firstissuedate": "2011-06-27",
       "firstname": "Zubin",
-      "lastissuedate": "2023-04-10",
+      "lastissuedate": "2026-05-04",
       "lastname": "Mistry",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
-      "status": "EXPIRED"
+      "status": "ACTIVE"
     },
     {
       "actiontaken": "No",
@@ -21842,7 +22859,7 @@
       "firstname": "Priya",
       "lastissuedate": "2024-07-31",
       "lastname": "Nandakumar",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "S",
       "status": "ACTIVE"
     },
@@ -22142,7 +23159,7 @@
       "firstname": "Imani",
       "lastissuedate": "2025-06-30",
       "lastname": "Nwachukwu",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "O",
       "status": "ACTIVE"
     },
@@ -22232,7 +23249,7 @@
       "firstname": "Adaeze",
       "lastissuedate": "2024-09-30",
       "lastname": "Okonkwo",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -22427,7 +23444,7 @@
       "firstname": "Dmitri",
       "lastissuedate": "2024-09-30",
       "lastname": "Orlovsky",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -22697,7 +23714,7 @@
       "firstname": "Thaddeus",
       "lastissuedate": "2025-11-30",
       "lastname": "Pennington",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "G",
       "status": "ACTIVE"
     },
@@ -22847,7 +23864,7 @@
       "firstname": "Nadira",
       "lastissuedate": "2024-10-31",
       "lastname": "Qureshi",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -22997,7 +24014,7 @@
       "firstname": "Linnea",
       "lastissuedate": "2025-04-30",
       "lastname": "Sandvik",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "M",
       "status": "ACTIVE"
     },
@@ -23357,7 +24374,7 @@
       "firstname": "Benedikt",
       "lastissuedate": "2025-01-31",
       "lastname": "Sternhagen",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "A",
       "status": "ACTIVE"
     },
@@ -23477,7 +24494,7 @@
       "firstname": "Hideo",
       "lastissuedate": "2025-07-31",
       "lastname": "Tachibana",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     },
@@ -23567,7 +24584,7 @@
       "firstname": "Clementine",
       "lastissuedate": "2025-04-30",
       "lastname": "Thornbury",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "A",
       "status": "ACTIVE"
     },
@@ -23822,7 +24839,7 @@
       "firstname": "Leander",
       "lastissuedate": "2026-01-14",
       "lastname": "Vandermeer",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "C",
       "status": "ACTIVE"
     },
@@ -24167,7 +25184,7 @@
       "firstname": "Tabitha",
       "lastissuedate": "2025-12-31",
       "lastname": "Whitcombe",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "L",
       "status": "ACTIVE"
     },
@@ -24272,7 +25289,7 @@
       "firstname": "Tomasz",
       "lastissuedate": "2025-02-28",
       "lastname": "Wi\u015bniewski",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "K",
       "status": "ACTIVE"
     },
@@ -24602,7 +25619,7 @@
       "firstname": "Piotr",
       "lastissuedate": "2025-09-30",
       "lastname": "Zielinski",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "W",
       "status": "ACTIVE"
     },
@@ -24647,7 +25664,7 @@
       "firstname": "Kenji",
       "lastissuedate": "2026-04-02",
       "lastname": "Matsuda",
-      "lookup_date": "2026-04-16",
+      "lookup_date": "2026-05-14",
       "middlename": "",
       "status": "ACTIVE"
     }

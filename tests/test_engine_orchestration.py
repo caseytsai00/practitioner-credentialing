@@ -307,3 +307,46 @@ def test_process_batch_withdrawal_is_sticky_and_quiet():
     records_three, ledger, _ = process_batch(batch_three, ledger, RULES, "2026-05-18")
     app_three = next(r for r in records_three if r.application_id == "APP-X")
     assert app_three.status == "withdrawn"
+
+
+def test_admitted_governing_body_approval_governs_status_even_with_a_lingering_finding():
+    # Real batch-02/03 data surfaced this: a Governing Body decision can admit an approval for a
+    # revision while one of the six elements still shows "finding" in this engine's own tracking
+    # (e.g. a certification lapse disposition that never explicitly cleared it). The admitted
+    # decision is the office's real authority and must govern the status; a lingering finding the
+    # Skill itself still has open belongs in the action queue, not in blocking the status at
+    # "in-verification" forever.
+    batch = _complete_minimal_batch()
+    batch.certification_replies = [
+        {
+            "application_id": "APP-X",
+            "reply_id": "CR-1",
+            "declaration_id": "DEC-2",
+            "received_date": "2026-01-20",
+            "certification_status": "Lapsed",
+        }
+    ]
+    batch.decisions = {
+        "GBD-X": {
+            "decision_id": "GBD-X",
+            "body": "Governing Body",
+            "signatory": "Dr. Chair, MD",
+            "role": "Chair, Governing Body",
+            "application_id": "APP-X",
+            "revision": 1,
+            "decision_date": "2026-02-01",
+            "outcome": "approved",
+            "privileges": ["PRIV-FM"],
+            "criteria_version": "LARK-PRIV-2026.1",
+            "reason": None,
+            "effective_date": "2026-02-01",
+            "supersedes": None,
+            "filename": "d.md",
+        }
+    }
+    ledger = new_ledger()
+    ledger["licence_lookup_wa"] = list(batch.licence_lookup_wa)
+    record, warnings = process_application("APP-X", batch, ledger, RULES, "2026-03-16")
+    assert record.elements["certification"] == "finding"
+    assert record.approval_decision_id == "GBD-X"
+    assert record.status == "active"

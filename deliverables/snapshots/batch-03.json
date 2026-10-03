@@ -3,7 +3,7 @@
     {
       "action_queue": [],
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
@@ -35,17 +35,29 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "approved-not-yet-effective"
+      "status": "active"
     },
     {
       "action_queue": [],
-      "activation": null,
+      "activation": {
+        "active_at_export": false,
+        "cycle_end": "2028-06-01",
+        "effective_date": "2026-06-01",
+        "privileges": [
+          "PRIV-HOSP; PRIV-IM"
+        ]
+      },
       "application_id": "APP-2026-002",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-012",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-012",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-012",
           "reason": null
         }
       ],
@@ -58,9 +70,9 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 1,
-      "status": "packet-presentable"
+      "status": "approved-not-yet-effective"
     },
     {
       "action_queue": [],
@@ -101,13 +113,25 @@
     },
     {
       "action_queue": [],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-PED"
+        ]
+      },
       "application_id": "APP-2026-004",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-014",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-014",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-014",
           "reason": null
         }
       ],
@@ -120,9 +144,9 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 1,
-      "status": "packet-presentable"
+      "status": "active"
     },
     {
       "action_queue": [
@@ -132,13 +156,25 @@
           "owner": "Clinical Director"
         }
       ],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-RAD"
+        ]
+      },
       "application_id": "APP-2026-005",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-015",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-015",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-015",
           "reason": null
         }
       ],
@@ -153,17 +189,29 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "in-verification"
+      "status": "active"
     },
     {
       "action_queue": [],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-ANES"
+        ]
+      },
       "application_id": "APP-2026-006",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-016",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-016",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-016",
           "reason": null
         }
       ],
@@ -176,14 +224,14 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 1,
-      "status": "packet-presentable"
+      "status": "active"
     },
     {
       "action_queue": [],
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-04-27",
         "effective_date": "2026-04-27",
         "privileges": [
@@ -215,42 +263,29 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "approved-not-yet-effective"
+      "status": "active"
     },
     {
       "action_queue": [],
-      "activation": null,
+      "activation": {
+        "active_at_export": false,
+        "cycle_end": "2028-06-15",
+        "effective_date": "2026-06-15",
+        "privileges": [
+          "PRIV-OBG"
+        ]
+      },
       "application_id": "APP-2026-008",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-018",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-018",
           "reason": null
-        }
-      ],
-      "elements": {
-        "certification": "resolved",
-        "education": "resolved",
-        "experience": "resolved",
-        "gaps": "resolved",
-        "licensure": "resolved",
-        "references": "resolved"
-      },
-      "monitored_conditions": [],
-      "packet_presentable": true,
-      "revision": 1,
-      "status": "packet-presentable"
-    },
-    {
-      "action_queue": [],
-      "activation": null,
-      "application_id": "APP-2026-009",
-      "approval_decision_id": null,
-      "decisions": [
+        },
         {
           "admitted": true,
-          "decision_id": "MEC-2026-019",
+          "decision_id": "GBD-2026-018",
           "reason": null
         }
       ],
@@ -263,9 +298,46 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 1,
-      "status": "packet-presentable"
+      "status": "approved-not-yet-effective"
+    },
+    {
+      "action_queue": [],
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-FM"
+        ]
+      },
+      "application_id": "APP-2026-009",
+      "approval_decision_id": "GBD-2026-019",
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-019",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-019",
+          "reason": null
+        }
+      ],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "active"
     },
     {
       "action_queue": [
@@ -275,13 +347,25 @@
           "owner": "Clinical Director"
         }
       ],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-PED"
+        ]
+      },
       "application_id": "APP-2026-010",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-020",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-020",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-020",
           "reason": null
         }
       ],
@@ -296,42 +380,29 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "in-verification"
+      "status": "active"
     },
     {
       "action_queue": [],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-GS"
+        ]
+      },
       "application_id": "APP-2026-011",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-021",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-021",
           "reason": null
-        }
-      ],
-      "elements": {
-        "certification": "resolved",
-        "education": "resolved",
-        "experience": "resolved",
-        "gaps": "resolved",
-        "licensure": "resolved",
-        "references": "resolved"
-      },
-      "monitored_conditions": [],
-      "packet_presentable": true,
-      "revision": 1,
-      "status": "packet-presentable"
-    },
-    {
-      "action_queue": [],
-      "activation": null,
-      "application_id": "APP-2026-012",
-      "approval_decision_id": null,
-      "decisions": [
+        },
         {
           "admitted": true,
-          "decision_id": "MEC-2026-022",
+          "decision_id": "GBD-2026-021",
           "reason": null
         }
       ],
@@ -344,14 +415,51 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 1,
-      "status": "packet-presentable"
+      "status": "active"
     },
     {
       "action_queue": [],
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-IM"
+        ]
+      },
+      "application_id": "APP-2026-012",
+      "approval_decision_id": "GBD-2026-022",
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-022",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-022",
+          "reason": null
+        }
+      ],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "active"
+    },
+    {
+      "action_queue": [],
+      "activation": {
+        "active_at_export": true,
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
@@ -383,18 +491,12 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "approved-not-yet-effective"
+      "status": "active"
     },
     {
-      "action_queue": [
-        {
-          "due": null,
-          "item": "Chase peer reference reply from Dr. Tarek Whitcombe, MD",
-          "owner": "Medical Services Professional"
-        }
-      ],
+      "action_queue": [],
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
@@ -421,12 +523,12 @@
         "experience": "resolved",
         "gaps": "resolved",
         "licensure": "resolved",
-        "references": "outstanding"
+        "references": "resolved"
       },
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "approved-not-yet-effective"
+      "status": "active"
     },
     {
       "action_queue": [
@@ -445,7 +547,7 @@
         "education": "resolved",
         "experience": "resolved",
         "gaps": "resolved",
-        "licensure": "finding",
+        "licensure": "resolved",
         "references": "resolved"
       },
       "monitored_conditions": [
@@ -454,19 +556,31 @@
           "due": "2027-08-31"
         }
       ],
-      "packet_presentable": false,
+      "packet_presentable": true,
       "revision": 1,
-      "status": "in-verification"
+      "status": "packet-presentable"
     },
     {
       "action_queue": [],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-FM"
+        ]
+      },
       "application_id": "APP-2026-016",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-025",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-025",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-025",
           "reason": null
         }
       ],
@@ -479,9 +593,9 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 1,
-      "status": "packet-presentable"
+      "status": "active"
     },
     {
       "action_queue": [
@@ -491,13 +605,25 @@
           "owner": "Clinical Director"
         }
       ],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-EM"
+        ]
+      },
       "application_id": "APP-2026-017",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-026",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-026",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-026",
           "reason": null
         }
       ],
@@ -510,9 +636,9 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 1,
-      "status": "packet-presentable"
+      "status": "active"
     },
     {
       "action_queue": [
@@ -522,10 +648,28 @@
           "owner": "Clinical Director"
         }
       ],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-IM"
+        ]
+      },
       "application_id": "APP-2026-018",
-      "approval_decision_id": null,
-      "decisions": [],
+      "approval_decision_id": "GBD-2026-027",
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-027",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-027",
+          "reason": null
+        }
+      ],
       "elements": {
         "certification": "resolved",
         "education": "resolved",
@@ -537,7 +681,7 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 2,
-      "status": "in-verification"
+      "status": "active"
     },
     {
       "action_queue": [
@@ -585,10 +729,28 @@
     },
     {
       "action_queue": [],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-FM"
+        ]
+      },
       "application_id": "APP-2026-021",
-      "approval_decision_id": null,
-      "decisions": [],
+      "approval_decision_id": "GBD-2026-028",
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-028",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-028",
+          "reason": null
+        }
+      ],
       "elements": {
         "certification": "resolved",
         "education": "resolved",
@@ -598,9 +760,9 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 1,
-      "status": "packet-presentable"
+      "status": "active"
     },
     {
       "action_queue": [],
@@ -622,59 +784,9 @@
       "status": "packet-presentable"
     },
     {
-      "action_queue": [
-        {
-          "due": null,
-          "item": "Chase peer reference reply from Dr. Hideo Okpara, MD",
-          "owner": "Medical Services Professional"
-        }
-      ],
-      "activation": null,
-      "application_id": "APP-2026-023",
-      "approval_decision_id": null,
-      "decisions": [],
-      "elements": {
-        "certification": "resolved",
-        "education": "resolved",
-        "experience": "resolved",
-        "gaps": "resolved",
-        "licensure": "resolved",
-        "references": "outstanding"
-      },
-      "monitored_conditions": [],
-      "packet_presentable": false,
-      "revision": 1,
-      "status": "in-verification"
-    },
-    {
-      "action_queue": [
-        {
-          "due": null,
-          "item": "Reference from Dr. Anaya Ferndale, MD is a relative/partner and does not count; name a substitute referee",
-          "owner": "Applicant"
-        }
-      ],
-      "activation": null,
-      "application_id": "APP-2026-024",
-      "approval_decision_id": null,
-      "decisions": [],
-      "elements": {
-        "certification": "resolved",
-        "education": "resolved",
-        "experience": "resolved",
-        "gaps": "resolved",
-        "licensure": "resolved",
-        "references": "outstanding"
-      },
-      "monitored_conditions": [],
-      "packet_presentable": false,
-      "revision": 1,
-      "status": "in-verification"
-    },
-    {
       "action_queue": [],
       "activation": null,
-      "application_id": "APP-2026-025",
+      "application_id": "APP-2026-023",
       "approval_decision_id": null,
       "decisions": [],
       "elements": {
@@ -687,8 +799,57 @@
       },
       "monitored_conditions": [],
       "packet_presentable": true,
-      "revision": 2,
+      "revision": 1,
       "status": "packet-presentable"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-024",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Reference from Dr. Marguerite Ndiaye, MD signed 2024-05-05 is no longer current; refresh it",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Rosalind Esposito-Vela, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-025",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 2,
+      "status": "in-verification"
     },
     {
       "action_queue": [
@@ -698,13 +859,25 @@
           "owner": "Clinical Director"
         }
       ],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-IM; PRIV-HOSP"
+        ]
+      },
       "application_id": "APP-2026-026",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-029",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-029",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-029",
           "reason": null
         }
       ],
@@ -719,7 +892,7 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "in-verification"
+      "status": "active"
     },
     {
       "action_queue": [
@@ -748,7 +921,7 @@
       },
       "monitored_conditions": [],
       "packet_presentable": false,
-      "revision": 1,
+      "revision": 2,
       "status": "in-verification"
     },
     {
@@ -771,18 +944,7 @@
       "status": "withdrawn"
     },
     {
-      "action_queue": [
-        {
-          "due": null,
-          "item": "Nothing on file supports the privilege requested; Clinical Director review needed",
-          "owner": "Clinical Director"
-        },
-        {
-          "due": null,
-          "item": "Notify applicant of discontinuance per disposition 2026-03-31_disposition_APP-2026-029.md",
-          "owner": "Medical Services Professional"
-        }
-      ],
+      "action_queue": [],
       "activation": null,
       "application_id": "APP-2026-029",
       "approval_decision_id": null,
@@ -806,11 +968,6 @@
           "due": "2026-03-01",
           "item": "Chase experience verification with Mosswater Valley Hospital",
           "owner": "Medical Services Professional"
-        },
-        {
-          "due": "2026-05-07",
-          "item": "Chase experience verification with Two Rivers Health Partners",
-          "owner": "Medical Services Professional"
         }
       ],
       "activation": null,
@@ -832,38 +989,25 @@
     },
     {
       "action_queue": [],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-HOSP"
+        ]
+      },
       "application_id": "APP-2026-031",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-030",
       "decisions": [
         {
           "admitted": true,
           "decision_id": "MEC-2026-030",
           "reason": null
-        }
-      ],
-      "elements": {
-        "certification": "resolved",
-        "education": "resolved",
-        "experience": "resolved",
-        "gaps": "resolved",
-        "licensure": "resolved",
-        "references": "resolved"
-      },
-      "monitored_conditions": [],
-      "packet_presentable": true,
-      "revision": 2,
-      "status": "packet-presentable"
-    },
-    {
-      "action_queue": [],
-      "activation": null,
-      "application_id": "APP-2026-032",
-      "approval_decision_id": null,
-      "decisions": [
+        },
         {
           "admitted": true,
-          "decision_id": "MEC-2026-031",
+          "decision_id": "GBD-2026-030",
           "reason": null
         }
       ],
@@ -876,9 +1020,46 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
+      "revision": 2,
+      "status": "active"
+    },
+    {
+      "action_queue": [],
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-OBG"
+        ]
+      },
+      "application_id": "APP-2026-032",
+      "approval_decision_id": "GBD-2026-031",
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-031",
+          "reason": null
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-031",
+          "reason": null
+        }
+      ],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
       "revision": 1,
-      "status": "packet-presentable"
+      "status": "active"
     },
     {
       "action_queue": [
@@ -967,10 +1148,23 @@
     },
     {
       "action_queue": [],
-      "activation": null,
+      "activation": {
+        "active_at_export": false,
+        "cycle_end": "2028-06-01",
+        "effective_date": "2026-06-01",
+        "privileges": [
+          "PRIV-FM"
+        ]
+      },
       "application_id": "APP-2026-036",
-      "approval_decision_id": null,
-      "decisions": [],
+      "approval_decision_id": "GBD-2026-035",
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-035",
+          "reason": null
+        }
+      ],
       "elements": {
         "certification": "resolved",
         "education": "resolved",
@@ -980,14 +1174,14 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 2,
-      "status": "packet-presentable"
+      "status": "approved-not-yet-effective"
     },
     {
       "action_queue": [],
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
@@ -1006,6 +1200,11 @@
           "admitted": true,
           "decision_id": "GBD-2026-036",
           "reason": null
+        },
+        {
+          "admitted": false,
+          "decision_id": "GBD-2026-037",
+          "reason": "a decision from Governing Body is already admitted for this application and revision"
         }
       ],
       "elements": {
@@ -1019,18 +1218,30 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "approved-not-yet-effective"
+      "status": "active"
     },
     {
       "action_queue": [],
-      "activation": null,
+      "activation": {
+        "active_at_export": true,
+        "cycle_end": "2028-05-15",
+        "effective_date": "2026-05-15",
+        "privileges": [
+          "PRIV-EM"
+        ]
+      },
       "application_id": "APP-2026-038",
-      "approval_decision_id": null,
+      "approval_decision_id": "GBD-2026-038",
       "decisions": [
         {
           "admitted": false,
           "decision_id": "MEC-2026-036",
           "reason": "Executive Committee of the Medical Staff may not issue outcome 'approved'"
+        },
+        {
+          "admitted": true,
+          "decision_id": "GBD-2026-038",
+          "reason": null
         }
       ],
       "elements": {
@@ -1042,9 +1253,9 @@
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 1,
-      "status": "decision-inadmissible"
+      "status": "active"
     },
     {
       "action_queue": [
@@ -1055,7 +1266,7 @@
         }
       ],
       "activation": {
-        "active_at_export": false,
+        "active_at_export": true,
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
@@ -1087,16 +1298,10 @@
       "monitored_conditions": [],
       "packet_presentable": false,
       "revision": 1,
-      "status": "approved-not-yet-effective"
+      "status": "active-with-conditions"
     },
     {
-      "action_queue": [
-        {
-          "due": null,
-          "item": "Licence MD60096330 is not active and current as of 2026-04-20",
-          "owner": "Medical Services Professional"
-        }
-      ],
+      "action_queue": [],
       "activation": null,
       "application_id": "APP-2026-040",
       "approval_decision_id": null,
@@ -1106,60 +1311,45 @@
         "education": "resolved",
         "experience": "resolved",
         "gaps": "resolved",
-        "licensure": "outstanding",
+        "licensure": "resolved",
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": false,
+      "packet_presentable": true,
       "revision": 1,
-      "status": "in-verification"
+      "status": "packet-presentable"
     }
   ],
-  "as_of": "2026-04-20",
-  "batch": 2,
+  "as_of": "2026-05-18",
+  "batch": 3,
   "consumed": {
     "documents": [
-      "2026-03-17_MEC-2026-012.md",
-      "2026-03-17_MEC-2026-035.md",
-      "2026-03-19_MEC-2026-015.md",
-      "2026-03-19_MEC-2026-033.md",
-      "2026-03-24_MEC-2026-014.md",
-      "2026-03-24_MEC-2026-025.md",
-      "2026-03-26_MEC-2026-016.md",
-      "2026-03-26_MEC-2026-032.md",
-      "2026-03-26_MEC-2026-037.md",
-      "2026-03-30_gap-explanation_APP-2026-018.md",
-      "2026-03-31_MEC-2026-018.md",
-      "2026-03-31_disposition_APP-2026-029.md",
-      "2026-04-02_MEC-2026-019.md",
-      "2026-04-02_MEC-2026-029.md",
-      "2026-04-02_confirm-disclosure_APP-2026-015.md",
-      "2026-04-02_discontinued_APP-2026-029.md",
-      "2026-04-02_disposition_APP-2026-017.md",
-      "2026-04-02_disposition_APP-2026-032.md",
-      "2026-04-06_withdrawal_APP-2026-028.md",
-      "2026-04-07_MEC-2026-020.md",
-      "2026-04-08_disposition_APP-2026-027.md",
-      "2026-04-09_MEC-2026-021.md",
-      "2026-04-09_referee-ineligible_APP-2026-024.md",
-      "2026-04-10_certification-lapsed_APP-2026-027.md",
-      "2026-04-14_GBD-2026-011.md",
-      "2026-04-14_GBD-2026-013.md",
-      "2026-04-14_GBD-2026-017.md",
-      "2026-04-14_GBD-2026-023.md",
-      "2026-04-14_GBD-2026-024.md",
-      "2026-04-14_GBD-2026-032.md",
-      "2026-04-14_GBD-2026-033.md",
-      "2026-04-14_GBD-2026-034.md",
-      "2026-04-14_GBD-2026-036.md",
-      "2026-04-14_GBD-2026-039.md",
-      "2026-04-14_MEC-2026-022.md",
-      "2026-04-14_MEC-2026-026.md",
-      "2026-04-14_MEC-2026-036.md",
-      "2026-04-15_referee-overdue_APP-2026-023.md",
-      "2026-04-16_MEC-2026-030.md",
-      "2026-04-16_MEC-2026-031.md",
-      "2026-04-16_deferral-chase_APP-2026-034.md"
+      "2026-04-20_confirm-disclosure-reply_APP-2026-015.md",
+      "2026-04-21_MEC-2026-028.md",
+      "2026-04-23_referee-substitution_APP-2026-023.md",
+      "2026-04-24_referee-substitution_APP-2026-034.md",
+      "2026-05-05_MEC-2026-027.md",
+      "2026-05-06_disposition_APP-2026-015.md",
+      "2026-05-12_GBD-2026-012.md",
+      "2026-05-12_GBD-2026-014.md",
+      "2026-05-12_GBD-2026-015.md",
+      "2026-05-12_GBD-2026-016.md",
+      "2026-05-12_GBD-2026-018.md",
+      "2026-05-12_GBD-2026-019.md",
+      "2026-05-12_GBD-2026-020.md",
+      "2026-05-12_GBD-2026-021.md",
+      "2026-05-12_GBD-2026-022.md",
+      "2026-05-12_GBD-2026-025.md",
+      "2026-05-12_GBD-2026-026.md",
+      "2026-05-12_GBD-2026-027.md",
+      "2026-05-12_GBD-2026-028.md",
+      "2026-05-12_GBD-2026-029.md",
+      "2026-05-12_GBD-2026-030.md",
+      "2026-05-12_GBD-2026-031.md",
+      "2026-05-12_GBD-2026-035.md",
+      "2026-05-12_GBD-2026-037.md",
+      "2026-05-12_GBD-2026-038.md",
+      "2026-05-14_reference-stale_APP-2026-025.md"
     ],
     "record_files": [
       "application-disclosures.csv",
@@ -1178,15 +1368,15 @@
     ]
   },
   "predecessor": {
-    "path": "deliverables/snapshots/batch-01.json",
-    "sha256": "7382410a1d62932aa2d509e1afdcc00fa112ce05185410e72402a30c031d3c2a"
+    "path": "deliverables/snapshots/batch-02.json",
+    "sha256": "69fa7c56c60a6f439ab6e966dfbe7c40a60eab32e76799f71b87f76cb0d2fd68"
   },
   "produced": [
-    "deliverables/snapshots/batch-02.json",
-    "deliverables/state/batch-02.state.json",
+    "deliverables/snapshots/batch-03.json",
+    "deliverables/state/batch-03.state.json",
     "deliverables/run-log.md"
   ],
   "rules_file": "deliverables/rules.md",
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "batch-02-20261003T035038529861Z"
+  "snapshot_id": "batch-03-20261003T035121495253Z"
 }

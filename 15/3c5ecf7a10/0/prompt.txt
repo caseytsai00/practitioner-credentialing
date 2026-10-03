@@ -3,3 +3,142 @@ Looks good. Let's implement
 ---
 
 Let's do native
+
+---
+
+<task-notification>
+<task-id>a94342f59d46130f3</task-id>
+<tool-use-id>REDACTED</tool-use-id>
+<output-file>/private/tmp/claude-501/-Users-caseytsai-GitRollTraining-practitioner-credentialing/c4c7aaf1-c5f7-475e-9a36-4c8721595230/tasks/a94342f59d46130f3.output</output-file>
+<status>completed</status>
+<summary>Agent "Final whole-branch code review" finished</summary>
+<note>A task-notification fires each time this agent stops with no live background children of its own. The user can send it another message and resume it, so the same task-id may notify more than once.</note>
+<result>I've completed the review across several passes (plan/spec, engine code, parsers/CLI, sealed snapshot data, supersede bookkeeping, tests). One note first: **running `pytest` modified `deliverables/run-log.md`** (3 appended entries) — that's a property of the test suite, not something I edited; see Issue 11. You'll want `git checkout deliverables/run-log.md`.
+
+---
+
+### Strengths
+
+- **The supersede bookkeeping is genuinely correct.** I verified all four superseded copies byte-for-byte against the actual sealed git blobs: `batch-01.superseded-...ppq-finding-fix.json` == `4739a57:batch-01.json`; `batch-02.superseded-...compute-status-fix.json` == `5f69553:batch-02.json`; `batch-02/03.superseded-...decision-revision-fix.json` == `d2080c2:batch-02/03.json`. SHA-256 identical in every case. Nothing was silently lost, and the two extra ppq-fix copies for batches 2–3 preserve never-committed intermediate bytes — more conservative than required.
+- **Predecessor hash chain is correct.** batch-01 `predecessor: null`; batch-02 → batch-01 sha matches on disk; batch-03 → batch-02 sha matches. All three `snapshot_id`s distinct.
+- **All five Review Focus items have real, behavior-level tests** (`tests/test_run_batch_cli.py:63`, `:91`; `tests/test_engine_decisions.py:30` + `tests/test_e2e_batch_02.py:41`; `tests/test_engine_orchestration.py:284`, `:253`). No mocks — `_FakeBatch` is a data stand-in, not a behavior stub. 81/81 pass.
+- **The three in-flight fixes are each correct as far as they go.** `compute_status` (`scripts/engine.py:689-712`) now lets the admitted Governing Body outcome govern while the lingering finding stays visible in both `elements` and `action_queue` — nothing is hidden. `evaluate_decisions` (`:648-662`) keeps every decision in `decision_records`. `detect_ppq_findings` (`:501`) fires even when every element would otherwise resolve, verified against APP-2026-032 in the sealed batch-01 output.
+- **Rules-as-data is real.** `scripts/rules.py` is 20 lines, `deliverables/rules.md` carries provenance per threshold, and `tests/test_rules_deliverable.py` guards the ids/values. Interview-sourced vs. session-decision labelling is honest and matches the transcript.
+- **Blocked-run safety is properly implemented and tested.** `scripts/run_batch.py:127-143` validates before comparing, refuses a changed reseal by default, and `:154-167` logs `blocked` without touching any snapshot.
+- **The merge-by-natural-key architecture is the right call**, and the plan (lines ~2670-2680) explicitly reasons about why no `diff_revision_data` is needed. Element resolution being a pure function of the accumulated store makes Review Focus #4 true by construction rather than by bookkeeping.
+- **Good true positives in the real data**: APP-2026-026's `eligibility-question` (requests PRIV-CARD/Cardiovascular Disease with only an Internal Medicine residency) is a correct catch; APP-2026-021's `no-record` reply correctly superseded by a confirmed successor-registrar reply; APP-2026-030's discrepancy correctly clearing when revision 2 amended the date.
+
+---
+
+### Issues
+
+#### Critical (Must Fix)
+
+**C1. A Clinical Director disposition that explicitly declines to clear a finding is read as clearing it — the engine decides protected judgment #2.**
+`scripts/engine.py:568-584` (`parse_disposition_outcome`) adds the `clear` label on the phrase `"present the file to the executive committee"`. That phrase is an instruction to proceed *with the finding attached*, not a determination that the finding is immaterial. Real consequence in the sealed output — `office-exports/batch-03/dispositions/2026-05-06_disposition_APP-2026-015.md` says:
+
+&gt; "The credential is current but it is **not full and unrestricted** while the stipulated agreement is in force. Present the file to the Executive Committee … **I make no recommendation on the privileges themselves.**"
+
+`deliverables/snapshots/batch-03.json` seals APP-2026-015 as `licensure: "resolved"`, `packet_presentable: true` — while its own `monitored_conditions` still carries the board monitoring programme through 2027-08-31 and its `action_queue` still says the board action "needs Clinical Director review." The schema defines `resolved` as "verified and needs nothing further" and `finding` as "a fact the Clinical Director, **and then the committees**, must weigh" — i.e. a finding is meant to *survive* into committee review, which is precisely what this disposition ordered. The committees receive a clean packet with no licensure finding on it.
+
+Note this is **plan-prescribed** (plan line 3044 lists that phrase as a `clear` signal), so it's a plan defect faithfully implemented, not an implementer deviation. Fix: drop `"present the file to the executive committee"` from the `clear` set — keep only `"no bar to appointment"` and `"sufficient and the file may proceed"`, which are actual determinations. Separately, `apply_dispositions:603-612` resolves **every** flagged element on a `clear`, not just the one the disposition discusses; no multi-element case fires in this data, but the blanket behavior is wrong (see I-note under Important).
+
+**C2. The Governing Body's own `Conditions:` block is dropped entirely at the parser, so `monitored_conditions` is empty on the one conditional approval in the data.**
+`scripts/parsers.py:83-99` enumerates fixed decision fields and never reads `Conditions`; `_HEADER_FIELD_RE` (`:35`) can't match the `- …` bullet lines anyway. `scripts/engine.py:676-686` (`extract_monitored_conditions`) sources conditions **only** from `board-action` letters matching `through YYYY-MM-DD`. `office-exports/batch-02/decisions/2026-04-14_GBD-2026-039.md` carries:
+
+```
+**Conditions:**
+- Re-verification of the Washington licence before its expiry on 2026-12-31 — due 2026-11-30
+- The Clinical Director's written concurrence on the 2021 practice gap explanation — due 2026-06-30
+```
+
+`deliverables/snapshots/batch-03.json` seals APP-2026-039 as `status: "active-with-conditions"` with `monitored_conditions: []`. The snapshot asserts a status that its own payload contradicts (schema: "active-with-conditions — active, with at least one monitored condition still running"), and two real dated obligations are lost — including a licence re-verification due 2026-11-30, which is exactly the failure mode the stakeholder opened the interview with ("a licence expires underneath it and I only notice when I happen to look"). The second condition is a protected judgment (#1) with a hard due date; it reaches the action queue only as a generic gap question with `due: null`.
+
+**C3. `activation.privileges` is mangled wherever the office used `; ` to separate privilege codes — six sealed application entries carry a bogus code.**
+`scripts/parsers.py:82` splits `Privileges` on `,` only. Nine decision documents use `; ` (e.g. `**Privileges:** PRIV-HOSP; PRIV-IM`). Result in the sealed snapshots:
+
+| snapshot | application | `activation.privileges` |
+|---|---|---|
+| batch-02 | APP-2026-014, APP-2026-039 | `["PRIV-HOSP; PRIV-IM"]` |
+| batch-03 | APP-2026-002, APP-2026-014, APP-2026-039 | `["PRIV-HOSP; PRIV-IM"]` |
+| batch-03 | APP-2026-026 | `["PRIV-IM; PRIV-HOSP"]` |
+
+The schema says `privileges` is "The privilege groups the approval named, **by their published codes**." `"PRIV-HOSP; PRIV-IM"` is not a published code, and no consumer can match it against `privilege-requests.csv`'s `privilege_code`. Fix: `re.split(r"[;,]", ...)`. **This is the fourth bug, and it is materially worse than the stale-action-item issue that was triaged away** — it is wrong data in the primary deliverable, not a redundant informational line.
+
+#### Important (Should Fix)
+
+**I1. A refused decision produces no action-queue item unless the refusal reason is a revision mismatch.** `scripts/engine.py:648-671` queues an item only in the revision branch (`:654`); the `admit_decision` refusals (wrong body, missing signatory, duplicate) fall through to `:663-664` with no action item. Sealed evidence: APP-2026-038 batch-02 is `decision-inadmissible` with `action_queue: []`, and APP-2026-037 batch-03 refuses `GBD-2026-037` with `action_queue: []`. Schema: action_queue is "Empty only when the file needs nothing and carries nothing to report." A refused Executive-Committee approval obviously needs re-issuing by the correct body. Worse — `GBD-2026-037` ("The Governing Body considered the file **again**") grants `PRIV-FM; PRIV-HOSP` with effective date 2026-05-15, versus the admitted `GBD-2026-036`'s `PRIV-FM`/2026-05-01. The engine silently drops the added PRIV-HOSP and tells nobody. Note `scripts/parsers.py:95` parses a `supersedes` field that the engine never consults.
+
+**I2. The duplicate-body refusal will block a legitimate follow-up decision after a deferral.** `admit_decision:525` refuses any second decision from the same body at the same revision. APP-2026-034 holds an admitted `deferred-pending-information` at revision 1 across batches 2 and 3; a Governing Body approval at revision 1 in a future batch — the normal resolution of a deferral — would be refused as a duplicate and the file would never activate. Fix: key the duplicate check on (body, outcome-class) or treat a later decision from the same body as superseding, driven by the parsed `supersedes` field.
+
+**I3. Deferral and denial reasons go nowhere.** APP-2026-034 reads `deferred` in both batch-02 and batch-03 with `action_queue: []` and no monitored condition, although `GBD-2026-032`'s `Reason` states exactly what is owed ("one further peer reference from a referee outside the applicant's current group practice") and the office sent `2026-04-16_deferral-chase_APP-2026-034.md`. A file on a Governing Body hold with nothing in its queue is the single most misleading row a reader of this snapshot can hit.
+
+**I4. The 3-attempts/21-days cadence is not applied to references, though `deliverables/rules.md:113-120` says it is.** `resolve_references` (`scripts/engine.py:347-393`) never reads `verification_attempts`. `REF-1401` (APP-2026-014) and `REF-2301` (APP-2026-023) each had 3 logged `peer-reference` attempts by batch 2, yet batch-02 shows only `"Chase peer reference reply from …"` with `due: null` — no "silence is not a pass" escalation and no ≥21-day next-attempt date. The real office escalated exactly here (`referee-overdue`, then `referee-substitution`); the engine stayed silent. Either wire attempts into `resolve_references` or correct rules.md's scope claim.
+
+**I5. `confirmed-with-discrepancy` is treated as no reply at all, leaving one file permanently stuck.** `scripts/engine.py:270-274` requires `outcome == "confirmed"`. `VR-3002` (APP-2026-030 / ENT-3002) is `confirmed-with-discrepancy`; revision 2 amended the declared date to match the verified one, so the discrepancy correctly cleared — but `experience` stays `outstanding` in batch-02 and batch-03 with `"Chase experience verification with Mosswater Valley Hospital"` forever. The source *did* reply, the applicant *did* amend, and the file can never reach `packet-presentable`. "Silence is never a pass" is satisfied here; the outcome value just isn't recognised.
+
+**I6. The terminal-state early return discards `decisions`, `action_queue`, and `monitored_conditions`.** `scripts/engine.py:719-729` builds the record with the defaults for all three. Today no withdrawn/discontinued file has decisions, so the schema invariant "A record that was refused stays here with the reason; it is **never dropped from a later snapshot**" survives by luck — I verified decision-set monotonicity holds across all three sealed snapshots. But APP-2026-029's `"Notify applicant of discontinuance per disposition …"` item is present in batch-02 and **gone in batch-03** with no record that it was done. Carry the ledger's stored decisions/queue/conditions through the terminal path.
+
+**I7. README advertises a batch-4 resume that cannot work.** `README.md:45-47` tells the next operator to run `--batch 4`. `scripts/run_batch.py:27` hardcodes `AS_OF_BY_BATCH = {1,2,3}`, so `AS_OF_BY_BATCH[4]` raises `KeyError: 4`, caught at `:154`, and the run is logged `blocked` with a cryptic traceback. The documented resume path is the one thing a handoff reader will try first. Add an `--as-of` argument (or read the batch README's export date).
+
+**I8. The test suite is not read-only and the repo at HEAD cannot be cloned-and-tested.** `tests/test_e2e_batch_0{1,2,3}.py` call `scripts.run_batch.main()` against the **real** `deliverables/`, appending three entries to the committed `deliverables/run-log.md` on every `pytest` run — which is why the audit log has 63 entries, most of them test noise rather than real runs. Separately, `git ls-files` shows `office-exports/` (0 files) and `interviews/` (0 files) untracked, so on a fresh clone 5 of 81 tests cannot run at all, and the assignment's own requirement to commit the interview is unmet at this HEAD. Point the e2e tests at a `tmp_path` copy (as `test_run_batch_cli.py` already correctly does) or at minimum redirect the run-log.
+
+**I9. `SKILL.md` points to a README section that does not exist.** `SKILL.md:87-88`: "see README.md for the exact supersede bookkeeping this requires." `grep -i supersede README.md` → nothing. The manual byte-preservation step is the only thing standing between a `--force-resupersede` and permanent loss of sealed bytes, and `--force-resupersede` itself does no preserving (`scripts/run_batch.py:127`). Document the procedure, or better, have the flag copy the existing file to a `superseded-` name before overwriting.
+
+**I10. `deliverables/rules.md` lists three decision-admission conditions; the code enforces four.** `rules.md:99-104` names body/outcome match, signatory+role, and non-duplicate. `evaluate_decisions:649` adds a revision-match refusal — the behavior is defensible and interview-grounded ("a packet that has to be tied to one exact revision"), but `rules_file` in every snapshot points at rules.md as "the register that lists **every** rule this run applied." Add the fourth condition.
+
+#### Minor (Nice to Have)
+
+- **M1.** `scripts/engine.py:837-838` wires the PPQ finding onto `licensure`, an unrelated element, and **overwrites** whatever licensure computed — an `outstanding` licence (no board record found) would be replaced by `finding`, masking the outstanding verification. Attach PPQ findings to the element the question concerns, or don't clobber a non-resolved state.
+- **M2.** `rules.md:162-168`'s known-limitation entry says only the PPQ action item can linger past its element's resolution. In fact **any** element's action item can — `resolve_*` items are appended at `:802-804`, before `apply_dispositions` at `:846`. APP-2026-015 batch-03 proves it: licensure `resolved`, board-action review item still queued. Broaden the wording.
+- **M3.** Two genuine case-specific constants remain in `engine.py`, contradicting `rules.md:10-11`'s absolute claim: `len(token) &gt; 3` at `:493` (an undocumented tuning knob that decides which privilege-name words count) and the literal `"the 30-day clock expired"` prose at `:167` (would lie if `intake.missing_items_clock_days` changed).
+- **M4.** `signature_date.replace(year=+2)` (`:379`) and `effective.replace(year=+2)` (`:533`) raise `ValueError` on a Feb-29 input. Loud failure, but a blocked run on a leap-day effective date.
+- **M5.** `resolve_licensure:217` / `resolve_certification:331` `return` on the first problem credential, discarding the remaining credentials' action items — an applicant with two licences, one unmatched and one under board action, surfaces only the first.
+- **M6.** `consumed.record_files` (`run_batch.py:101`) lists every CSV in the directory rather than the ones actually read; the schema says "the record files … this run **read**."
+- **M7.** The attempt-exhausted message says "after 3 attempts" (from `max_attempts`) even where 4 are logged — APP-2026-033/Willowmere has 4.
+- **M8.** The engine never emits `routed-to-clinical-director`; it uses `finding` for that purpose. Defensible, but one of the schema's seven element states is dead.
+- **M9.** `datetime.datetime.utcnow()` (`run_batch.py:35`, `:82`, `:120`) — fine on the pinned 3.7.4, deprecated on 3.12+.
+- **M10.** `scripts/engine.py` at 920 lines is still coherent (clean `evaluate_intake` → `resolve_elements` → overrides → `apply_dispositions` → `evaluate_decisions` → `compute_status` pipeline, pure functions throughout, good explanatory comments at the two fix sites). The one smell is `process_application:786-903`, which is the only place the override/disposition/decision ordering is expressed and the only place C1/M1 can be seen — worth extracting. The spec's `scripts/action_queue.py` was never created; the plan superseded that and folded the helpers into engine.py, which is fine.
+
+---
+
+### Declined to Judge
+
+- `.entire/` session-capture files and the `entire/*` branches — capture tooling, outside plan and spec.
+- Commit message style and co-author trailers — not addressed by plan or spec.
+- `README.md`'s retained starter-template sections ("Start", "Supplied files", "Before you work") — assignment boilerplate, not implementation.
+- Committing ~2.8 MB of `deliverables/state/*.state.json` — spec §3 explicitly places them in the repo as the continuity ledger.
+- Absence of CI configuration — never required.
+- `scripts/recount_check.py` being Python in the same repo rather than a truly external tool — spec §6 asks only for "a method other than the Skill's own code," which it satisfies (no `engine`/`parsers` import).
+- `--state` accepting an arbitrary absolute path — CLI ergonomics, no security boundary here (single-user local tool, no shell interpolation).
+- Type-hint completeness, docstring coverage, lint/format config — no standard set by plan or spec.
+- Whether `decision-inadmissible` should persist once a later admitted approval exists (APP-2026-036 batch-03 resolves to `approved-not-yet-effective` while two refused records remain) — the schema's precedence text supports the implementation; flagging only as a design question, not a defect.
+- The coarse substring eligibility heuristic's general precision — spec §7 discloses it as coarse by design; I checked the two real positives and found both correct.
+
+---
+
+### Recommendations
+
+1. **Fix C1, C2, C3 and re-supersede all three snapshots one more time.** Each changes sealed output; the bookkeeping discipline already demonstrated three times works, and the byte-preservation has been verified correct, so a fourth cycle is low-risk. C3 is a one-line parser change; C2 needs a `Conditions:` bullet parser plus sourcing `monitored_conditions` from admitted decisions; C1 is one phrase removed from a set.
+2. **Add an action-queue item on every decision refusal** (I1), not just the revision branch, and surface deferral/denial `Reason` text into the queue (I3). These are the two places where the snapshot currently tells a reader "nothing to do" about a file that is blocked.
+3. **Redirect the e2e tests' writes to a temp tree** (I8) and commit `office-exports/` and `interviews/` before handoff — `git checkout deliverables/run-log.md` first to drop the three entries my test run appended.
+4. Reconcile the three documentation/code divergences: rules.md's reference-cadence scope (I4), rules.md's admission conditions (I10), SKILL.md's dangling README pointer (I9), and README's batch-4 promise (I7).
+5. **On the triage call you asked about:** leaving the stale PPQ action item was a reasonable call in isolation — it is informational, not a wrong state. But the search around it stopped too early. Three issues of strictly greater severity (C1–C3) sit in the same neighbourhood (dispositions, decision parsing, activation), all visible from the sealed snapshots without reading any code: a status whose own payload contradicts it (`active-with-conditions` / `monitored_conditions: []`), a privilege code that isn't a code, and a `resolved` element whose action queue still demands review of it. A quick self-consistency pass over the sealed JSON — status vs. elements vs. monitored_conditions vs. action_queue — would have caught all three and is worth adding to `verification.md` as a standing check.
+
+---
+
+### Assessment
+
+**Ready to merge?** With fixes
+
+**Reasoning:** The architecture, cross-batch accumulation, rules-as-data, supersede discipline, and TDD coverage are all solid, and the three documented fixes are correct — I verified the superseded bytes, the hash chain, and the decision-set monotonicity independently rather than taking the narrative's word for it. But the sealed deliverable contains three substantive defects: a Clinical Director disposition that explicitly declined to clear a licensure restriction is read as clearing it (crossing the protected-judgment boundary the whole design is built around), the Governing Body's own dated conditions are dropped so a snapshot says `active-with-conditions` with none recorded, and six `activation.privileges` entries carry a concatenated non-code. Each is a one-to-few-line fix, and each changes sealed output, so they belong in one more fix-and-resupersede cycle before handoff.</result>
+<usage><subagent_tokens>198290</subagent_tokens><tool_uses>59</tool_uses><duration_ms>689169</duration_ms></usage>
+</task-notification>
+
+---
+
+Your claude.ai usage limit has reset. Continue the task you were working on when the limit was reached; do not repeat work that is already complete.
+
+---
+
+Are we ready to submit?

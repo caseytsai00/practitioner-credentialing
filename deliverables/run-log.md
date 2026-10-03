@@ -701,3 +701,54 @@ under new `snapshot_id`s via `--force-resupersede`.
 - Failures: none
 - Note: unchanged re-run; sealed snapshot left untouched
 
+
+## Post-review fix round -- 2026-10-03
+
+An independent whole-branch review (fresh reviewer, read-only pass over the full implementation
+and the sealed snapshots) found 3 Critical and 7 Important issues, all in the sealed deliverable
+itself, none hypothetical. Each was fixed with a regression test confirmed RED before the fix and
+GREEN after; full detail for each is in `deliverables/verification.md`'s "Post-review fixes"
+section. Summary:
+
+1. **Critical** -- a disposition that explicitly declined to clear a licensure restriction
+   ("present the file to the committee ... I make no recommendation on the privileges themselves")
+   was read as clearing it, crossing the protected-judgment boundary the whole design is built
+   around. Fixed in `parse_disposition_outcome`.
+2. **Critical** -- a Governing Body decision's own `Conditions:` block (dated obligations) was
+   dropped entirely, so `active-with-conditions` could seal with `monitored_conditions: []`.
+   Fixed by parsing the block (`scripts/parsers.py`) and sourcing conditions from the admitted
+   decision (`extract_monitored_conditions`).
+3. **Critical** -- `activation.privileges` split only on `,`, leaving a `; `-separated list (used
+   in 9 real decision documents) as one bogus code. Fixed in `scripts/parsers.py`.
+4. **Important** -- a refused decision produced no action-queue item unless the refusal was a
+   revision mismatch. Fixed: every refusal now queues one.
+5. **Important** -- a second decision from the same body at the same revision was always refused
+   as a "duplicate", which would have wrongly blocked the normal resolution of a deferral by a
+   later approval. Fixed: the chronologically latest decision per body is the candidate for
+   admission; an earlier one is refused as superseded by it, not as a duplicate.
+6. **Important** -- a deferred or denied decision's stated `reason` never reached the action
+   queue, leaving a file on a Governing Body hold with nothing telling a reader what's owed.
+   Fixed: the reason is now queued.
+7. **Important** -- the 3-attempts/21-days cadence, documented in `rules.md` as applying to
+   references, was never wired into `resolve_references`. Fixed.
+8. **Important** -- a `confirmed-with-discrepancy` verification reply was treated as no reply at
+   all, leaving an otherwise-settled entry permanently `outstanding` even after the applicant
+   amended the record to match. Fixed: it now counts as a reply.
+9. **Important** -- the sticky terminal-state (withdrawn/discontinued) short-circuit discarded a
+   file's `decisions`/`action_queue`/`monitored_conditions`, so a real item (e.g. "Notify
+   applicant of discontinuance ...") vanished the batch after it was recorded. Fixed: these are
+   now persisted in the ledger and carried forward.
+10. **Important** -- `README.md` documented a `--batch 4` resume that would `KeyError`. Fixed by
+    adding a `--as-of` CLI override and a clear blocked error instead of a crash.
+11. **Important** -- `--force-resupersede` itself did no preservation, relying on a manual
+    copy-aside step `SKILL.md` pointed to a README section that didn't exist. Fixed: the flag now
+    automatically preserves the existing sealed bytes under a `superseded-<timestamp>.json` name
+    before overwriting; `SKILL.md` describes this directly.
+
+All three sealed snapshots were affected by one or more of these (batch 3 most, since most
+real Governing Body activity is there) and were regenerated and resuperseded accordingly -- this
+time via the now-automatic preservation in (11) rather than a manual copy. One consequence worth
+flagging on its own: fix 1 (the disposition-clearing fix) correctly reclassifies APP-2026-015's
+disposition as unable to be automatically interpreted (it no longer silently resolves a finding
+the Clinical Director declined to clear), which correctly flips batch 3's result from `supported`
+to `partial` -- this is the fix working as intended, not a regression.

@@ -14,6 +14,7 @@ if _REPO_ROOT_FOR_IMPORT not in sys.path:
 import argparse
 import datetime
 import json
+import shutil
 import traceback
 from typing import List, Optional
 
@@ -67,6 +68,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--batch", type=int, required=True)
     parser.add_argument("--state", default=None)
     parser.add_argument("--force-resupersede", action="store_true")
+    parser.add_argument(
+        "--as-of",
+        default=None,
+        help="export date (YYYY-MM-DD) for a batch not in AS_OF_BY_BATCH (batches 1-3 don't need this)",
+    )
     args = parser.parse_args(argv)
 
     batch_dir = os.path.join(REPO_ROOT, "office-exports", "batch-{:02d}".format(args.batch))
@@ -79,13 +85,20 @@ def main(argv: Optional[List[str]] = None) -> int:
     command = "python3 scripts/run_batch.py --batch {}".format(args.batch)
     if args.state:
         command += " --state {}".format(os.path.relpath(args.state, REPO_ROOT))
+    if args.as_of:
+        command += " --as-of {}".format(args.as_of)
     started_at = datetime.datetime.utcnow().isoformat() + "Z"
 
     try:
         rules = load_rules(rules_path)
         ledger = load_ledger(args.state) if args.state else new_ledger()
         batch = BatchData(batch_dir)
-        as_of = AS_OF_BY_BATCH[args.batch]
+        as_of = args.as_of or AS_OF_BY_BATCH.get(args.batch)
+        if as_of is None:
+            raise RuntimeError(
+                "batch {} has no AS_OF_BY_BATCH entry and no --as-of was given; "
+                "pass --as-of YYYY-MM-DD (the batch's own export date) to run it".format(args.batch)
+            )
 
         records, updated_ledger, warnings = process_batch(batch, ledger, rules, as_of)
 
@@ -123,8 +136,9 @@ def main(argv: Optional[List[str]] = None) -> int:
         validate_snapshot(snapshot, schema_path)
 
         result = "supported" if not warnings else "partial"
+        supersede_note = None
 
-        if os.path.exists(snapshot_path) and not args.force_resupersede:
+        if os.path.exists(snapshot_path):
             with open(snapshot_path, encoding="utf-8") as f:
                 existing = json.load(f)
             existing_comparable = dict(existing)
@@ -137,9 +151,19 @@ def main(argv: Optional[List[str]] = None) -> int:
                     note="unchanged re-run; sealed snapshot left untouched",
                 )
                 return 0
-            raise RuntimeError(
-                "batch {} already has a sealed snapshot that differs from this run's result; "
-                "rerun with --force-resupersede to regenerate it and every later snapshot".format(args.batch)
+            if not args.force_resupersede:
+                raise RuntimeError(
+                    "batch {} already has a sealed snapshot that differs from this run's result; "
+                    "rerun with --force-resupersede to regenerate it and every later snapshot".format(args.batch)
+                )
+            # --force-resupersede must itself preserve the sealed bytes it's about to overwrite --
+            # requiring the operator to copy the file aside by hand first is the only thing that
+            # would otherwise stand between this flag and permanent loss of sealed data.
+            timestamp = datetime.datetime.utcnow().strftime("%Y%m%dT%H%M%S")
+            superseded_path = snapshot_path[: -len(".json")] + ".superseded-{}.json".format(timestamp)
+            shutil.copyfile(snapshot_path, superseded_path)
+            supersede_note = "superseded {} -- prior sealed bytes preserved unchanged at {}".format(
+                os.path.relpath(snapshot_path, REPO_ROOT), os.path.relpath(superseded_path, REPO_ROOT)
             )
 
         os.makedirs(os.path.dirname(snapshot_path), exist_ok=True)
@@ -149,7 +173,10 @@ def main(argv: Optional[List[str]] = None) -> int:
             f.write("\n")
         save_ledger(updated_ledger, state_path)
 
-        append_run_log(run_log_path, command, args.batch, started_at, consumed, produced, warnings, result)
+        append_run_log(
+            run_log_path, command, args.batch, started_at, consumed, produced, warnings, result,
+            note=supersede_note,
+        )
         return 0
     except Exception as exc:  # noqa: BLE001 -- a blocked run must still log and exit cleanly
         append_run_log(

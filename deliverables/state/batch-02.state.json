@@ -85,6 +85,7 @@
           {
             "application_id": "APP-2026-001",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-10",
             "decision_id": "MEC-2026-011",
@@ -104,6 +105,7 @@
           {
             "application_id": "APP-2026-001",
             "body": "Governing Body",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "GBD-2026-011",
@@ -555,6 +557,7 @@
           {
             "application_id": "APP-2026-002",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-17",
             "decision_id": "MEC-2026-012",
@@ -562,7 +565,8 @@
             "filename": "2026-03-17_MEC-2026-012.md",
             "outcome": "recommended",
             "privileges": [
-              "PRIV-HOSP; PRIV-IM"
+              "PRIV-HOSP",
+              "PRIV-IM"
             ],
             "raw_text": "# Executive Committee of the Medical Staff \u2014 minute extract MEC-2026-012\n\n**Decision ID:** MEC-2026-012  \n**Body:** Executive Committee of the Medical Staff  \n**Signatory:** Dr. Peter Vandermolen, MD  \n**Role:** Chair, Executive Committee of the Medical Staff  \n**Application:** APP-2026-002  \n**Revision:** 1  \n**Decision date:** 2026-03-17  \n**Outcome:** recommended  \n**Privileges:** PRIV-HOSP; PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:**   \n**Supersedes:**   \n\n## Minute\n\nThe Executive Committee reviewed the file as presented by the Medical Staff Office and recommends the appointment and the privileges named above to the Governing Body.\n\nSigned: Dr. Peter Vandermolen, MD, Chair, Executive Committee of the Medical Staff, 2026-03-17.\n",
             "reason": null,
@@ -1030,6 +1034,7 @@
           {
             "application_id": "APP-2026-003",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-12",
             "decision_id": "MEC-2026-013",
@@ -1049,6 +1054,7 @@
           {
             "application_id": "APP-2026-003",
             "body": "Governing Body",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "GBD-2026-013",
@@ -1500,6 +1506,7 @@
           {
             "application_id": "APP-2026-004",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-24",
             "decision_id": "MEC-2026-014",
@@ -1960,6 +1967,7 @@
           {
             "application_id": "APP-2026-005",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-19",
             "decision_id": "MEC-2026-015",
@@ -2419,6 +2427,7 @@
           {
             "application_id": "APP-2026-006",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-26",
             "decision_id": "MEC-2026-016",
@@ -2842,6 +2851,7 @@
           {
             "application_id": "APP-2026-007",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-10",
             "decision_id": "MEC-2026-017",
@@ -2861,6 +2871,7 @@
           {
             "application_id": "APP-2026-007",
             "body": "Governing Body",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "GBD-2026-017",
@@ -3312,6 +3323,7 @@
           {
             "application_id": "APP-2026-008",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-31",
             "decision_id": "MEC-2026-018",
@@ -3719,6 +3731,7 @@
           {
             "application_id": "APP-2026-009",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-02",
             "decision_id": "MEC-2026-019",
@@ -4182,6 +4195,7 @@
           {
             "application_id": "APP-2026-010",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-07",
             "decision_id": "MEC-2026-020",
@@ -4589,6 +4603,7 @@
           {
             "application_id": "APP-2026-011",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-09",
             "decision_id": "MEC-2026-021",
@@ -5076,6 +5091,7 @@
           {
             "application_id": "APP-2026-012",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "MEC-2026-022",
@@ -5543,6 +5559,7 @@
           {
             "application_id": "APP-2026-013",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-12",
             "decision_id": "MEC-2026-023",
@@ -5562,6 +5579,7 @@
           {
             "application_id": "APP-2026-013",
             "body": "Governing Body",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "GBD-2026-023",
@@ -5950,7 +5968,8 @@
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
-          "PRIV-HOSP; PRIV-IM"
+          "PRIV-HOSP",
+          "PRIV-IM"
         ]
       },
       "approval_decision_id": "GBD-2026-024",
@@ -6029,6 +6048,7 @@
           {
             "application_id": "APP-2026-014",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-10",
             "decision_id": "MEC-2026-024",
@@ -6036,7 +6056,8 @@
             "filename": "2026-03-10_MEC-2026-024.md",
             "outcome": "recommended",
             "privileges": [
-              "PRIV-HOSP; PRIV-IM"
+              "PRIV-HOSP",
+              "PRIV-IM"
             ],
             "raw_text": "# Executive Committee of the Medical Staff \u2014 minute extract MEC-2026-024\n\n**Decision ID:** MEC-2026-024  \n**Body:** Executive Committee of the Medical Staff  \n**Signatory:** Dr. Peter Vandermolen, MD  \n**Role:** Chair, Executive Committee of the Medical Staff  \n**Application:** APP-2026-014  \n**Revision:** 1  \n**Decision date:** 2026-03-10  \n**Outcome:** recommended  \n**Privileges:** PRIV-HOSP; PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:**   \n**Supersedes:**   \n\n## Minute\n\nThe Executive Committee reviewed the file as presented by the Medical Staff Office and recommends the appointment and the privileges named above to the Governing Body.\n\nSigned: Dr. Peter Vandermolen, MD, Chair, Executive Committee of the Medical Staff, 2026-03-10.",
             "reason": null,
@@ -6048,6 +6069,7 @@
           {
             "application_id": "APP-2026-014",
             "body": "Governing Body",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "GBD-2026-024",
@@ -6055,7 +6077,8 @@
             "filename": "2026-04-14_GBD-2026-024.md",
             "outcome": "approved",
             "privileges": [
-              "PRIV-HOSP; PRIV-IM"
+              "PRIV-HOSP",
+              "PRIV-IM"
             ],
             "raw_text": "# Governing Body \u2014 record of decision GBD-2026-024\n\n**Decision ID:** GBD-2026-024  \n**Body:** Governing Body  \n**Signatory:** Ms. Corinne Batiste  \n**Role:** Chair, Governing Body  \n**Application:** APP-2026-014  \n**Revision:** 1  \n**Decision date:** 2026-04-14  \n**Outcome:** approved  \n**Privileges:** PRIV-HOSP; PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:** 2026-05-01  \n**Supersedes:**   \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Ms. Corinne Batiste, Chair, Governing Body, 2026-04-14.\n",
             "reason": null,
@@ -6971,6 +6994,7 @@
           {
             "application_id": "APP-2026-016",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-24",
             "decision_id": "MEC-2026-025",
@@ -7484,6 +7508,7 @@
           {
             "application_id": "APP-2026-017",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "MEC-2026-026",
@@ -11249,6 +11274,7 @@
           {
             "application_id": "APP-2026-026",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-02",
             "decision_id": "MEC-2026-029",
@@ -11256,7 +11282,9 @@
             "filename": "2026-04-02_MEC-2026-029.md",
             "outcome": "recommended",
             "privileges": [
-              "PRIV-CARD; PRIV-HOSP; PRIV-IM"
+              "PRIV-CARD",
+              "PRIV-HOSP",
+              "PRIV-IM"
             ],
             "raw_text": "# Executive Committee of the Medical Staff \u2014 minute extract MEC-2026-029\n\n**Decision ID:** MEC-2026-029  \n**Body:** Executive Committee of the Medical Staff  \n**Signatory:** Dr. Peter Vandermolen, MD  \n**Role:** Chair, Executive Committee of the Medical Staff  \n**Application:** APP-2026-026  \n**Revision:** 1  \n**Decision date:** 2026-04-02  \n**Outcome:** recommended  \n**Privileges:** PRIV-CARD; PRIV-HOSP; PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:**   \n**Supersedes:**   \n\n## Minute\n\nThe Executive Committee reviewed the file as presented by the Medical Staff Office and recommends the appointment and the privileges named above to the Governing Body.\n\nSigned: Dr. Peter Vandermolen, MD, Chair, Executive Committee of the Medical Staff, 2026-04-02.\n",
             "reason": null,
@@ -12176,8 +12204,10 @@
       "status": "in-verification"
     },
     "APP-2026-028": {
+      "action_queue": [],
       "activation": null,
       "approval_decision_id": null,
+      "decisions": [],
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -12571,8 +12601,21 @@
       "status": "withdrawn"
     },
     "APP-2026-029": {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Nothing on file supports the privilege requested; Clinical Director review needed",
+          "owner": "Clinical Director"
+        },
+        {
+          "due": null,
+          "item": "Notify applicant of discontinuance per disposition 2026-03-31_disposition_APP-2026-029.md",
+          "owner": "Medical Services Professional"
+        }
+      ],
       "activation": null,
       "approval_decision_id": null,
+      "decisions": [],
       "decisions_seen": [],
       "documents_seen": [],
       "element_evidence": {},
@@ -13586,6 +13629,7 @@
           {
             "application_id": "APP-2026-031",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-16",
             "decision_id": "MEC-2026-030",
@@ -14037,6 +14081,7 @@
           {
             "application_id": "APP-2026-032",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-16",
             "decision_id": "MEC-2026-031",
@@ -14939,6 +14984,7 @@
           {
             "application_id": "APP-2026-034",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-26",
             "decision_id": "MEC-2026-032",
@@ -14958,6 +15004,7 @@
           {
             "application_id": "APP-2026-034",
             "body": "Governing Body",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "GBD-2026-032",
@@ -15382,6 +15429,7 @@
           {
             "application_id": "APP-2026-035",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-19",
             "decision_id": "MEC-2026-033",
@@ -15401,6 +15449,7 @@
           {
             "application_id": "APP-2026-035",
             "body": "Governing Body",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "GBD-2026-033",
@@ -15859,6 +15908,7 @@
           {
             "application_id": "APP-2026-036",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-10",
             "decision_id": "MEC-2026-034",
@@ -15878,6 +15928,7 @@
           {
             "application_id": "APP-2026-036",
             "body": "Governing Body",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "GBD-2026-034",
@@ -16364,6 +16415,7 @@
           {
             "application_id": "APP-2026-037",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-17",
             "decision_id": "MEC-2026-035",
@@ -16383,6 +16435,7 @@
           {
             "application_id": "APP-2026-037",
             "body": "Governing Body",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "GBD-2026-036",
@@ -16834,6 +16887,7 @@
           {
             "application_id": "APP-2026-038",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "MEC-2026-036",
@@ -17178,7 +17232,8 @@
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
-          "PRIV-HOSP; PRIV-IM"
+          "PRIV-HOSP",
+          "PRIV-IM"
         ]
       },
       "approval_decision_id": "GBD-2026-039",
@@ -17266,6 +17321,7 @@
           {
             "application_id": "APP-2026-039",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-26",
             "decision_id": "MEC-2026-037",
@@ -17273,7 +17329,8 @@
             "filename": "2026-03-26_MEC-2026-037.md",
             "outcome": "recommended",
             "privileges": [
-              "PRIV-HOSP; PRIV-IM"
+              "PRIV-HOSP",
+              "PRIV-IM"
             ],
             "raw_text": "# Executive Committee of the Medical Staff \u2014 minute extract MEC-2026-037\n\n**Decision ID:** MEC-2026-037  \n**Body:** Executive Committee of the Medical Staff  \n**Signatory:** Dr. Peter Vandermolen, MD  \n**Role:** Chair, Executive Committee of the Medical Staff  \n**Application:** APP-2026-039  \n**Revision:** 1  \n**Decision date:** 2026-03-26  \n**Outcome:** recommended  \n**Privileges:** PRIV-HOSP; PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:**   \n**Supersedes:**   \n\n## Minute\n\nThe Executive Committee reviewed the file as presented by the Medical Staff Office and recommends the appointment and the privileges named above to the Governing Body.\n\nSigned: Dr. Peter Vandermolen, MD, Chair, Executive Committee of the Medical Staff, 2026-03-26.\n",
             "reason": null,
@@ -17285,6 +17342,16 @@
           {
             "application_id": "APP-2026-039",
             "body": "Governing Body",
+            "conditions": [
+              {
+                "condition": "Re-verification of the Washington licence before its expiry on 2026-12-31",
+                "due": "2026-11-30"
+              },
+              {
+                "condition": "The Clinical Director's written concurrence on the 2021 practice gap explanation",
+                "due": "2026-06-30"
+              }
+            ],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-04-14",
             "decision_id": "GBD-2026-039",
@@ -17292,7 +17359,8 @@
             "filename": "2026-04-14_GBD-2026-039.md",
             "outcome": "approved-with-conditions",
             "privileges": [
-              "PRIV-HOSP; PRIV-IM"
+              "PRIV-HOSP",
+              "PRIV-IM"
             ],
             "raw_text": "# Governing Body \u2014 record of decision GBD-2026-039\n\n**Decision ID:** GBD-2026-039  \n**Body:** Governing Body  \n**Signatory:** Mr. Desmond Ihejirika  \n**Role:** Vice-Chair, Governing Body  \n**Application:** APP-2026-039  \n**Revision:** 1  \n**Decision date:** 2026-04-14  \n**Outcome:** approved-with-conditions  \n**Privileges:** PRIV-HOSP; PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:** Appointment and the privileges requested are granted subject to the two conditions recorded below.  \n**Effective date:** 2026-05-01  \n**Supersedes:**   \n**Conditions:**  \n- Re-verification of the Washington licence before its expiry on 2026-12-31 \u2014 due 2026-11-30  \n- The Clinical Director's written concurrence on the 2021 practice gap explanation \u2014 due 2026-06-30  \n\n## Minute\n\nThe Governing Body considered the file presented by the Medical Staff Office together with the Executive Committee's recommendation, and recorded the outcome above.\n\nSigned: Mr. Desmond Ihejirika, Vice-Chair, Governing Body, 2026-04-14.\n",
             "reason": "Appointment and the privileges requested are granted subject to the two conditions recorded below.",

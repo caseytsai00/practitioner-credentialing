@@ -389,7 +389,7 @@
       "action_queue": [
         {
           "due": null,
-          "item": "Chase peer reference reply from Dr. Tarek Whitcombe, MD",
+          "item": "references source Dr. Tarek Whitcombe, MD has not replied after 3 attempts; silence is not a pass",
           "owner": "Medical Services Professional"
         }
       ],
@@ -398,7 +398,8 @@
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
-          "PRIV-HOSP; PRIV-IM"
+          "PRIV-HOSP",
+          "PRIV-IM"
         ]
       },
       "application_id": "APP-2026-014",
@@ -625,7 +626,7 @@
       "action_queue": [
         {
           "due": null,
-          "item": "Chase peer reference reply from Dr. Hideo Okpara, MD",
+          "item": "references source Dr. Hideo Okpara, MD has not replied after 3 attempts; silence is not a pass",
           "owner": "Medical Services Professional"
         }
       ],
@@ -803,11 +804,6 @@
     {
       "action_queue": [
         {
-          "due": "2026-03-01",
-          "item": "Chase experience verification with Mosswater Valley Hospital",
-          "owner": "Medical Services Professional"
-        },
-        {
           "due": "2026-05-07",
           "item": "Chase experience verification with Two Rivers Health Partners",
           "owner": "Medical Services Professional"
@@ -912,7 +908,13 @@
       "status": "in-verification"
     },
     {
-      "action_queue": [],
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Governing Body deferred-pending-information: The Governing Body defers this appointment pending one further peer reference from a referee outside the applicant's current group practice. Both references on file are from colleagues at the same employer.",
+          "owner": "Medical Services Professional"
+        }
+      ],
       "activation": null,
       "application_id": "APP-2026-034",
       "approval_decision_id": null,
@@ -942,7 +944,13 @@
       "status": "deferred"
     },
     {
-      "action_queue": [],
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Governing Body denied: The Governing Body was not satisfied, on the peer references and on the applicant's account of the past two years, that the applicant's recent operative practice supports the general surgery privileges requested. The applicant may apply again.",
+          "owner": "Medical Services Professional"
+        }
+      ],
       "activation": null,
       "application_id": "APP-2026-035",
       "approval_decision_id": null,
@@ -1050,7 +1058,13 @@
       "status": "approved-not-yet-effective"
     },
     {
-      "action_queue": [],
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Decision MEC-2026-036 was refused (Executive Committee of the Medical Staff may not issue outcome 'approved'); confirm with the issuing body whether a corrected decision is needed",
+          "owner": "Medical Services Professional"
+        }
+      ],
       "activation": null,
       "application_id": "APP-2026-038",
       "approval_decision_id": null,
@@ -1087,7 +1101,8 @@
         "cycle_end": "2028-05-01",
         "effective_date": "2026-05-01",
         "privileges": [
-          "PRIV-HOSP; PRIV-IM"
+          "PRIV-HOSP",
+          "PRIV-IM"
         ]
       },
       "application_id": "APP-2026-039",
@@ -1112,7 +1127,16 @@
         "licensure": "resolved",
         "references": "resolved"
       },
-      "monitored_conditions": [],
+      "monitored_conditions": [
+        {
+          "condition": "Re-verification of the Washington licence before its expiry on 2026-12-31",
+          "due": "2026-11-30"
+        },
+        {
+          "condition": "The Clinical Director's written concurrence on the 2021 practice gap explanation",
+          "due": "2026-06-30"
+        }
+      ],
       "packet_presentable": false,
       "revision": 1,
       "status": "approved-not-yet-effective"
@@ -1207,7 +1231,7 @@
   },
   "predecessor": {
     "path": "deliverables/snapshots/batch-01.json",
-    "sha256": "929224265bf44c01929e0bfe478e4fb55499248ecb266756844801baca63fcda"
+    "sha256": "5ee628fbf15e539b8c6ccdc22fbec84a7b7fcbed85576ecf53b2305f6380dc80"
   },
   "produced": [
     "deliverables/snapshots/batch-02.json",
@@ -1216,5 +1240,5 @@
   ],
   "rules_file": "deliverables/rules.md",
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "batch-02-20261003T040224362511Z"
+  "snapshot_id": "batch-02-20261003T163328515456Z"
 }

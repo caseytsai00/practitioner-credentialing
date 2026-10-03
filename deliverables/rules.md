@@ -96,12 +96,17 @@ source: >
 
 ## Other session decisions (not numeric — no yaml block, but binding on scripts/engine.py)
 
-- **Decision admission.** Admit a decision record only if: its issuing body matches its outcome
-  type (Executive Committee of the Medical Staff -> `recommended`; Governing Body ->
-  `approved` / `approved-with-conditions` / `deferred-pending-information` / `denied`), it carries
-  a named signatory and role, and it is not a duplicate decision for the same application and
-  revision. Refuse anything else, naming the first condition that failed. Session decision,
-  2026-10-02 — the interview never covered the authority roster or decision-admission criteria.
+- **Decision admission.** Admit a decision record only if: it names the application's current
+  revision (one naming a since-superseded revision is refused with that reason, never silently
+  dropped), its issuing body matches its outcome type (Executive Committee of the Medical Staff
+  -> `recommended`; Governing Body -> `approved` / `approved-with-conditions` /
+  `deferred-pending-information` / `denied`), it carries a named signatory and role, and -- among
+  decisions that pass those checks -- it is the chronologically latest one from its body for this
+  application and revision (an earlier one from the same body is refused as superseded by the
+  later one, not as an inadmissible "duplicate", so a real follow-up decision after a deferral is
+  never wrongly blocked). Refuse anything else, naming the first condition that failed. Session
+  decision, 2026-10-02 — the interview never covered the authority roster or decision-admission
+  criteria.
 - **Eligibility-question auto-detection.** If nothing in an applicant's declared or verified
   training, residency, or certification supports a requested privilege's clinical area, set that
   element to `eligibility-question` and route it to the Clinical Director; the Skill never decides

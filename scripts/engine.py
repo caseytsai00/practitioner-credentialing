@@ -267,8 +267,15 @@ def resolve_attempt_tracked_element(
     all_confirmed = True
     for entry in history_entries:
         entry_id = entry["entry_id"]
+        # "confirmed-with-discrepancy" means the source DID reply -- the discrepancy itself is
+        # handled separately (detect_discrepancies / the applicant resolving it in writing or by
+        # amendment), so treating only a bare "confirmed" as a reply leaves an otherwise-settled
+        # entry permanently "outstanding" even after the applicant corrects the value (real case:
+        # VR-3002/APP-2026-030).
         confirmed = any(
-            r.get("entry_id") == entry_id and r.get("element") == element_label and r.get("outcome") == "confirmed"
+            r.get("entry_id") == entry_id
+            and r.get("element") == element_label
+            and r.get("outcome") in ("confirmed", "confirmed-with-discrepancy")
             for r in verification_replies
         )
         if confirmed:
@@ -344,9 +351,11 @@ def resolve_certification(credentials, certification_replies, as_of) -> ElementR
     return ElementResult(state="outstanding", action_items=action_items)
 
 
-def resolve_references(referees, peer_reference_replies, as_of, rules) -> ElementResult:
+def resolve_references(referees, peer_reference_replies, verification_attempts, as_of, rules) -> ElementResult:
     required = rules["references.required_count"]
     staleness_years = rules["references.staleness_years"]
+    max_attempts = rules["verification.attempt_max_count"]
+    min_spacing = rules["verification.attempt_min_spacing_days"]
     as_of_date = _parse_date(as_of)
     action_items = []
     qualifying_count = 0
@@ -355,14 +364,39 @@ def resolve_references(referees, peer_reference_replies, as_of, rules) -> Elemen
             (r for r in peer_reference_replies if r.get("referee_id") == referee.get("referee_id")), None
         )
         if reply is None:
-            action_items.append(
-                ActionItem(
-                    item="Chase peer reference reply from {}".format(
-                        referee.get("referee_name", referee.get("referee_id"))
-                    ),
-                    owner="Medical Services Professional",
-                )
+            # rules.md documents the 3-attempts/21-days cadence as applying to references too --
+            # silence after the attempt ceiling must escalate the same way education/experience
+            # already do, not sit as a generic "chase" message forever (real cases:
+            # REF-1401/APP-2026-014, REF-2302/APP-2026-025, each with logged attempts and no reply).
+            referee_label = referee.get("referee_name", referee.get("referee_id"))
+            attempts = sorted(
+                (
+                    a
+                    for a in verification_attempts
+                    if a.get("subject_ref") == referee.get("referee_id") and a.get("element") == "peer-reference"
+                ),
+                key=lambda a: a["attempt_date"],
             )
+            if len(attempts) >= max_attempts:
+                action_items.append(
+                    ActionItem(
+                        item="references source {} has not replied after {} attempts; silence is not a pass".format(
+                            referee_label, max_attempts
+                        ),
+                        owner="Medical Services Professional",
+                    )
+                )
+            else:
+                due = None
+                if attempts:
+                    due = _add_days(_parse_date(attempts[-1]["attempt_date"]), min_spacing).isoformat()
+                action_items.append(
+                    ActionItem(
+                        item="Chase peer reference reply from {}".format(referee_label),
+                        owner="Medical Services Professional",
+                        due=due,
+                    )
+                )
             continue
         if reply.get("related_or_partner") == "Yes":
             action_items.append(
@@ -449,7 +483,7 @@ def resolve_elements(
             "experience", "affiliation-and-employment", experience_entries, verification_replies, verification_attempts, as_of, rules
         ),
         "certification": resolve_certification(credentials, certification_replies, as_of),
-        "references": resolve_references(referees, peer_reference_replies, as_of, rules),
+        "references": resolve_references(referees, peer_reference_replies, verification_attempts, as_of, rules),
         "gaps": resolve_gaps(application_id, history, correspondence, rules),
     }
 
@@ -572,12 +606,17 @@ def parse_disposition_outcome(text: str) -> set:
         labels.add("discontinue")
     if "opportunity to amend" in lowered:
         labels.add("amend-offer")
+    # "Present the file to the committee" is a routing instruction -- it says the file moves on,
+    # not that the finding is immaterial. Only an actual determination clears a finding; a
+    # disposition that routes the file onward while explicitly declining to recommend on it (real
+    # case: APP-2026-015, "I make no recommendation on the privileges themselves") must NOT read
+    # as cleared, or the engine ends up deciding protected judgment #2 (whether a finding is
+    # disqualifying) by proxy.
     if any(
         phrase in lowered
         for phrase in (
             "sufficient and the file may proceed",
             "no bar to appointment",
-            "present the file to the executive committee",
         )
     ):
         labels.add("clear")
@@ -639,13 +678,14 @@ def evaluate_decisions(revision, decisions_for_app):
     # queued for a human, never silently dropped (real data: APP-2026-036's Governing Body
     # approval for revision 1 would otherwise vanish once a later correction moved it to
     # revision 2 in the same batch).
-    admitted_bodies = set()
     decision_records = []
     admitted_gb_outcome = None
     approval_decision_id = None
     activation_source = None
     action_items = []
-    for decision in sorted(decisions_for_app, key=lambda d: d.get("decision_date") or ""):
+
+    relevant = []
+    for decision in decisions_for_app:
         if decision.get("revision") != revision:
             reason = "decision names revision {}; the file is now at revision {}".format(
                 decision.get("revision"), revision
@@ -660,20 +700,60 @@ def evaluate_decisions(revision, decisions_for_app):
                 )
             )
             continue
-        admitted, reason = admit_decision(decision, admitted_bodies)
+        relevant.append(decision)
+
+    # Only the chronologically latest decision from each body is a candidate for admission. A
+    # real office sequence -- a Governing Body deferral, then later a Governing Body approval
+    # once the applicant supplies what was missing -- must let the later decision win; the
+    # earlier one is refused as superseded by it, never as an inadmissible "duplicate" (which
+    # would wrongly block the normal resolution of a deferral).
+    relevant_sorted = sorted(relevant, key=lambda d: d.get("decision_date") or "")
+    latest_by_body = {}
+    for decision in relevant_sorted:
+        latest_by_body[decision.get("body")] = decision
+
+    for decision in relevant_sorted:
+        if latest_by_body.get(decision.get("body")) is not decision:
+            newer = latest_by_body[decision.get("body")]
+            reason = "superseded by a later decision from {} ({})".format(decision.get("body"), newer["decision_id"])
+            decision_records.append(Decision(decision_id=decision["decision_id"], admitted=False, reason=reason))
+            continue
+        admitted, reason = admit_decision(decision)
         decision_records.append(Decision(decision_id=decision["decision_id"], admitted=admitted, reason=reason))
         if admitted:
-            admitted_bodies.add(decision["body"])
             if decision["body"] == "Governing Body":
                 admitted_gb_outcome = decision["outcome"]
                 if decision["outcome"] in ("approved", "approved-with-conditions"):
                     approval_decision_id = decision["decision_id"]
                     activation_source = decision
+                elif decision["outcome"] in ("denied", "deferred-pending-information") and decision.get("reason"):
+                    # A deferral or denial's stated reason names exactly what is owed or why the
+                    # file was denied -- a file on a Governing Body hold must not sit with an
+                    # empty action_queue (real case: APP-2026-034's deferral, "one further peer
+                    # reference from a referee outside the applicant's current group practice").
+                    action_items.append(
+                        ActionItem(
+                            item="Governing Body {}: {}".format(decision["outcome"], decision["reason"]),
+                            owner="Medical Services Professional",
+                        )
+                    )
+        else:
+            # Any refusal -- wrong body, missing signatory, a duplicate -- leaves a decision that
+            # needs a human's attention to get reissued correctly (real case: MEC-2026-036, the
+            # Executive Committee issuing "approved", which only the Governing Body may).
+            action_items.append(
+                ActionItem(
+                    item="Decision {} was refused ({}); confirm with the issuing body whether a corrected decision is needed".format(
+                        decision["decision_id"], reason
+                    ),
+                    owner="Medical Services Professional",
+                )
+            )
     has_inadmissible = any(not d.admitted for d in decision_records)
     return decision_records, admitted_gb_outcome, approval_decision_id, activation_source, has_inadmissible, action_items
 
 
-def extract_monitored_conditions(store) -> List[MonitoredCondition]:
+def extract_monitored_conditions(store, activation_decision=None) -> List[MonitoredCondition]:
     conditions = []
     for letter in store.get("letters", []):
         if letter.get("letter_type") != "board-action":
@@ -683,6 +763,13 @@ def extract_monitored_conditions(store) -> List[MonitoredCondition]:
             conditions.append(
                 MonitoredCondition(condition="Board-ordered monitoring programme in force", due=match.group(1))
             )
+    # An approved-with-conditions Governing Body decision states its own conditions directly
+    # (parsed by scripts.parsers._load_decisions into the decision's "conditions" list) -- these
+    # are real dated obligations (e.g. a licence re-verification deadline) and must appear here,
+    # or "active-with-conditions" ends up asserting a status its own payload doesn't back up.
+    if activation_decision is not None:
+        for condition in activation_decision.get("conditions", []):
+            conditions.append(MonitoredCondition(condition=condition["condition"], due=condition["due"]))
     return conditions
 
 
@@ -712,11 +799,27 @@ def compute_status(*, intake_status, elements, admitted_gb_outcome, has_inadmiss
     return "packet-presentable"
 
 
+def _action_item_from_dict(d: dict) -> ActionItem:
+    return ActionItem(item=d["item"], owner=d["owner"], due=d.get("due"))
+
+
+def _decision_from_dict(d: dict) -> Decision:
+    return Decision(decision_id=d["decision_id"], admitted=d["admitted"], reason=d.get("reason"))
+
+
+def _monitored_condition_from_dict(d: dict) -> MonitoredCondition:
+    return MonitoredCondition(condition=d["condition"], due=d["due"])
+
+
 def process_application(application_id, batch, ledger, rules, as_of):
     entry = get_application_entry(ledger, application_id)
     warnings: List[str] = []
 
     if entry.get("status") in ("withdrawn", "discontinued"):
+        # Once terminal, this record is a frozen snapshot of what was true when the status was
+        # set -- its decisions/action_queue/monitored_conditions must be carried forward from the
+        # ledger, not defaulted to empty, or a real item (e.g. "Notify applicant of
+        # discontinuance ...") silently vanishes the very next batch (real case: APP-2026-029).
         elements = entry.get("elements") or {name: "outstanding" for name in ELEMENT_NAMES}
         record = ApplicationRecord(
             application_id=application_id,
@@ -724,7 +827,12 @@ def process_application(application_id, batch, ledger, rules, as_of):
             status=entry["status"],
             elements=elements,
             packet_presentable=False,
+            decisions=[_decision_from_dict(d) for d in entry.get("decisions", [])],
             approval_decision_id=entry.get("approval_decision_id"),
+            monitored_conditions=[
+                _monitored_condition_from_dict(m) for m in entry.get("monitored_conditions", [])
+            ],
+            action_queue=[_action_item_from_dict(a) for a in entry.get("action_queue", [])],
         )
         return record, warnings
 
@@ -752,6 +860,9 @@ def process_application(application_id, batch, ledger, rules, as_of):
         elements = {name: "outstanding" for name in ELEMENT_NAMES}
         entry["status"] = "withdrawn"
         entry["elements"] = elements
+        entry["decisions"] = []
+        entry["action_queue"] = []
+        entry["monitored_conditions"] = []
         record = ApplicationRecord(
             application_id=application_id, revision=revision, status="withdrawn",
             elements=elements, packet_presentable=False,
@@ -857,6 +968,9 @@ def process_application(application_id, batch, ledger, rules, as_of):
     if status_override == "discontinued":
         entry["status"] = "discontinued"
         entry["elements"] = elements
+        entry["decisions"] = []
+        entry["action_queue"] = [item.to_dict() for item in action_queue]
+        entry["monitored_conditions"] = []
         record = ApplicationRecord(
             application_id=application_id, revision=revision, status="discontinued",
             elements=elements, packet_presentable=False, action_queue=action_queue,
@@ -873,7 +987,7 @@ def process_application(application_id, batch, ledger, rules, as_of):
     ) = evaluate_decisions(revision, store.get("decisions", []))
     action_queue.extend(decision_action_items)
     activation = compute_activation(activation_source, rules, as_of) if activation_source is not None else None
-    monitored_conditions = extract_monitored_conditions(store)
+    monitored_conditions = extract_monitored_conditions(store, activation_source)
 
     status = compute_status(
         intake_status="complete",

@@ -33,6 +33,8 @@ _CSV_FILES = {
 
 
 _HEADER_FIELD_RE = re.compile(r"\*\*([^:*]+):\*\*\s*(.*)")
+_CONDITIONS_BLOCK_RE = re.compile(r"\*\*Conditions:\*\*\s*\n((?:-.*\n?)*)")
+_CONDITION_LINE_RE = re.compile(r"^-\s*(.+?)\s*—\s*due\s+(\d{4}-\d{2}-\d{2})\s*$")
 _LETTER_FILENAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})_([a-z-]+)_(APP-[\w-]+)\.md$")
 _DISPOSITION_FILENAME_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})_disposition_(APP-[\w-]+)\.md$")
 
@@ -44,6 +46,23 @@ def _parse_header_fields(text: str) -> Dict[str, str]:
         if match:
             fields[match.group(1).strip()] = match.group(2).strip()
     return fields
+
+
+def _parse_conditions(text: str) -> list:
+    # The office states an approved-with-conditions decision's actual conditions as a bulleted
+    # "**Conditions:**" block, each line "- <condition> — due YYYY-MM-DD" -- a header-field
+    # regex alone can't see these (they're not "**Field:** value" lines), and dropping them loses
+    # dated obligations a monitored_conditions consumer needs (e.g. a licence re-verification
+    # deadline).
+    block_match = _CONDITIONS_BLOCK_RE.search(text)
+    if not block_match:
+        return []
+    conditions = []
+    for line in block_match.group(1).splitlines():
+        line_match = _CONDITION_LINE_RE.match(line.strip())
+        if line_match:
+            conditions.append({"condition": line_match.group(1).strip(), "due": line_match.group(2)})
+    return conditions
 
 
 def _load_letters(dir_path: str) -> Dict[str, dict]:
@@ -79,7 +98,10 @@ def _load_decisions(dir_path: str) -> Dict[str, dict]:
         decision_id = fields.get("Decision ID")
         if not decision_id:
             continue
-        privileges = [p.strip() for p in fields.get("Privileges", "").split(",") if p.strip()]
+        # The office separates multiple privilege codes with either "," or "; " across real
+        # decision documents -- splitting on "," alone leaves a "; "-separated list as one bogus
+        # code that can never match a real privilege_code.
+        privileges = [p.strip() for p in re.split(r"[;,]", fields.get("Privileges", "")) if p.strip()]
         decisions[decision_id] = {
             "decision_id": decision_id,
             "body": fields.get("Body", ""),
@@ -94,6 +116,7 @@ def _load_decisions(dir_path: str) -> Dict[str, dict]:
             "reason": fields.get("Reason") or None,
             "effective_date": fields.get("Effective date") or None,
             "supersedes": fields.get("Supersedes") or None,
+            "conditions": _parse_conditions(text),
             "filename": filename,
             "raw_text": text,
         }

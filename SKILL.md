@@ -84,8 +84,11 @@ Each invocation writes (or refreshes) exactly three files: `deliverables/snapsho
 - Re-running a batch whose result is unchanged leaves the already-sealed snapshot's bytes
   untouched (only the run log gets a new entry). Re-running a batch whose result actually
   changed (e.g. a genuine bug fix) refuses by default -- pass `--force-resupersede` to regenerate
-  that snapshot and every later one under new `snapshot_id`s; see README.md for the exact
-  supersede bookkeeping this requires.
+  it under a new `snapshot_id`. The flag itself automatically preserves the prior sealed bytes
+  unchanged at `batch-0N.superseded-<timestamp>.json` before overwriting, and `run-log.md`
+  records which file superseded which. Only `batch-0N.json` itself needs regenerating this way
+  for *that* batch -- re-run every later batch normally afterward so its ledger carries the
+  correction forward.
 - `deferred`/`denied`/`discontinued`/`withdrawn` are correct, complete results of a run, not
   failures -- they represent a business hold or outcome, not something gone wrong with the Skill.
 

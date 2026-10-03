@@ -53,3 +53,63 @@ def test_missing_document_directory_yields_empty_dict(tmp_path):
 
     batch = BatchData(str(empty_batch))
     assert batch.dispositions == {}
+
+
+def test_decision_privileges_split_on_semicolon_too():
+    # Real data uses "; " to separate multiple privilege codes in some decisions (e.g.
+    # "PRIV-HOSP; PRIV-IM") -- splitting on "," alone leaves the whole string as one bogus code.
+    import os as _os
+    import tempfile
+
+    from scripts.parsers import _load_decisions
+
+    with tempfile.TemporaryDirectory() as tmp:
+        path = _os.path.join(tmp, "2026-01-01_GBD-TEST.md")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(
+                "**Decision ID:** GBD-TEST\n"
+                "**Body:** Governing Body\n"
+                "**Application:** APP-TEST\n"
+                "**Privileges:** PRIV-HOSP; PRIV-IM\n"
+            )
+        decisions = _load_decisions(tmp)
+        assert decisions["GBD-TEST"]["privileges"] == ["PRIV-HOSP", "PRIV-IM"]
+
+
+def test_decision_conditions_block_is_parsed():
+    # Real case: GBD-2026-039 grants approved-with-conditions with two dated conditions in a
+    # "**Conditions:**" bullet block -- these must not be dropped, or an "active-with-conditions"
+    # status ends up with monitored_conditions: [] (contradicting its own schema definition).
+    import os as _os
+    import tempfile
+
+    from scripts.parsers import _load_decisions
+
+    with tempfile.TemporaryDirectory() as tmp:
+        path = _os.path.join(tmp, "2026-01-01_GBD-TEST2.md")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(
+                "**Decision ID:** GBD-TEST2\n"
+                "**Body:** Governing Body\n"
+                "**Application:** APP-TEST\n"
+                "**Outcome:** approved-with-conditions\n"
+                "**Conditions:**\n"
+                "- Re-verification of the Washington licence before its expiry on 2026-12-31 "
+                "— due 2026-11-30\n"
+                "- The Clinical Director's written concurrence on the 2021 practice gap "
+                "explanation — due 2026-06-30\n"
+                "\n"
+                "## Minute\n"
+            )
+        decisions = _load_decisions(tmp)
+        conditions = decisions["GBD-TEST2"]["conditions"]
+        assert conditions == [
+            {
+                "condition": "Re-verification of the Washington licence before its expiry on 2026-12-31",
+                "due": "2026-11-30",
+            },
+            {
+                "condition": "The Clinical Director's written concurrence on the 2021 practice gap explanation",
+                "due": "2026-06-30",
+            },
+        ]

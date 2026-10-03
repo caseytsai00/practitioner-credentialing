@@ -42,9 +42,12 @@ python3 scripts/run_batch.py --batch 3 --state deliverables/state/batch-02.state
 
 Each command is idempotent: running the same batch again with the same inputs leaves the already
 sealed `deliverables/snapshots/batch-0N.json` byte-for-byte unchanged (only `run-log.md` gets a
-new entry). To resume work on a batch the office releases later (a hypothetical batch 4), run
-`python3 scripts/run_batch.py --batch 4 --state deliverables/state/batch-03.state.json` once
-`office-exports/batch-04/` exists.
+new entry). To resume work on a batch the office releases later (a hypothetical batch 4), the
+batch's own export date isn't built in (only batches 1-3 are), so pass it with `--as-of`:
+`python3 scripts/run_batch.py --batch 4 --state deliverables/state/batch-03.state.json --as-of YYYY-MM-DD`
+once `office-exports/batch-04/` exists, using that batch's own README for its export date.
+Omitting `--as-of` for a batch outside 1-3 blocks cleanly with a clear reason in `run-log.md`
+rather than crashing.
 
 ## What supported / partial / blocked / deferred look like in this repo
 

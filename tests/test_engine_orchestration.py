@@ -423,3 +423,197 @@ def test_ppq_yes_disclosure_forces_a_finding_even_when_otherwise_resolved():
     record_two, warnings_two = process_application("APP-X", batch_two, ledger, RULES, "2026-04-20")
     assert record_two.elements["licensure"] == "resolved"
     assert record_two.status == "packet-presentable"
+
+
+def test_parse_disposition_outcome_present_to_committee_alone_is_not_clear():
+    # Real case: office-exports/batch-03/dispositions/2026-05-06_disposition_APP-2026-015.md --
+    # the Clinical Director explicitly declines to clear the restriction ("not full and
+    # unrestricted ... I make no recommendation on the privileges themselves") while still
+    # routing the file onward. "Present the file to the committee" is an instruction to proceed
+    # WITH the finding attached, not a determination that it's immaterial -- treating it as
+    # "clear" lets the engine decide protected judgment #2 (whether a finding is disqualifying).
+    text = (
+        "The credential is current but it is not full and unrestricted while the stipulated "
+        "agreement is in force. Present the file to the Executive Committee of the Medical Staff "
+        "and the Governing Body with the board's summary attached. Do not discontinue the "
+        "application. I make no recommendation on the privileges themselves."
+    )
+    labels = parse_disposition_outcome(text)
+    assert "clear" not in labels
+    assert "discontinue" not in labels
+
+
+def test_parse_disposition_outcome_still_clears_when_no_bar_is_stated():
+    # The office's own "present to committee" + "no bar to appointment" combination (real case:
+    # APP-2026-032) must still resolve -- only the bare "present to committee" phrase alone,
+    # with no actual determination, must stop being treated as clearing.
+    text = (
+        "Present the file to the Executive Committee of the Medical Staff and the Governing Body "
+        "with both documents attached. I record no bar to appointment and no condition."
+    )
+    assert "clear" in parse_disposition_outcome(text)
+
+
+def test_extract_monitored_conditions_includes_approved_with_conditions_decision():
+    from scripts.engine import extract_monitored_conditions
+
+    store = {"letters": []}
+    activation_decision = {
+        "decision_id": "GBD-X",
+        "outcome": "approved-with-conditions",
+        "conditions": [
+            {"condition": "Re-verification of the Washington licence", "due": "2026-11-30"},
+            {"condition": "The Clinical Director's written concurrence", "due": "2026-06-30"},
+        ],
+    }
+    conditions = [c.to_dict() for c in extract_monitored_conditions(store, activation_decision)]
+    assert {"condition": "Re-verification of the Washington licence", "due": "2026-11-30"} in conditions
+    assert {"condition": "The Clinical Director's written concurrence", "due": "2026-06-30"} in conditions
+
+
+def test_approved_with_conditions_status_carries_its_own_conditions():
+    # End-to-end: an admitted approved-with-conditions decision's Conditions block must show up
+    # in the sealed record's monitored_conditions, not just in status.
+    batch = _complete_minimal_batch()
+    batch.decisions = {
+        "GBD-X": {
+            "decision_id": "GBD-X",
+            "body": "Governing Body",
+            "signatory": "Dr. Chair, MD",
+            "role": "Chair, Governing Body",
+            "application_id": "APP-X",
+            "revision": 1,
+            "decision_date": "2026-02-01",
+            "outcome": "approved-with-conditions",
+            "privileges": ["PRIV-FM"],
+            "criteria_version": "LARK-PRIV-2026.1",
+            "reason": None,
+            "effective_date": "2026-02-01",
+            "supersedes": None,
+            "conditions": [{"condition": "Annual CME due", "due": "2027-02-01"}],
+            "filename": "d.md",
+        }
+    }
+    ledger = new_ledger()
+    ledger["licence_lookup_wa"] = list(batch.licence_lookup_wa)
+    record, warnings = process_application("APP-X", batch, ledger, RULES, "2026-03-16")
+    assert record.status == "active-with-conditions"
+    assert any(mc.condition == "Annual CME due" and mc.due == "2027-02-01" for mc in record.monitored_conditions)
+
+
+def _gb_decision(decision_id, outcome, decision_date, reason=None, effective_date=None, revision=1):
+    return {
+        "decision_id": decision_id,
+        "body": "Governing Body",
+        "signatory": "Ms. Chair, GB",
+        "role": "Chair, Governing Body",
+        "application_id": "APP-X",
+        "revision": revision,
+        "decision_date": decision_date,
+        "outcome": outcome,
+        "privileges": ["PRIV-FM"],
+        "criteria_version": "LARK-PRIV-2026.1",
+        "reason": reason,
+        "effective_date": effective_date,
+        "supersedes": None,
+        "conditions": [],
+        "filename": decision_id + ".md",
+    }
+
+
+def test_a_later_decision_from_the_same_body_supersedes_an_earlier_one_rather_than_duplicate_refusal():
+    # Real-world shape: a Governing Body defers, then later -- after the applicant supplies what
+    # was missing -- the Governing Body approves. The earlier decision must not block the later,
+    # legitimate one as a "duplicate": the later one is the operative decision; the earlier one
+    # is refused as superseded by it, not as an inadmissible duplicate.
+    batch = _complete_minimal_batch()
+    batch.decisions = {
+        "GBD-1": _gb_decision("GBD-1", "deferred-pending-information", "2026-02-01", reason="Needs one more reference."),
+        "GBD-2": _gb_decision("GBD-2", "approved", "2026-02-15", effective_date="2026-02-15"),
+    }
+    ledger = new_ledger()
+    ledger["licence_lookup_wa"] = list(batch.licence_lookup_wa)
+    record, warnings = process_application("APP-X", batch, ledger, RULES, "2026-03-16")
+    decisions_by_id = {d.decision_id: d for d in record.decisions}
+    assert decisions_by_id["GBD-2"].admitted is True
+    assert decisions_by_id["GBD-1"].admitted is False
+    assert "superseded" in decisions_by_id["GBD-1"].reason
+    assert record.approval_decision_id == "GBD-2"
+
+
+def test_a_refused_decision_for_any_reason_queues_a_human_action_item():
+    # Real case: MEC-2026-036, Executive Committee issuing "approved" (only Governing Body may).
+    # Any refusal -- not just a revision mismatch -- leaves a file that needs a human's attention
+    # to get the decision reissued correctly; action_queue must never silently stay empty for it.
+    batch = _complete_minimal_batch()
+    batch.decisions = {
+        "MEC-X": {
+            "decision_id": "MEC-X",
+            "body": "Executive Committee of the Medical Staff",
+            "signatory": "Dr. Chair, MD",
+            "role": "Chair",
+            "application_id": "APP-X",
+            "revision": 1,
+            "decision_date": "2026-02-01",
+            "outcome": "approved",
+            "privileges": ["PRIV-FM"],
+            "criteria_version": "LARK-PRIV-2026.1",
+            "reason": None,
+            "effective_date": None,
+            "supersedes": None,
+            "conditions": [],
+            "filename": "MEC-X.md",
+        }
+    }
+    ledger = new_ledger()
+    ledger["licence_lookup_wa"] = list(batch.licence_lookup_wa)
+    record, warnings = process_application("APP-X", batch, ledger, RULES, "2026-03-16")
+    assert any(d.decision_id == "MEC-X" and d.admitted is False for d in record.decisions)
+    assert any("MEC-X" in item.item for item in record.action_queue)
+
+
+def test_deferred_decisions_reason_is_surfaced_to_the_action_queue():
+    # Real case: APP-2026-034, deferred pending one further peer reference "from a referee
+    # outside the applicant's current group practice" -- a file on a Governing Body hold must
+    # name what's owed, not sit with an empty action_queue.
+    batch = _complete_minimal_batch()
+    batch.decisions = {
+        "GBD-1": _gb_decision(
+            "GBD-1",
+            "deferred-pending-information",
+            "2026-02-01",
+            reason="Needs one further peer reference from a referee outside the applicant's current group practice.",
+        )
+    }
+    ledger = new_ledger()
+    ledger["licence_lookup_wa"] = list(batch.licence_lookup_wa)
+    record, warnings = process_application("APP-X", batch, ledger, RULES, "2026-03-16")
+    assert record.status == "deferred"
+    assert any("referee outside" in item.item for item in record.action_queue)
+
+
+def test_discontinued_application_keeps_its_notify_action_item_in_a_later_batch():
+    # Real case: APP-2026-029's "Notify applicant of discontinuance ..." action item is present
+    # in the batch it was discovered but vanishes in the next batch, because the sticky
+    # terminal-state short-circuit doesn't carry it forward. Once discontinued, the record a
+    # reader sees later must still show what was done, not silently go quiet.
+    batch_one = _complete_minimal_batch()
+    batch_one.dispositions = {
+        "d.md": {
+            "filename": "d.md",
+            "application_id": "APP-X",
+            "date": "2026-02-01",
+            "raw_text": "Discontinue the application and tell the applicant.",
+        }
+    }
+    ledger = new_ledger()
+    ledger["licence_lookup_wa"] = list(batch_one.licence_lookup_wa)
+    record_one, _ = process_application("APP-X", batch_one, ledger, RULES, "2026-03-16")
+    assert record_one.status == "discontinued"
+    assert any("Notify applicant of discontinuance" in item.item for item in record_one.action_queue)
+
+    batch_two = _complete_minimal_batch(revision="1")
+    batch_two.dispositions = {}
+    record_two, _ = process_application("APP-X", batch_two, ledger, RULES, "2026-04-20")
+    assert record_two.status == "discontinued"
+    assert any("Notify applicant of discontinuance" in item.item for item in record_two.action_queue)

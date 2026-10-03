@@ -69,6 +69,7 @@
           {
             "application_id": "APP-2026-001",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-10",
             "decision_id": "MEC-2026-011",
@@ -949,6 +950,7 @@
           {
             "application_id": "APP-2026-003",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-12",
             "decision_id": "MEC-2026-013",
@@ -2619,6 +2621,7 @@
           {
             "application_id": "APP-2026-007",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-10",
             "decision_id": "MEC-2026-017",
@@ -4764,6 +4767,7 @@
           {
             "application_id": "APP-2026-013",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-12",
             "decision_id": "MEC-2026-023",
@@ -5215,6 +5219,7 @@
           {
             "application_id": "APP-2026-014",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-10",
             "decision_id": "MEC-2026-024",
@@ -5222,7 +5227,8 @@
             "filename": "2026-03-10_MEC-2026-024.md",
             "outcome": "recommended",
             "privileges": [
-              "PRIV-HOSP; PRIV-IM"
+              "PRIV-HOSP",
+              "PRIV-IM"
             ],
             "raw_text": "# Executive Committee of the Medical Staff \u2014 minute extract MEC-2026-024\n\n**Decision ID:** MEC-2026-024  \n**Body:** Executive Committee of the Medical Staff  \n**Signatory:** Dr. Peter Vandermolen, MD  \n**Role:** Chair, Executive Committee of the Medical Staff  \n**Application:** APP-2026-014  \n**Revision:** 1  \n**Decision date:** 2026-03-10  \n**Outcome:** recommended  \n**Privileges:** PRIV-HOSP; PRIV-IM  \n**Criteria version:** LARK-PRIV-2026.1  \n**Reason:**   \n**Effective date:**   \n**Supersedes:**   \n\n## Minute\n\nThe Executive Committee reviewed the file as presented by the Medical Staff Office and recommends the appointment and the privileges named above to the Governing Body.\n\nSigned: Dr. Peter Vandermolen, MD, Chair, Executive Committee of the Medical Staff, 2026-03-10.",
             "reason": null,
@@ -13861,6 +13867,7 @@
           {
             "application_id": "APP-2026-036",
             "body": "Executive Committee of the Medical Staff",
+            "conditions": [],
             "criteria_version": "LARK-PRIV-2026.1",
             "decision_date": "2026-03-10",
             "decision_id": "MEC-2026-034",

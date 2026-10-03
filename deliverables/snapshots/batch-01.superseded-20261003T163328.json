@@ -171,7 +171,7 @@
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-16",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Delphine Kettering, MD",
           "owner": "Medical Services Professional"
         }
@@ -206,7 +206,7 @@
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-19",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Thaddeus Vukovic, MD",
           "owner": "Medical Services Professional"
         }
@@ -246,12 +246,12 @@
           "owner": "Clinical Director"
         },
         {
-          "due": "2026-03-23",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Kenji Kjeldsen, MD",
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-23",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Piotr Okpara, MD",
           "owner": "Medical Services Professional"
         }
@@ -296,17 +296,17 @@
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-26",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Ingrid Oduya, MD",
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-26",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Hanne Ferndale, MD",
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-26",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Desmond Banerjee, MD",
           "owner": "Medical Services Professional"
         }
@@ -356,12 +356,12 @@
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-30",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Clementine Ndiaye, MD",
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-30",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Mateusz Nwachukwu, MD",
           "owner": "Medical Services Professional"
         }
@@ -411,7 +411,7 @@
     {
       "action_queue": [
         {
-          "due": "2026-03-23",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Tarek Whitcombe, MD",
           "owner": "Medical Services Professional"
         }
@@ -621,7 +621,7 @@
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-16",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Callum Kettering, MD",
           "owner": "Medical Services Professional"
         }
@@ -651,7 +651,7 @@
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-19",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Linnea Vukovic, MD",
           "owner": "Medical Services Professional"
         }
@@ -676,7 +676,7 @@
     {
       "action_queue": [
         {
-          "due": "2026-03-23",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Hideo Okpara, MD",
           "owner": "Medical Services Professional"
         }
@@ -701,7 +701,7 @@
     {
       "action_queue": [
         {
-          "due": "2026-03-05",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Anaya Ferndale, MD",
           "owner": "Medical Services Professional"
         }
@@ -755,7 +755,7 @@
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-16",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Mira Tachibana, MD",
           "owner": "Medical Services Professional"
         },
@@ -805,7 +805,7 @@
           "owner": "Clinical Director"
         },
         {
-          "due": "2026-03-19",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Kwabena Whitcombe, MD",
           "owner": "Medical Services Professional"
         }
@@ -875,6 +875,11 @@
       "action_queue": [
         {
           "due": "2026-03-01",
+          "item": "Chase experience verification with Mosswater Valley Hospital",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-01",
           "item": "Chase experience verification with Larkhollow Physicians Network",
           "owner": "Medical Services Professional"
         },
@@ -909,7 +914,7 @@
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-16",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Hanne Nowicki, MD",
           "owner": "Medical Services Professional"
         }
@@ -949,12 +954,12 @@
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-23",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Clementine Pennington, MD",
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-23",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Mateusz Larkspur, MD",
           "owner": "Medical Services Professional"
         },
@@ -994,7 +999,7 @@
           "owner": "Medical Services Professional"
         },
         {
-          "due": "2026-03-19",
+          "due": null,
           "item": "Chase peer reference reply from Dr. Lucia Pryce-Jones, MD",
           "owner": "Medical Services Professional"
         }
@@ -1206,5 +1211,5 @@
   ],
   "rules_file": "deliverables/rules.md",
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "batch-01-20261003T163328323644Z"
+  "snapshot_id": "batch-01-20261003T040224157580Z"
 }

@@ -1,0 +1,1210 @@
+{
+  "applications": [
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-001",
+      "approval_decision_id": null,
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-011",
+          "reason": null
+        }
+      ],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-002",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-003",
+      "approval_decision_id": null,
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-013",
+          "reason": null
+        }
+      ],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-05",
+          "item": "Chase experience verification with Orchard Row Specialty Clinic",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-004",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Clinical Director: is the explanation for the gap 2013-07-01 to 2013-07-30 satisfactory?",
+          "owner": "Clinical Director"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-005",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "finding",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-006",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-007",
+      "approval_decision_id": null,
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-017",
+          "reason": null
+        }
+      ],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-12",
+          "item": "Chase experience verification with Northsound Medical Group",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Delphine Kettering, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-008",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-15",
+          "item": "Chase experience verification with Two Rivers Health Partners",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-15",
+          "item": "Chase experience verification with Harrowgate Community Health",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Thaddeus Vukovic, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-009",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-19",
+          "item": "Chase education verification with Pinevale University Hospital",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-19",
+          "item": "Chase experience verification with Larkhollow Physicians Network",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Certification for American Board of Pediatrics shows status 'Not certified'; route to Clinical Director",
+          "owner": "Clinical Director"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Kenji Kjeldsen, MD",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Piotr Okpara, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-010",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "finding",
+        "education": "outstanding",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-22",
+          "item": "Chase education verification with Tolliver General Hospital",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-22",
+          "item": "Chase experience verification with Greyfen Regional Hospital",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-22",
+          "item": "Chase experience verification with Willowmere Health Cooperative",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase certification reply for American Board of Surgery",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Ingrid Oduya, MD",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Hanne Ferndale, MD",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Desmond Banerjee, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-011",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "outstanding",
+        "education": "outstanding",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-26",
+          "item": "Chase education verification with Halloway Point School of Medicine",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-26",
+          "item": "Chase education verification with Westmarch University Medical Center",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-26",
+          "item": "Chase experience verification with Stonebridge Medical Associates",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-26",
+          "item": "Chase experience verification with Northsound Medical Group",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase certification reply for American Board of Internal Medicine",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Clementine Ndiaye, MD",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Mateusz Nwachukwu, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-012",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "outstanding",
+        "education": "outstanding",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-013",
+      "approval_decision_id": null,
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-023",
+          "reason": null
+        }
+      ],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Tarek Whitcombe, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-014",
+      "approval_decision_id": null,
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-024",
+          "reason": null
+        }
+      ],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Board action on licence MD60069441 needs Clinical Director review",
+          "owner": "Clinical Director"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-015",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "finding",
+        "references": "resolved"
+      },
+      "monitored_conditions": [
+        {
+          "condition": "Board-ordered monitoring programme in force",
+          "due": "2027-08-31"
+        }
+      ],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-05",
+          "item": "Chase experience verification with Willowmere Health Cooperative",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-05",
+          "item": "Chase experience verification with Harrowgate Community Health",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-016",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-08",
+          "item": "Chase experience verification with Stonebridge Medical Associates",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-08",
+          "item": "Chase experience verification with Kettlebrook Family Clinic",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Clinical Director: is the explanation for the gap 2019-04-01 to 2019-11-05 satisfactory?",
+          "owner": "Clinical Director"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-017",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "outstanding",
+        "gaps": "finding",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Send return-incomplete letter naming the unexplained period 2024-05-02 to 2024-06-01",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-018",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "outstanding",
+        "education": "outstanding",
+        "experience": "outstanding",
+        "gaps": "return-incomplete",
+        "licensure": "outstanding",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "returned-incomplete"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-20",
+          "item": "Awaiting applicant reply to missing-items letter",
+          "owner": "Applicant"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-019",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "outstanding",
+        "education": "outstanding",
+        "experience": "outstanding",
+        "gaps": "outstanding",
+        "licensure": "outstanding",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "intake-incomplete"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-020",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "education source Cascade Valley College of Medicine has not replied after 3 attempts; silence is not a pass",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-12",
+          "item": "Chase experience verification with Larkhollow Physicians Network",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-12",
+          "item": "Chase experience verification with Greyfen Regional Hospital",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Callum Kettering, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-021",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "outstanding",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-15",
+          "item": "Chase experience verification with Stonebridge Medical Associates",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Linnea Vukovic, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-022",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Hideo Okpara, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-023",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Anaya Ferndale, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-024",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-025",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 2,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-12",
+          "item": "Chase experience verification with Mosswater Valley Hospital",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-12",
+          "item": "Chase experience verification with Willowmere Health Cooperative",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Mira Tachibana, MD",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Nothing on file supports the privilege requested; Clinical Director review needed",
+          "owner": "Clinical Director"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-026",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "eligibility-question",
+        "education": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-15",
+          "item": "Chase education verification with Drumlin Bay Medical Center",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-15",
+          "item": "Chase experience verification with Silverbeck Physicians Group",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-15",
+          "item": "Chase experience verification with Orchard Row Specialty Clinic",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Certification for American Board of Surgery shows status 'Inactive'; route to Clinical Director",
+          "owner": "Clinical Director"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Kwabena Whitcombe, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-027",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "finding",
+        "education": "outstanding",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-028",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Nothing on file supports the privilege requested; Clinical Director review needed",
+          "owner": "Clinical Director"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-029",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "eligibility-question",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-01",
+          "item": "Chase experience verification with Mosswater Valley Hospital",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-01",
+          "item": "Chase experience verification with Larkhollow Physicians Network",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Discrepancy on ENT-3002: declared to_date is 2022-08-31, source says 2021-11-30; applicant must resolve in writing or amend",
+          "owner": "Applicant"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-030",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "discrepancy",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-12",
+          "item": "Chase experience verification with Two Rivers Health Partners",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Hanne Nowicki, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-031",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-19",
+          "item": "Chase education verification with Saltmarsh Regional Health",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-19",
+          "item": "Chase experience verification with Bellamy Creek Medical Center",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-03-19",
+          "item": "Chase experience verification with Willowmere Health Cooperative",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Clementine Pennington, MD",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Mateusz Larkspur, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-032",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "outstanding",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [
+        {
+          "due": "2026-03-15",
+          "item": "Chase experience verification with Harrowgate Community Health",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": "2026-04-05",
+          "item": "Chase experience verification with Willowmere Health Cooperative",
+          "owner": "Medical Services Professional"
+        },
+        {
+          "due": null,
+          "item": "Chase peer reference reply from Dr. Lucia Pryce-Jones, MD",
+          "owner": "Medical Services Professional"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-033",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "outstanding"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-034",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-035",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-036",
+      "approval_decision_id": null,
+      "decisions": [
+        {
+          "admitted": true,
+          "decision_id": "MEC-2026-034",
+          "reason": null
+        }
+      ],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-037",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-038",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    },
+    {
+      "action_queue": [
+        {
+          "due": null,
+          "item": "Clinical Director: is the explanation for the gap 2021-04-01 to 2021-07-04 satisfactory?",
+          "owner": "Clinical Director"
+        }
+      ],
+      "activation": null,
+      "application_id": "APP-2026-039",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "finding",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": false,
+      "revision": 1,
+      "status": "in-verification"
+    },
+    {
+      "action_queue": [],
+      "activation": null,
+      "application_id": "APP-2026-040",
+      "approval_decision_id": null,
+      "decisions": [],
+      "elements": {
+        "certification": "resolved",
+        "education": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "licensure": "resolved",
+        "references": "resolved"
+      },
+      "monitored_conditions": [],
+      "packet_presentable": true,
+      "revision": 1,
+      "status": "packet-presentable"
+    }
+  ],
+  "as_of": "2026-03-16",
+  "batch": 1,
+  "consumed": {
+    "documents": [
+      "2026-02-06_gap-explanation_APP-2026-005.md",
+      "2026-02-06_gap-explanation_APP-2026-039.md",
+      "2026-02-13_gap-explanation_APP-2026-017.md",
+      "2026-02-18_missing-items_APP-2026-019.md",
+      "2026-02-20_cover-note_APP-2026-031.md",
+      "2026-03-04_board-action_APP-2026-015.md",
+      "2026-03-06_missing-licence_APP-2026-031.md",
+      "2026-03-06_return-incomplete_APP-2026-018.md",
+      "2026-03-10_MEC-2026-011.md",
+      "2026-03-10_MEC-2026-017.md",
+      "2026-03-10_MEC-2026-024.md",
+      "2026-03-10_MEC-2026-034.md",
+      "2026-03-10_discrepancy_APP-2026-030.md",
+      "2026-03-12_MEC-2026-013.md",
+      "2026-03-12_MEC-2026-023.md"
+    ],
+    "record_files": [
+      "application-disclosures.csv",
+      "applications.csv",
+      "certification-replies.csv",
+      "correspondence.csv",
+      "declared-credentials.csv",
+      "declared-history.csv",
+      "licence-lookup-other-states.csv",
+      "licence-lookup-wa.csv",
+      "peer-referees.csv",
+      "peer-reference-replies.csv",
+      "privilege-requests.csv",
+      "verification-attempts.csv",
+      "verification-replies.csv"
+    ]
+  },
+  "predecessor": null,
+  "produced": [
+    "deliverables/snapshots/batch-01.json",
+    "deliverables/state/batch-01.state.json",
+    "deliverables/run-log.md"
+  ],
+  "rules_file": "deliverables/rules.md",
+  "schema_version": "credentialing-snapshot/1",
+  "snapshot_id": "batch-01-20261003T034420796548Z"
+}

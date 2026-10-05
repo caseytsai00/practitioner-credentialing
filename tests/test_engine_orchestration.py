@@ -49,6 +49,18 @@ def test_parse_disposition_outcome_unmatched_text_is_empty_set():
     assert parse_disposition_outcome("Some unrelated note with no recognized phrasing.") == set()
 
 
+# docs/office-documents/LARK-AUTH-2026.1-reserved-authority.md, "Individual authority" table:
+# "Clinical Director | Dr. Marguerite Oyelaran, MD | 2025-07-01 to 2027-06-30 | Record a
+# disposition on a gap explanation, on a high-risk or licensure finding, and on a threshold
+# eligibility question; decide whether an application is discontinued." Real dispositions'
+# "Recorded by:" field (scripts/parsers.py's recorded_by) always reads exactly
+# "Dr. Marguerite Oyelaran, MD, Clinical Director" (confirmed across all 5 real disposition
+# documents) -- the roster's signatory name followed by her role, comma-separated, matching the
+# combined single-field format the office's own documents use (unlike decisions, which carry
+# signatory and role as two separate fields).
+_CLINICAL_DIRECTOR_RECORDED_BY = "Dr. Marguerite Oyelaran, MD, Clinical Director"
+
+
 def test_apply_dispositions_resolves_a_finding_on_clear():
     elements = {name: "resolved" for name in ELEMENT_NAMES}
     elements["gaps"] = "finding"
@@ -56,6 +68,7 @@ def test_apply_dispositions_resolves_a_finding_on_clear():
         {
             "filename": "d1.md",
             "date": "2026-02-01",
+            "recorded_by": _CLINICAL_DIRECTOR_RECORDED_BY,
             "raw_text": "The explanation is sufficient and the file may proceed.",
         }
     ]
@@ -72,6 +85,7 @@ def test_apply_dispositions_discontinue_sets_status_override():
         {
             "filename": "d1.md",
             "date": "2026-02-01",
+            "recorded_by": _CLINICAL_DIRECTOR_RECORDED_BY,
             "raw_text": "The applicant does not meet the threshold criteria. Discontinue the application.",
         }
     ]
@@ -83,11 +97,58 @@ def test_apply_dispositions_discontinue_sets_status_override():
 def test_apply_dispositions_unmatched_text_flags_for_human_interpretation():
     elements = {name: "resolved" for name in ELEMENT_NAMES}
     elements["licensure"] = "finding"
-    dispositions = [{"filename": "d1.md", "date": "2026-02-01", "raw_text": "No recognized phrasing here."}]
+    dispositions = [
+        {
+            "filename": "d1.md",
+            "date": "2026-02-01",
+            "recorded_by": _CLINICAL_DIRECTOR_RECORDED_BY,
+            "raw_text": "No recognized phrasing here.",
+        }
+    ]
     new_elements, status_override, action_items, unmatched = apply_dispositions(elements, dispositions)
     assert unmatched is True
     assert new_elements["licensure"] == "finding"
     assert any("could not be automatically interpreted" in item.item for item in action_items)
+
+
+def test_apply_dispositions_refuses_a_disposition_not_recorded_by_the_clinical_director():
+    # LARK-AUTH-2026.1's opening line applies here exactly as it does to decisions: "A record's
+    # own claim of authority is not evidence of it." A disposition recorded by anyone else must
+    # not clear a finding, however well-phrased its text -- it is refused and raised to a human,
+    # the same way an inadmissible decision is. No real disposition in office-exports/ is signed
+    # by anyone but the Clinical Director (synthetic, derived directly from the roster).
+    elements = {name: "resolved" for name in ELEMENT_NAMES}
+    elements["gaps"] = "finding"
+    dispositions = [
+        {
+            "filename": "d1.md",
+            "date": "2026-02-01",
+            "recorded_by": "Dr. Peter Vandermolen, MD, Chair, Executive Committee of the Medical Staff",
+            "raw_text": "The explanation is sufficient and the file may proceed.",
+        }
+    ]
+    new_elements, status_override, action_items, unmatched = apply_dispositions(elements, dispositions)
+    assert new_elements["gaps"] == "finding"
+    assert unmatched is True
+    assert any("Clinical Director" in item.item for item in action_items)
+
+
+def test_apply_dispositions_refuses_a_disposition_outside_the_clinical_directors_term():
+    # LARK-AUTH-2026.1: Clinical Director's term is 2025-07-01 to 2027-06-30. A disposition dated
+    # outside that window, even if correctly attributed by name and role, is refused.
+    elements = {name: "resolved" for name in ELEMENT_NAMES}
+    elements["gaps"] = "finding"
+    dispositions = [
+        {
+            "filename": "d1.md",
+            "date": "2024-01-15",
+            "recorded_by": _CLINICAL_DIRECTOR_RECORDED_BY,
+            "raw_text": "The explanation is sufficient and the file may proceed.",
+        }
+    ]
+    new_elements, status_override, action_items, unmatched = apply_dispositions(elements, dispositions)
+    assert new_elements["gaps"] == "finding"
+    assert unmatched is True
 
 
 class _FakeBatch:
@@ -330,7 +391,7 @@ def test_admitted_governing_body_approval_governs_status_even_with_a_lingering_f
         "GBD-X": {
             "decision_id": "GBD-X",
             "body": "Governing Body",
-            "signatory": "Dr. Chair, MD",
+            "signatory": "Ms. Corinne Batiste",
             "role": "Chair, Governing Body",
             "application_id": "APP-X",
             "revision": 1,
@@ -362,7 +423,7 @@ def test_decision_for_a_superseded_revision_is_refused_not_silently_dropped():
         "GBD-X": {
             "decision_id": "GBD-X",
             "body": "Governing Body",
-            "signatory": "Dr. Chair, MD",
+            "signatory": "Ms. Corinne Batiste",
             "role": "Chair, Governing Body",
             "application_id": "APP-X",
             "revision": 1,
@@ -417,6 +478,7 @@ def test_ppq_yes_disclosure_forces_a_finding_even_when_otherwise_resolved():
             "filename": "d.md",
             "application_id": "APP-X",
             "date": "2026-02-01",
+            "recorded_by": _CLINICAL_DIRECTOR_RECORDED_BY,
             "raw_text": "I record no bar to appointment and no condition.",
         }
     }
@@ -479,7 +541,7 @@ def test_approved_with_conditions_status_carries_its_own_conditions():
         "GBD-X": {
             "decision_id": "GBD-X",
             "body": "Governing Body",
-            "signatory": "Dr. Chair, MD",
+            "signatory": "Ms. Corinne Batiste",
             "role": "Chair, Governing Body",
             "application_id": "APP-X",
             "revision": 1,
@@ -505,7 +567,7 @@ def _gb_decision(decision_id, outcome, decision_date, reason=None, effective_dat
     return {
         "decision_id": decision_id,
         "body": "Governing Body",
-        "signatory": "Ms. Chair, GB",
+        "signatory": "Ms. Corinne Batiste",
         "role": "Chair, Governing Body",
         "application_id": "APP-X",
         "revision": revision,
@@ -603,6 +665,7 @@ def test_discontinued_application_keeps_its_notify_action_item_in_a_later_batch(
             "filename": "d.md",
             "application_id": "APP-X",
             "date": "2026-02-01",
+            "recorded_by": _CLINICAL_DIRECTOR_RECORDED_BY,
             "raw_text": "Discontinue the application and tell the applicant.",
         }
     }
@@ -617,3 +680,71 @@ def test_discontinued_application_keeps_its_notify_action_item_in_a_later_batch(
     record_two, _ = process_application("APP-X", batch_two, ledger, RULES, "2026-04-20")
     assert record_two.status == "discontinued"
     assert any("Notify applicant of discontinuance" in item.item for item in record_two.action_queue)
+
+
+def test_eligibility_mismatch_does_not_clobber_an_existing_certification_finding():
+    # Real-shaped combination of two independently real patterns: APP-2026-027's inactive
+    # certification (resolve_certification -> `finding`) and APP-2026-029's unsupported privilege
+    # request (detect_eligibility_mismatch -> `eligibility-question`). Both already happen in the
+    # real data separately; nothing stops them from coinciding on the same file. Before this fix,
+    # detect_eligibility_mismatch unconditionally overwrote `elements["certification"]`, so a real
+    # board-reported inactive certification would silently vanish from the sealed `elements` dict
+    # the moment an unrelated eligibility mismatch was also detected -- even though
+    # resolve_certification's own action item (routed to the Clinical Director) stayed in the
+    # queue the whole time. The element state must reflect whichever concern was found first, not
+    # whichever check happened to run last; both action items must still appear either way.
+    batch = _complete_minimal_batch()
+    batch.certification_replies = [
+        {
+            "application_id": "APP-X",
+            "reply_id": "CR-1",
+            "declaration_id": "DEC-2",
+            "received_date": "2026-01-20",
+            "certification_status": "Inactive",
+            "board_name": "American Board of Family Medicine",
+        }
+    ]
+    batch.privilege_requests = [
+        {"application_id": "APP-X", "revision": "1", "request_id": "REQ-1", "privilege_code": "PRIV-ORTHO", "privilege_name": "Orthopaedic Surgery"}
+    ]
+    ledger = new_ledger()
+    ledger["licence_lookup_wa"] = list(batch.licence_lookup_wa)
+    record, _ = process_application("APP-X", batch, ledger, RULES, "2026-03-16")
+    assert record.elements["certification"] == "finding"
+    assert any("shows status 'Inactive'" in item.item for item in record.action_queue)
+    assert any("Nothing on file supports the privilege requested" in item.item for item in record.action_queue)
+
+
+def test_ppq_finding_does_not_clobber_an_existing_licensure_discrepancy():
+    # Mirror of the certification/eligibility-mismatch case above, for the identical pattern on
+    # licensure: detect_ppq_findings unconditionally overwrote `elements["licensure"]` too, so a
+    # real credential discrepancy (declared_issue_date mismatch, added for edge case #4) would
+    # silently vanish from the sealed `elements` dict the moment an unrelated PPQ "Yes" answer was
+    # also present -- even though the Applicant-owned discrepancy action item stayed in the queue
+    # the whole time with a different owner than the PPQ finding's Clinical-Director item.
+    batch = _complete_minimal_batch()
+    batch.declared_credentials[0]["declared_issue_date"] = "2010-01-01"
+    batch.licence_lookup_wa = [
+        {
+            "credentialnumber": "MD1",
+            "status": "ACTIVE",
+            "expirationdate": "2030-01-01",
+            "actiontaken": "No",
+            "firstissuedate": "2012-06-30",
+        }
+    ]
+    batch.disclosures = [
+        {
+            "application_id": "APP-X",
+            "revision": "1",
+            "question_code": "PPQ-2",
+            "answer": "Yes",
+            "applicant_comment": "Explained in attached letter.",
+        }
+    ]
+    ledger = new_ledger()
+    ledger["licence_lookup_wa"] = list(batch.licence_lookup_wa)
+    record, _ = process_application("APP-X", batch, ledger, RULES, "2026-03-16")
+    assert record.elements["licensure"] == "discrepancy"
+    assert any("Discrepancy on DEC-1" in item.item and item.owner == "Applicant" for item in record.action_queue)
+    assert any("professional practice question" in item.item and item.owner == "Clinical Director" for item in record.action_queue)

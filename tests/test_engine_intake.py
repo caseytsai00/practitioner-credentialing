@@ -35,6 +35,7 @@ def test_complete_application_has_no_missing_items():
         priv_requests=[{"request_id": "REQ-1"}],
         referees=_two_referees(),
         correspondence=[],
+        letters=[],
         as_of="2026-03-16",
         rules=RULES,
     )
@@ -54,6 +55,7 @@ def test_missing_release_with_no_letter_yet_is_intake_incomplete_and_queues_a_le
         priv_requests=[{"request_id": "REQ-1"}],
         referees=_two_referees(),
         correspondence=[],
+        letters=[],
         as_of="2026-01-20",
         rules=RULES,
     )
@@ -83,6 +85,7 @@ def test_missing_items_within_clock_after_letter_sent_is_intake_incomplete_with_
         priv_requests=[{"request_id": "REQ-1"}],
         referees=_two_referees(),
         correspondence=correspondence,
+        letters=[],
         as_of="2026-02-01",
         rules=RULES,
     )
@@ -110,6 +113,7 @@ def test_missing_items_after_clock_expires_is_ineligible_clock_expired():
         priv_requests=[{"request_id": "REQ-1"}],
         referees=_two_referees(),
         correspondence=correspondence,
+        letters=[],
         as_of="2026-03-01",
         rules=RULES,
     )
@@ -146,11 +150,60 @@ def test_unexplained_30_day_gap_is_returned_incomplete_with_no_clock():
         priv_requests=[{"request_id": "REQ-1"}],
         referees=_two_referees(),
         correspondence=[],
+        letters=[],
         as_of="2026-01-20",
         rules=RULES,
     )
     assert result.status == "returned-incomplete"
     assert result.clock_due is None
+
+
+def test_privilege_request_citing_a_superseded_criteria_version_is_a_missing_item():
+    # Interview, 05:23 PM: Renata shared "Privilege criteria — initial appointment
+    # (LARK-PRIV-2026.1)" as the office's privilege criteria document; every privilege-requests.csv
+    # row across all three real batches cites exactly this version. Intake completeness condition
+    # 3 (02:14 PM) requires "a privilege request naming at least one group from the *current*
+    # criteria" -- missing_intake_items previously only checked that a privilege request existed
+    # at all, never that it actually cited the current version. No real case in the office's three
+    # batches has a stale citation (every row cites LARK-PRIV-2026.1) -- synthetic, derived
+    # directly from the interview's stated condition.
+    result = evaluate_intake(
+        application_id="APP-X",
+        app_row=_complete_app_row(),
+        disclosures=[],
+        history=[],
+        credentials=[{"declaration_id": "DEC-1"}],
+        priv_requests=[{"request_id": "REQ-1", "criteria_version_cited": "LARK-PRIV-2024.1"}],
+        referees=_two_referees(),
+        correspondence=[],
+        letters=[],
+        as_of="2026-01-20",
+        rules=RULES,
+    )
+    assert result.status == "intake-incomplete"
+    assert any("current criteria" in item for item in result.missing_items)
+
+
+def test_privilege_request_with_no_cited_version_is_not_penalized():
+    # A blank/absent criteria_version_cited isn't evidence of a stale citation -- it's missing
+    # data, and this condition (like the office's other data-derived completeness checks) treats
+    # "we cannot tell" as satisfied rather than inventing a problem from an absent field. Every
+    # other existing intake test's minimal fixture omits this field entirely; this confirms that
+    # stays safe after the check above was added.
+    result = evaluate_intake(
+        application_id="APP-X",
+        app_row=_complete_app_row(),
+        disclosures=[{"answer": "No", "applicant_comment": ""}],
+        history=[],
+        credentials=[{"declaration_id": "DEC-1"}],
+        priv_requests=[{"request_id": "REQ-1"}],
+        referees=_two_referees(),
+        correspondence=[],
+        letters=[],
+        as_of="2026-03-16",
+        rules=RULES,
+    )
+    assert result.status == "complete"
 
 
 def test_explained_gap_does_not_block_intake():
@@ -174,12 +227,12 @@ def test_explained_gap_does_not_block_intake():
             "organization": "Org B",
         },
     ]
-    correspondence = [
+    letters = [
         {
             "application_id": "APP-X",
-            "direction": "inbound",
+            "letter_type": "gap-explanation",
             "date": "2026-01-05",
-            "subject": "Explanation of period 2020-06-02 to 2020-07-14",
+            "raw_text": "# Explanation of period 2020-06-02 to 2020-07-14\n\n**Period explained:** 2020-06-02 to 2020-07-14  \n\nI was travelling.",
         }
     ]
     result = evaluate_intake(
@@ -190,7 +243,8 @@ def test_explained_gap_does_not_block_intake():
         credentials=[{"declaration_id": "DEC-1"}],
         priv_requests=[{"request_id": "REQ-1"}],
         referees=_two_referees(),
-        correspondence=correspondence,
+        correspondence=[],
+        letters=letters,
         as_of="2026-01-20",
         rules=RULES,
     )

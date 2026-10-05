@@ -42,3 +42,22 @@ def test_real_batch_02_run_resumes_from_batch_01():
     mec_036 = next(d for d in app_038["decisions"] if d["decision_id"] == "MEC-2026-036")
     assert mec_036["admitted"] is False
     assert mec_036["reason"] is not None
+
+    # Real case: ENT-2201/APP-2026-022 -- unresolved since batch 1 (see test_e2e_batch_01.py);
+    # nothing in batch 2's data supplies a matching reply, so it stays outstanding and the file,
+    # having no decisions filed at all, stays short of packet-presentable.
+    assert by_id["APP-2026-022"]["elements"]["education"] == "outstanding"
+    assert by_id["APP-2026-022"]["status"] == "in-verification"
+
+    # Real case: ENT-3602/APP-2026-036 -- revision 2 (applications.csv, revision_reason) changed
+    # the declared employer from "Willowmere Health Cooperative" to "Silverbeck Physicians Group"
+    # (a practice acquisition). The only reply on file, VR-3602 (verification-replies.csv), still
+    # confirms the pre-acquisition name; the fresh confirmation from Silverbeck (VR-3604) doesn't
+    # arrive until batch 3. Per the interview's accepted-source criteria and the brief's
+    # instruction not to invent an accepted source, this must not read as verified in batch 2.
+    assert by_id["APP-2026-036"]["elements"]["experience"] == "outstanding"
+    # No admitted Governing Body outcome governs this file yet (both its decisions are refused
+    # for the revision mismatch, same as MEC-2026-036 above), so with an element genuinely
+    # outstanding the status is in-verification, not decision-inadmissible -- compute_status
+    # checks "all elements resolved" before it ever reaches the inadmissible-decision branch.
+    assert by_id["APP-2026-036"]["status"] == "in-verification"

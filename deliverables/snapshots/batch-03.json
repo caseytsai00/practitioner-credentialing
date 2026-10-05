@@ -772,23 +772,29 @@
       "status": "active"
     },
     {
-      "action_queue": [],
+      "action_queue": [
+        {
+          "due": null,
+          "item": "education reply for Westmarch University Medical Center: Cascade Valley Physicians Society is not on the accepted-sources table; recorded as received, the entry stays outstanding, keep requesting from an accepted source, and raise to the Medical Services Professional to decide whether an impossibility route applies",
+          "owner": "Medical Services Professional"
+        }
+      ],
       "activation": null,
       "application_id": "APP-2026-022",
       "approval_decision_id": null,
       "decisions": [],
       "elements": {
         "certification": "resolved",
-        "education": "resolved",
+        "education": "outstanding",
         "experience": "resolved",
         "gaps": "resolved",
         "licensure": "resolved",
         "references": "resolved"
       },
       "monitored_conditions": [],
-      "packet_presentable": true,
+      "packet_presentable": false,
       "revision": 1,
-      "status": "packet-presentable"
+      "status": "in-verification"
     },
     {
       "action_queue": [],
@@ -859,13 +865,7 @@
       "status": "in-verification"
     },
     {
-      "action_queue": [
-        {
-          "due": null,
-          "item": "Nothing on file supports the privilege requested; Clinical Director review needed",
-          "owner": "Clinical Director"
-        }
-      ],
+      "action_queue": [],
       "activation": {
         "active_at_export": true,
         "cycle_end": "2028-05-15",
@@ -890,7 +890,7 @@
         }
       ],
       "elements": {
-        "certification": "eligibility-question",
+        "certification": "resolved",
         "education": "resolved",
         "experience": "resolved",
         "gaps": "resolved",
@@ -1438,7 +1438,7 @@
   },
   "predecessor": {
     "path": "deliverables/snapshots/batch-02.json",
-    "sha256": "76a6c026c98d706df4a248802d460883e98681743b2dd18ee1a3d057fc19026d"
+    "sha256": "035299f30402a89d2412f975e5c8d8d0f53acff2e44b445c0a52a983b3454826"
   },
   "produced": [
     "deliverables/snapshots/batch-03.json",
@@ -1447,5 +1447,5 @@
   ],
   "rules_file": "deliverables/rules.md",
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "batch-03-20261003T163328705031Z"
+  "snapshot_id": "batch-03-20261005T173122525433Z"
 }

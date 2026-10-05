@@ -40,6 +40,15 @@ def test_real_batch_01_run_produces_valid_sealed_snapshot():
         if app["decisions"]:
             assert all(d["decision_id"] for d in app["decisions"])
 
+    # Real case: ENT-2201/APP-2026-022 (declared-history.csv, residency at Westmarch University
+    # Medical Center). Its only reply, VR-2201 (verification-replies.csv), comes from "Cascade
+    # Valley Physicians Society" -- a state medical society confirming "from its own membership
+    # file" -- not from Westmarch's own Graduate Medical Education office, which 3 separate
+    # attempts (verification-attempts.csv: ATT-2203, ATT-2204, ATT-2205) never got a reply from.
+    # Per the interview (05:19-05:20 PM) and the brief ("do not... invent" an accepted source), a
+    # reply from an organization other than the one declared must not resolve the element.
+    assert by_id["APP-2026-022"]["elements"]["education"] == "outstanding"
+
     state_path = os.path.join(REPO_ROOT, "deliverables", "state", "batch-01.state.json")
     assert os.path.exists(state_path)
     run_log_path = os.path.join(REPO_ROOT, "deliverables", "run-log.md")

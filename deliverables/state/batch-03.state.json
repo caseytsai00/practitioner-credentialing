@@ -10114,7 +10114,7 @@
       "element_evidence": {},
       "elements": {
         "certification": "resolved",
-        "education": "resolved",
+        "education": "outstanding",
         "experience": "resolved",
         "gaps": "resolved",
         "licensure": "resolved",
@@ -10514,7 +10514,7 @@
           }
         ]
       },
-      "status": "packet-presentable"
+      "status": "in-verification"
     },
     "APP-2026-023": {
       "activation": null,
@@ -11944,7 +11944,7 @@
       "documents_seen": [],
       "element_evidence": {},
       "elements": {
-        "certification": "eligibility-question",
+        "certification": "resolved",
         "education": "resolved",
         "experience": "resolved",
         "gaps": "resolved",

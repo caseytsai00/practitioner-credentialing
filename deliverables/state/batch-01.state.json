@@ -4055,7 +4055,7 @@
       "documents_seen": [],
       "element_evidence": {},
       "elements": {
-        "certification": "outstanding",
+        "certification": "eligibility-question",
         "education": "outstanding",
         "experience": "outstanding",
         "gaps": "resolved",
@@ -4401,7 +4401,7 @@
       "documents_seen": [],
       "element_evidence": {},
       "elements": {
-        "certification": "outstanding",
+        "certification": "eligibility-question",
         "education": "outstanding",
         "experience": "outstanding",
         "gaps": "resolved",
@@ -8280,7 +8280,7 @@
       "element_evidence": {},
       "elements": {
         "certification": "resolved",
-        "education": "resolved",
+        "education": "outstanding",
         "experience": "outstanding",
         "gaps": "resolved",
         "licensure": "resolved",
@@ -9871,7 +9871,7 @@
       "documents_seen": [],
       "element_evidence": {},
       "elements": {
-        "certification": "eligibility-question",
+        "certification": "resolved",
         "education": "resolved",
         "experience": "outstanding",
         "gaps": "resolved",
@@ -12284,7 +12284,7 @@
       "documents_seen": [],
       "element_evidence": {},
       "elements": {
-        "certification": "resolved",
+        "certification": "eligibility-question",
         "education": "outstanding",
         "experience": "outstanding",
         "gaps": "resolved",

@@ -16,6 +16,7 @@ EXPECTED = {
     "references.required_count": 2,
     "references.staleness_years": 2,
     "appointment.cycle_years": 2,
+    "intake.current_criteria_version": "LARK-PRIV-2026.1",
 }
 
 

@@ -40,3 +40,16 @@ def test_real_batch_03_run_resumes_from_batch_02():
     # given batch-02 and batch-03's decisions folders carry 26 Governing Body "approved" decisions
     # between them.
     assert any(app["approval_decision_id"] is not None for app in snapshot["applications"])
+
+    # Real case: ENT-2201/APP-2026-022 -- still unresolved (see test_e2e_batch_01.py); no batch
+    # ever supplies a reply from Westmarch University Medical Center's own GME office, and no
+    # disposition or decision exists for this application at all.
+    assert by_id["APP-2026-022"]["elements"]["education"] == "outstanding"
+    assert by_id["APP-2026-022"]["status"] == "in-verification"
+
+    # Real case: ENT-3602/APP-2026-036 -- by batch 3, VR-3604 (verification-replies.csv) confirms
+    # the post-acquisition employer "Silverbeck Physicians Group" directly, matching what's now
+    # declared, so this one *does* resolve -- confirming the fix only withholds confirmation while
+    # no matching reply exists, not permanently.
+    assert by_id["APP-2026-036"]["elements"]["experience"] == "resolved"
+    assert by_id["APP-2026-036"]["status"] == "approved-not-yet-effective"

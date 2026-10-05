@@ -34,7 +34,7 @@ def test_dispositions_are_parsed_from_filename_and_content():
     disposition = batch.dispositions["2026-01-25_disposition_APP-TEST-001.md"]
     assert disposition["date"] == "2026-01-25"
     assert disposition["application_id"] == "APP-TEST-001"
-    assert disposition["recorded_by"] == "Dr. Test Director, MD, Clinical Director"
+    assert disposition["recorded_by"] == "Dr. Marguerite Oyelaran, MD, Clinical Director"
     assert "no bar to appointment" in disposition["raw_text"]
 
 

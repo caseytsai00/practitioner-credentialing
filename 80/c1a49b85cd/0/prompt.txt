@@ -1,0 +1,276 @@
+One-paragraph context: the first build was functionally complete (full
+  engine, 97 self-written tests, all passing) but under-steered — 25 of 130
+  graded checkpoints were not met, and 19 had no evidence at all, meaning some
+  required behavior was never built, not just built wrong. The weak signal was
+  a low "Direction" score (2.6/5): I accepted your proposals too readily
+  instead of checking them against the office's actual rules. Precision was
+  strong (4.1/5) — keep giving me specific, well-referenced plans, because
+  this round I'll be checking sourcing before I approve anything.
+
+  Do NOT rewrite any code yet. First, do this audit and report back to me:
+
+  1. Re-read deliverables/rules.md, interviews/project-e-practitioner-
+     credentialing-20261002-2128.md, and the full task brief. For EACH of
+     these 8 edge cases, tell me (a) what the office's rule or interview
+     answer actually says should happen, citing the specific document+section
+     or interview turn, and (b) what the current code in scripts/ actually
+     does, citing file/line. Flag every mismatch and every case the code
+     doesn't handle at all:
+     - An item missing at intake
+     - A reply the office may not accept (inadmissible reply)
+     - A source that never answers (unresponsive source)
+     - A discrepancy between what the applicant declared and what a source
+       returned
+     - Evidence that ages while a file waits
+     - A later application revision landing on work already done
+     - A decision record that is not admissible
+     - A file that ends without an appointment
+
+  2. Do NOT treat the 97 passing tests as proof anything is correct — they
+     may just assert the code's own assumptions back at itself. For each test
+     file, tell me whether its expected values trace back independently to
+     rules.md/the interview, or were derived from the implementation. Flag
+     anything that looks circular.
+
+  3. Confirm the five decisions that must never be computed by the Skill are
+     still never computed anywhere: gap sufficiency, whether a finding is
+     disqualifying, discontinuation on eligibility grounds, the appointment
+     recommendation and which privileges, and the grant/modify/defer/deny
+     decision itself. Show me every place the code touches these five and
+     confirm each one only queues a human action.
+
+  Give me this as a findings list, not a diff. Once I've gone through it with
+  you and we've agreed what's wrong and in what order to fix it, we'll fix one
+  edge case at a time: you propose the fix with its rule citation, I approve
+  or redirect it, then you implement — not the other way around.
+
+---
+
+Sequencing, in this order:
+
+  1. Fix #2 (source-acceptance / silent-accept bug) and #6 (cross-revision
+  stale verification) together — don't reseal twice. Before resealing,
+  check batch-01 and batch-03's raw data for the same two conditions, not
+  just batch-02 where you found them.
+
+  2. Fix #5 (certification expiry_date) and #4 (discrepancy check scope) —
+  these are two of the 8 edge cases named in the brief, so bring them fully
+  in line with the stated rule, not just "safe given current data."
+
+  3. Fix #7 and #1 while you're in that part of the code.
+
+  4. For every fix above, write the test FIRST with an expected value you
+  derive independently from rules.md/the interview/the brief (cite the
+  source in the test), confirm it fails pre-fix, then fix the code. Also
+  fix the circular "Lapsed" test the same way.
+
+  5. Only after all of the above: regenerate the sealed snapshots. Check
+  all three batches for whether their output actually changed — reseal
+  only the ones that did, per the schema's "a re-run that changes nothing
+  keeps what it already sealed" rule. Any batch you do reseal (almost
+  certainly 02, and 03 because its predecessor hash will have changed)
+  follows the sealing procedure: new snapshot_id, old file kept alongside
+  as superseded, run-log entry naming which run superseded what and why.
+  Update rules.md and verification.md if the discrepancy-check scope
+  changed what's documented as the enforced rule.
+
+  Start with step 1. Show me the diff and the new/updated tests for #2 and
+  #6 before moving to step 2.
+
+---
+
+Before step 2: I found the actual accepted-source document the interview named
+  (LARK-ATT-2026.1) and read it in full. Your organization-name-match fix for
+  #2 is checking the wrong thing for three of the four elements.
+
+  Save the content below into the repo (e.g.
+  docs/office-documents/LARK-ATT-2026.1-accepted-sources.md) and cite it
+  properly in rules.md as the office's own closed list, in force from
+  2026-01-01. Then rework the source-acceptance check:
+
+  - Education/training, Licensure, Board certification: acceptance depends on
+    whether the attester is one of the specific named bodies/offices on the
+    table for that element — NOT on whether its name matches the declared
+    school/board. (FCVS, ECFMG, AMA/AOA Physician Profile, ABMS, CertiFACTS,
+    National Student Clearinghouse are all valid designated-equivalent sources
+    and will never match a declared org's name — don't reject them.)
+  - Affiliations/employment: acceptance DOES require matching the specific
+    currently-declared employer/affiliation, per the table's primary-source
+    row (the affiliated hospital's medical staff office / that employer's HR
+    department) — keep org-matching here, it's correct for this element only.
+  - Secondary sources apply only on genuine impossibility (the original source
+    no longer exists) and require the reason written into the file. Explicitly
+    distinguish this from non-response: "non-response is not impossibility" —
+    a source that exists and isn't answering stays outstanding with logged
+    attempts, full stop, it never opens the secondary route.
+  - An inadmissible reply (from a source not on the table, for any reason
+    other than documented impossibility) follows this exact procedure: record
+    it as received, mark the entry still outstanding, keep requesting from an
+    accepted source, and raise it to the Medical Services Professional to
+    decide if an impossibility route applies.
+  - Applicant self-attestation and applicant-supplied copies (diplomas,
+    licenses, registrations) are never an accepted source for any element,
+    under any circumstance — check whether anything currently treats them as
+    resolving an element, and fix it if so.
+
+  [paste the full table content from my message here]
+
+  Re-validate against all three batches the same way you did last time —
+  recheck for both false positives AND false negatives this time, since the
+  old heuristic could have been silently rejecting valid designated-equivalent
+  replies I haven't checked for yet. Then come back to me before resealing or
+  starting step 2.
+
+---
+
+Move on to step 2. hold off on resealing until that and the #7/#1 cleanup are done
+
+---
+
+Before resealing or anything else: five more office documents named in the
+  interview were just read and staged at
+  .claude/staged-office-documents/ (LARK-AUTH, LARK-PRIV, LARK-APP, LARK-REF,
+  and the export-format office note). Only LARK-ATT had actually been read
+  before now — these five were named and linked in the interview but never
+  opened, same gap as LARK-ATT, just not caught until now.
+
+  Go through all five like you did LARK-ATT: save each one into
+  docs/office-documents/ (as you already did for LARK-ATT), cite it properly
+  in rules.md, and compare it against what scripts/engine.py currently does.
+  Priority order:
+
+  1. LARK-AUTH-2026.1: the decision-admission logic in rules.md is currently
+     a "session decision" because the interview supposedly "never covered the
+     authority roster" — it did, this is it. Replace the session-invented
+     rule with the real one: three bodies (Credentials Committee and
+     Executive Committee can only recommend/not-recommend/defer, never
+     approve; only Governing Body approves), checked against the named
+     individual and their term dates, including the Vice-Chair's
+     calendar-year-2026-only designation. A decision naming the right body
+     but the wrong individual, or the right individual outside their term or
+     designation window, should be inadmissible.
+
+  2. LARK-PRIV-2026.1: replace the eligibility-question approximation with
+     the real 7-rule procedure — per-group board+specialty+training match,
+     active-on-decision-date, the board-eligible exception (valid for only
+     PRIV-FM/IM/HOSP/PED), PRIV-CARD's compound fellowship+residency
+     requirement, and the explicit exclusion of current-experience from the
+     Skill's own determination.
+
+  3. Immediate sanity check on the step-2 certification expiry_date fix you
+     just shipped: the export note says a blank expiry_date in
+     certification-replies.csv means the certificate never expires, not
+     missing data. Confirm your fix treats blank that way and doesn't
+     mishandle it now that you know.
+
+  4. The export note also says: an applicant absent from licence-lookup-wa.csv
+     has a confirmed absence of a WA credential, not unresolved data; and
+     completeness condition 7 (referee address) needs a third state —
+     "not assessable from the export" — since the export never carries
+     referee addresses at all. Check both against current code.
+
+  5. LARK-APP-2026.1 and LARK-REF-2026.1: lower urgency, but check the gap
+     matching rule (explanation matched by its own stated from/to dates "and
+     nothing else"), the PPQ declared-vs-verified mismatch rule (distinct
+     from the dates/issue-date discrepancy checks already built), and peer
+     reference currency (referee's signature date, measured against
+     Governing Body presentation date, not export date).
+
+  Same discipline as before: test first with an expectation derived from the
+  document, confirm RED, then fix. Report back before resealing — this is
+  likely to change more than one already-sealed application's output, not
+  just the ones from step 1.
+
+---
+
+Good work this round — verified independently, all checks out including the
+  APP-2026-011/012 trace.
+
+  Before resealing, finish all three priority-5 items, not just document them
+  as open: gap-matching (match by the letter's own stated dates, not
+  correspondence.csv's subject field), peer-reference currency (signature
+  date vs. Governing Body presentation date, not as_of), and PPQ
+  declared-vs-verified mismatch (characterize it, then implement). All three
+  map to edge cases named directly in the brief (gap handling, evidence
+  aging, and declared/verified discrepancy) — "inert on these 3 batches"
+  isn't the same as "won't be graded," since the Skill has to be correct in
+  general.
+
+  Also check: does disposition admission (the Clinical Director's authority
+  over gap/finding/eligibility/discontinuation dispositions) check her name,
+  role, and term window from LARK-AUTH-2026.1 the same way admit_decision now
+  checks committee/Governing Body records? That roster covers her
+  individually too, and it wasn't explicitly in this round's scope.
+
+  Keep the same discipline: derive the test's expected value from the
+  document first, confirm it fails pre-fix, then implement. Report back
+  before resealing.
+
+---
+
+Verified — disposition admission matches the same roster discipline correctly. But I found something on item 4 the report's phrasing glossed over, and a
+  real bug underneath it.
+
+  The "inert" framing was misleading, even if technically true. "No fix changes any sealed status or elements value" is true in the narrow sense —
+  elements.licensure and status are literally unchanged. But I recomputed the action queue directly rather than trusting the summary, and the PPQ-1 fix
+  does add a new action item to APP-2026-015 in both batch 2 and batch 3 — "action_queue" isn't covered by "status or elements value," so this wasn't
+  actually inert, it just didn't trip whatever the agent's diff-check was looking at. That means the real diff count going into resealing is higher than
+  the "14" you've been tracking, and this specific one is worth a close look before you approve it.
+
+  Here's the real bug, found by reading the actual letters, not just the CSV: APP-2026-015's full paper trail is unusually complete —
+  - batch 1: board reports a monitoring agreement against the licence (already correctly flagged as a licensure finding, unrelated to this fix)
+  - batch 2: the office's own letter asks the applicant to confirm the PPQ-1 answer — this is the new code correctly reconstructing something the office
+    already did by hand
+  - batch 3: the applicant replies in writing confirming the correction, and the Clinical Director's disposition explicitly says "I have read... the 
+    applicant's written confirmation of 2026-04-20... Present the file to the Executive Committee..." — i.e., a human has already resolved this.
+
+  I recomputed batch 3's action queue directly, and the new item — "Declared No to PPQ-1 but a source reports 'Yes'; confirm the answer in writing or 
+  submit a revision" — still fires in batch 3, after the applicant already confirmed and the Clinical Director already acted on it. The declared PPQ-1
+  answer never changes in the data (the office's own rule: a free-standing letter reply isn't a new application revision, so application-disclosures.csv
+  stays frozen at "No" forever), so if the fix only compares declared-vs-verified, it has no way to ever stop asking — it'll nag for confirmation
+  indefinitely even after the office has the confirmation on file and has moved on.
+
+  This isn't a nitpick — it means the action queue would misrepresent what's actually still outstanding on this file, which is exactly the kind of thing
+  the "human action queue for every file" deliverable needs to get right. Paste this back:
+
+  Found a real bug in the PPQ-1 fix by tracing APP-2026-015's full letter
+  trail (batch-01 board-action letter, batch-02 confirm-disclosure request,
+  batch-03 applicant reply + Clinical Director disposition). I recomputed the
+  action queue directly: the new "confirm the answer" item still fires in
+  batch 3, even though the applicant already replied in writing (LTR-0057,
+  2026-04-20) and the Clinical Director's disposition already says she read
+  that confirmation and acted on it. Since the declared PPQ-1 answer never
+  changes (a correction arrives as correspondence, not a new application
+  revision, per the export note), the item has no way to ever clear on its
+  own — it'll nag forever even after the office has resolved it by hand.
+
+  Fix: once a disposition already covers this application (or, short of
+  that, once an inbound correspondence entry referencing PPQ-1 exists from
+  the applicant), stop raising the "confirm the answer" item. Match the
+  precedent you already have for admissibility and staleness elsewhere in
+  this codebase rather than inventing a new pattern.
+
+  Also, going forward: the "confirmed inert" claims need to check the whole
+  record (action_queue included), not just status and elements — that's what
+  let this one through. Re-verify priorities 1-3 from this same round
+  (disposition admission, gap-matching, reference currency) the same way —
+  actually diff the recomputed action_queue/evidence against the sealed
+  snapshot, not just status/elements — before calling them inert too.
+
+  Then report back before resealing.
+
+---
+
+Verified independently — 33 field-level diffs confirmed by my own deep
+  diff against the sealed snapshots, not just your count. The PPQ-1 fix
+  checks out: fires in batch 1 and 2, correctly stops in batch 3. Approved.
+
+  Go ahead and reseal. One thing to confirm as you do it: batch 1 itself has
+  8 real diffs (APP-2026-010, 011, 012, 015, 022, 026, 027, 032), so it needs
+  the same reseal treatment as 2 and 3 — not just the later two. For each of
+  the three: new snapshot_id, old sealed file kept alongside as superseded
+  with its bytes unchanged, and a run-log.md entry naming which run
+  superseded which file and why.
+
+  After resealing, run the full test suite once more and confirm all three
+  e2e tests go green on their own (not forced) before you call this done.

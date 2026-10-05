@@ -1,0 +1,221 @@
+{
+  "cli_version": "0.10.2",
+  "checkpoint_id": "80c1a49b85cd",
+  "session_id": "2fbd6a0f-7fd4-4644-b9e3-28a73aa766ef",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-05T17:54:46.019927Z",
+  "branch": "worktree-redo-e-credentialing",
+  "checkpoints_count": 8,
+  "save_step_count": 8,
+  "files_touched": [
+    "deliverables/rules.md",
+    "deliverables/run-log.md",
+    "deliverables/snapshots/batch-01.json",
+    "deliverables/snapshots/batch-01.superseded-20261005T173112.json",
+    "deliverables/snapshots/batch-02.json",
+    "deliverables/snapshots/batch-02.superseded-20261005T173117.json",
+    "deliverables/snapshots/batch-03.json",
+    "deliverables/snapshots/batch-03.superseded-20261005T173122.json",
+    "deliverables/state/batch-01.state.json",
+    "deliverables/state/batch-02.state.json",
+    "deliverables/state/batch-03.state.json",
+    "deliverables/verification.md",
+    "docs/office-documents/LARK-APP-2026.1-application-form.md",
+    "docs/office-documents/LARK-ATT-2026.1-accepted-sources.md",
+    "docs/office-documents/LARK-AUTH-2026.1-reserved-authority.md",
+    "docs/office-documents/LARK-PRIV-2026.1-privilege-criteria.md",
+    "docs/office-documents/LARK-REF-2026.1-peer-reference-form.md",
+    "docs/office-documents/office-note-2026-03-16-export-format.md",
+    "scripts/engine.py",
+    "tests/fixtures/mini-batch/dispositions/2026-01-25_disposition_APP-TEST-001.md",
+    "tests/test_e2e_batch_01.py",
+    "tests/test_e2e_batch_02.py",
+    "tests/test_e2e_batch_03.py",
+    "tests/test_engine_decisions.py",
+    "tests/test_engine_discrepancy_eligibility.py",
+    "tests/test_engine_elements.py",
+    "tests/test_engine_intake.py",
+    "tests/test_engine_orchestration.py",
+    "tests/test_engine_real_data_regressions.py",
+    "tests/test_parsers_documents.py",
+    "tests/test_rules_deliverable.py"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-sonnet-5",
+  "turn_id": "9c00e5290615",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 822,
+    "cache_creation_tokens": 2912472,
+    "cache_read_tokens": 209563687,
+    "output_tokens": 429989,
+    "api_call_count": 411
+  },
+  "session_metrics": {
+    "turn_count": 8
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-05T17:54:45.771227Z",
+    "agent_lines": 6601,
+    "agent_removed": 42,
+    "human_added": 152,
+    "human_modified": 144,
+    "human_removed": 0,
+    "total_committed": 6897,
+    "total_lines_changed": 6939,
+    "agent_percentage": 95.73425565643464,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 184,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/redo-brief.md": 66,
+        ".claude/settings.json": 84,
+        "deliverables/run-log.md": 34
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 150,
+      "user_lines_removed": 0,
+      "agent_lines_added": 34,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".claude/redo-brief.md": 66,
+        ".claude/settings.json": 84
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 188,
+      "user_lines_removed": 24,
+      "agent_lines_added": 267,
+      "agent_lines_removed": 8,
+      "user_added_per_file": {
+        ".claude/redo-brief.md": 66,
+        ".claude/settings.json": 84,
+        "deliverables/run-log.md": 38
+      },
+      "user_removed_per_file": {
+        "deliverables/run-log.md": 24
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 188,
+      "user_lines_removed": 24,
+      "agent_lines_added": 705,
+      "agent_lines_removed": 14,
+      "user_added_per_file": {
+        ".claude/redo-brief.md": 66,
+        ".claude/settings.json": 84,
+        "deliverables/run-log.md": 38
+      },
+      "user_removed_per_file": {
+        "deliverables/run-log.md": 24
+      }
+    },
+    {
+      "checkpoint_number": 5,
+      "user_lines_added": 561,
+      "user_lines_removed": 24,
+      "agent_lines_added": 1346,
+      "agent_lines_removed": 19,
+      "user_added_per_file": {
+        ".claude/redo-brief.md": 66,
+        ".claude/settings.json": 84,
+        ".claude/staged-office-documents/LARK-APP-2026.1-application-form.md": 118,
+        ".claude/staged-office-documents/LARK-AUTH-2026.1-reserved-authority.md": 68,
+        ".claude/staged-office-documents/LARK-PRIV-2026.1-privilege-criteria.md": 41,
+        ".claude/staged-office-documents/LARK-REF-2026.1-peer-reference-form.md": 55,
+        ".claude/staged-office-documents/office-note-2026-03-16-export-format.md": 91,
+        "deliverables/run-log.md": 38
+      },
+      "user_removed_per_file": {
+        "deliverables/run-log.md": 24
+      }
+    },
+    {
+      "checkpoint_number": 6,
+      "user_lines_added": 561,
+      "user_lines_removed": 24,
+      "agent_lines_added": 2344,
+      "agent_lines_removed": 96,
+      "user_added_per_file": {
+        ".claude/redo-brief.md": 66,
+        ".claude/settings.json": 84,
+        ".claude/staged-office-documents/LARK-APP-2026.1-application-form.md": 118,
+        ".claude/staged-office-documents/LARK-AUTH-2026.1-reserved-authority.md": 68,
+        ".claude/staged-office-documents/LARK-PRIV-2026.1-privilege-criteria.md": 41,
+        ".claude/staged-office-documents/LARK-REF-2026.1-peer-reference-form.md": 55,
+        ".claude/staged-office-documents/office-note-2026-03-16-export-format.md": 91,
+        "deliverables/run-log.md": 38
+      },
+      "user_removed_per_file": {
+        "deliverables/run-log.md": 24
+      }
+    },
+    {
+      "checkpoint_number": 7,
+      "user_lines_added": 561,
+      "user_lines_removed": 24,
+      "agent_lines_added": 2817,
+      "agent_lines_removed": 128,
+      "user_added_per_file": {
+        ".claude/redo-brief.md": 66,
+        ".claude/settings.json": 84,
+        ".claude/staged-office-documents/LARK-APP-2026.1-application-form.md": 118,
+        ".claude/staged-office-documents/LARK-AUTH-2026.1-reserved-authority.md": 68,
+        ".claude/staged-office-documents/LARK-PRIV-2026.1-privilege-criteria.md": 41,
+        ".claude/staged-office-documents/LARK-REF-2026.1-peer-reference-form.md": 55,
+        ".claude/staged-office-documents/office-note-2026-03-16-export-format.md": 91,
+        "deliverables/run-log.md": 38
+      },
+      "user_removed_per_file": {
+        "deliverables/run-log.md": 24
+      }
+    },
+    {
+      "checkpoint_number": 8,
+      "user_lines_added": 561,
+      "user_lines_removed": 24,
+      "agent_lines_added": 2965,
+      "agent_lines_removed": 128,
+      "user_added_per_file": {
+        ".claude/redo-brief.md": 66,
+        ".claude/settings.json": 84,
+        ".claude/staged-office-documents/LARK-APP-2026.1-application-form.md": 118,
+        ".claude/staged-office-documents/LARK-AUTH-2026.1-reserved-authority.md": 68,
+        ".claude/staged-office-documents/LARK-PRIV-2026.1-privilege-criteria.md": 41,
+        ".claude/staged-office-documents/LARK-REF-2026.1-peer-reference-form.md": 55,
+        ".claude/staged-office-documents/office-note-2026-03-16-export-format.md": 91,
+        "deliverables/run-log.md": 38
+      },
+      "user_removed_per_file": {
+        "deliverables/run-log.md": 24
+      }
+    },
+    {
+      "checkpoint_number": 9,
+      "user_lines_added": 557,
+      "user_lines_removed": 0,
+      "agent_lines_added": 7041,
+      "agent_lines_removed": 186,
+      "user_added_per_file": {
+        ".claude/redo-brief.md": 66,
+        ".claude/settings.json": 84,
+        ".claude/staged-office-documents/LARK-APP-2026.1-application-form.md": 118,
+        ".claude/staged-office-documents/LARK-AUTH-2026.1-reserved-authority.md": 68,
+        ".claude/staged-office-documents/LARK-PRIV-2026.1-privilege-criteria.md": 41,
+        ".claude/staged-office-documents/LARK-REF-2026.1-peer-reference-form.md": 55,
+        ".claude/staged-office-documents/office-note-2026-03-16-export-format.md": 91,
+        "deliverables/run-log.md": 34
+      }
+    }
+  ]
+}

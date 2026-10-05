@@ -1,0 +1,56 @@
+{
+  "cli_version": "0.10.2",
+  "checkpoint_id": "80c1a49b85cd",
+  "strategy": "manual-commit",
+  "branch": "worktree-redo-e-credentialing",
+  "checkpoints_count": 8,
+  "files_touched": [
+    "deliverables/rules.md",
+    "deliverables/run-log.md",
+    "deliverables/snapshots/batch-01.json",
+    "deliverables/snapshots/batch-01.superseded-20261005T173112.json",
+    "deliverables/snapshots/batch-02.json",
+    "deliverables/snapshots/batch-02.superseded-20261005T173117.json",
+    "deliverables/snapshots/batch-03.json",
+    "deliverables/snapshots/batch-03.superseded-20261005T173122.json",
+    "deliverables/state/batch-01.state.json",
+    "deliverables/state/batch-02.state.json",
+    "deliverables/state/batch-03.state.json",
+    "deliverables/verification.md",
+    "docs/office-documents/LARK-APP-2026.1-application-form.md",
+    "docs/office-documents/LARK-ATT-2026.1-accepted-sources.md",
+    "docs/office-documents/LARK-AUTH-2026.1-reserved-authority.md",
+    "docs/office-documents/LARK-PRIV-2026.1-privilege-criteria.md",
+    "docs/office-documents/LARK-REF-2026.1-peer-reference-form.md",
+    "docs/office-documents/office-note-2026-03-16-export-format.md",
+    "scripts/engine.py",
+    "tests/fixtures/mini-batch/dispositions/2026-01-25_disposition_APP-TEST-001.md",
+    "tests/test_e2e_batch_01.py",
+    "tests/test_e2e_batch_02.py",
+    "tests/test_e2e_batch_03.py",
+    "tests/test_engine_decisions.py",
+    "tests/test_engine_discrepancy_eligibility.py",
+    "tests/test_engine_elements.py",
+    "tests/test_engine_intake.py",
+    "tests/test_engine_orchestration.py",
+    "tests/test_engine_real_data_regressions.py",
+    "tests/test_parsers_documents.py",
+    "tests/test_rules_deliverable.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/80/c1a49b85cd/0/metadata.json",
+      "transcript": "/80/c1a49b85cd/0/full.jsonl",
+      "compact_transcript": "/80/c1a49b85cd/0/transcript.jsonl",
+      "content_hash": "/80/c1a49b85cd/0/content_hash.txt",
+      "prompt": "/80/c1a49b85cd/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 822,
+    "cache_creation_tokens": 2912472,
+    "cache_read_tokens": 209563687,
+    "output_tokens": 429989,
+    "api_call_count": 411
+  }
+}
